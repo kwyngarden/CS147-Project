@@ -1,20 +1,22 @@
+body {
+     width: 100%;
+}
+
+.tile {
+     width: 320px;
+     background-image: url('/images/arrillaga.jpg');
+     background-size: cover;
+     position: relative;
+     color: #ffffff;
+     text-align: center;
+}
+
 .jumbotron {
-	position: relative;
-	background: none;
-}
-
-.jumbotron:after {
-     content:"";
-     background: url("../images/lorempixel.jumbotron.jpeg");
-     opacity: 0.2;
-     top: 0;
-     left: 0;
-     bottom: 0;
-     right: 0;
-     position: absolute;
-     z-index: -1;	
-}
-
-.jumbotron p {
-     color: #6e6e6e;
+     width: 250px;
+     border: 1px solid gray;
+     box-shadow: 5px 5px 5px #888888;
+     margin-left: auto;
+     margin-right: auto;
+     background-image: #777777;
+     color: #000000;
 }
