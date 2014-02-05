@@ -2,21 +2,10 @@ body {
      width: 100%;
 }
 
-.tile {
-     width: 320px;
-     background-image: url('/images/arrillaga.jpg');
-     background-size: cover;
-     position: relative;
+.tile h1, .tile p, .tile ul{
      color: #ffffff;
-     text-align: center;
 }
 
-.jumbotron {
-     width: 250px;
-     border: 1px solid gray;
-     box-shadow: 5px 5px 5px #888888;
-     margin-left: auto;
-     margin-right: auto;
-     background-image: #777777;
-     color: #000000;
+.tile {
+     cursor: default;
 }
