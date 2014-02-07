@@ -10,6 +10,7 @@ var handlebars = require('express3-handlebars')
 var partials = require('express-partials');
 var index = require('./routes/index');
 var dining = require('./routes/dining');
+var map = require('./routes/map');
 //var project = require('./routes/project');
 // Example route
 // var user = require('./routes/user');
@@ -40,6 +41,7 @@ if ('development' == app.get('env')) {
 // Add routes here
 app.get('/', index.view);
 app.get('/dining/:name', dining.view);
+app.get('/map', map.view);
 //app.get('/project/:name', project.viewProject)
 // Example route
 // app.get('/users', user.list);

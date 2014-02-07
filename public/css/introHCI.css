@@ -16,3 +16,7 @@ body {
 	color: white;
 	background-color: #C41E3A;
 }
+
+#diningPanel {
+	width: 250px;
+}
