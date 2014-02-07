@@ -12,11 +12,11 @@ body {
 	margin: 0px;
 	padding-top: 2px;
 	text-align: center;
-	font-size: 150%;
+	font-size: 1.5em;
 	color: white;
 	background-color: #C41E3A;
 }
 
 #diningPanel {
-	width: 250px;
+	width: 300px;
 }
