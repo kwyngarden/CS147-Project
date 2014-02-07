@@ -7,10 +7,6 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link href="/css/metro-bootstrap.css" rel="stylesheet">
 	<link href="/css/introHCI.css" rel="stylesheet">
-	<script src="https://code.jquery.com/jquery.js"></script>
-	<script src="/js/bootstrap.min.js"></script>
-	<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&callback=initialize"></script>
-	<script src="/js/diningmap.js"></script>
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -24,5 +20,17 @@
 
 	{{>nav}}	
 
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-12">
+				<div id="map-canvas" style='height:500px;margin-bottom:20px;'></div>
+			</div>
+		</div>
+	</div>
+
+	<script src="https://code.jquery.com/jquery.js"></script>
+	<script src="/js/bootstrap.min.js"></script>
+	<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&callback=initialize"></script>
+	<script src="/js/diningmap.js"></script>
 </body>
 </html>
