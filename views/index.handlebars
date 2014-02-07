@@ -20,7 +20,7 @@
 
 	{{>nav}}
 
-	{{#each something}}
+	{{#each halls}}
 	<div class="panel" id="diningPanel">
     	<div class="panel-header bg-lightBlue fg-white">
     		<h3>{{name}} Dining</h3>
@@ -28,7 +28,7 @@
 
     	<div class="panel-content">
     		<div>
-    			Hours: {{hours}}
+    			Hours: {{hours.weekdays.dinner}}
     		</div>
 
     		<div>
