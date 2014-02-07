@@ -6,6 +6,13 @@ body {
      color: #ffffff;
 }
 
-.tile {
-     cursor: default;
+#title {
+	width: 100px;
+	height: 32px;
+	margin: 0px;
+	padding-top: 2px;
+	text-align: center;
+	font-size: 150%;
+	color: white;
+	background-color: #C41E3A;
 }
