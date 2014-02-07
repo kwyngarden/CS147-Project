@@ -5,7 +5,6 @@
 
 exports.view = function(req, res){
   var name = req.params.name;
-  res.render('dining', {
-  	'name': name
+  res.render('events', {
   });
 };
