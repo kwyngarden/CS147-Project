@@ -1,20 +1,18 @@
-.jumbotron {
-	position: relative;
-	background: none;
+body {
+     width: 100%;
 }
 
-.jumbotron:after {
-     content:"";
-     background: url("../images/lorempixel.jumbotron.jpeg");
-     opacity: 0.2;
-     top: 0;
-     left: 0;
-     bottom: 0;
-     right: 0;
-     position: absolute;
-     z-index: -1;	
+.tile h1, .tile p, .tile ul{
+     color: #ffffff;
 }
 
-.jumbotron p {
-     color: #6e6e6e;
+#title {
+	width: 100px;
+	height: 32px;
+	margin: 0px;
+	padding-top: 2px;
+	text-align: center;
+	font-size: 150%;
+	color: white;
+	background-color: #C41E3A;
 }
