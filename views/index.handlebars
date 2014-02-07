@@ -20,14 +20,15 @@
 
 	{{>nav}}
 
+	{{#each something}}
 	<div class="panel" id="diningPanel">
     	<div class="panel-header bg-lightBlue fg-white">
-    		<h3>Arrillaga Dining</h3>
+    		<h3>{{name}} Dining</h3>
     	</div>
 
     	<div class="panel-content">
     		<div>
-    			Hours: Open till 8pm
+    			Hours: {{hours}}
     		</div>
 
     		<div>
@@ -51,31 +52,7 @@
 			</div>
     	</div>
     </div>
-
-    <div class="tile triple triple-vertical bg-cyan">
-    	<h1>Arrillaga Dining</h1>
-    	<p>Open till 8pm</p>
-    	<hr>
-    	<div>
-    		<p>Today's Menu:</p>
-    		<ul>
-    			<li>Grilled chicken</li>
-    			<li>Couscous</li>
-    			<li>Quinoa</li>
-    		</ul>
-    	</div>
-
-    	<div class="rating fg-yellow">
-		    <ul>
-		        <li class="rated"></li>
-		        <li class="rated"></li>
-		        <li class="rated"></li>
-		        <li></li>
-		        <li></li>
-		    </ul>
-		    <span class="score-hint"></span>
-		</div>
-	</div>
+    {{/each}}
 
 </body>
 </html>
