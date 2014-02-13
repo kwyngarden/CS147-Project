@@ -1,0 +1,17 @@
+<header class="main">
+    <a id="simple-menu" href="#sidr" style="float:left;"><button type="button">Menu</button></a>
+    <h2 class="logo" style="padding-top:4px;"><a href="/" class="ss-list">Delp!</a></h2>
+    <div id="sidr">
+        <ul>
+            <li><a href="/map">Nearby</a></li>
+            <li><a href="/favorites">Favorites</a></li>
+            <li><a href="/events">Events</a></li>
+        </ul>
+    </div>
+    <script src="js/jquery.sidr.min.js"></script>
+    <script>
+        $(document).ready(function() {
+          $('#simple-menu').sidr();
+        });
+    </script>
+</header>
