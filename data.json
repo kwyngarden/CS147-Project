@@ -18,7 +18,7 @@
 				"latenightHours": ["9:00pm", "2:00am"],
 				"latenightDays": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
 			},
-			"imageURL": "images/dining.png"	
+			"imageURL": "dining.png"	
 		},
 		{
 			"name": "Ricker Dining",
@@ -37,7 +37,7 @@
 				"closed": ["Friday", "Saturday"],
 				"latenightDays": []
 			},
-			"imageURL": "images/dining.png"	
+			"imageURL": "dining.png"	
 		},
 		{
 			"name": "Lakeside Dining",
@@ -57,7 +57,7 @@
 				"latenightHours": ["9:30pm", "2:00am"],
 				"latenightDays": ["Monday", "Tuesday", "Wednesday", "Thursday", "Sunday"]
 			},
-			"imageURL": "images/dining.png"	
+			"imageURL": "dining.png"	
 		}
 	],
 	"menuItems": [
