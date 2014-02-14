@@ -18,7 +18,7 @@
 
 	<div class="panel">
 		<div class="panel-header bg-lightBlue fg-white">
-			{{hallName}}
+			{{hallName}} Dining
 		</div>
 
 		<div class="panel-content">
@@ -30,15 +30,30 @@
         				<span class="ratings icon-thumbs-down fg-red">23</span>
 						<span class="ratings icon-thumbs-up fg-green">374</span>
 			        </a>
-			        <div class="content">...asda</div>
+			        <div class="content">
+			        	Weekdays
+			        	<ul>
+				        	{{#each weekdayHours}}
+	    						<li>{{@key}}: {{this}}</li>
+							{{/each}}
+						</ul>
+						Weekends
+						<ul>
+							{{#each weekendHours}}
+								<li>{{@key}}: {{this}}</li>
+							{{/each}}
+						</ul>
+			        </div>
 			    </div>
 			</div>
 
-			{{#each menuItems}}
-			<div class="tile">
-				<img src="/images/arrillaga.jpg">
-				<div class="brand bg-dark fg-white">{{itemName}}</div>
-			</div>
+			{{#each menu}}
+			<a href="/food/{{../hallName}}/{{name}}">
+				<div class="tile">
+					<img src="/images/{{name}}.jpg">
+					<div class="brand bg-dark fg-white">{{name}}</div>
+				</div>
+			</a>
 			{{/each}}
 
 		</div>
