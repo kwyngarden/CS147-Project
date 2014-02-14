@@ -48,6 +48,7 @@ app.get('/map', map.view);
 app.get('/food/:dhall/:name', food.view);
 app.get('/favorites', favorites.view);
 app.get('/dining/:name', dining.view);
+app.get('/search/:searchtext', index.search);
 //app.get('/project/:name', project.viewProject)
 // Example route
 // app.get('/users', user.list);
