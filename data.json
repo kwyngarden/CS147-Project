@@ -18,7 +18,69 @@
 				"latenightHours": ["9:00pm", "2:00am"],
 				"latenightDays": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
 			},
-			"imageURL": "/images/dining.png"	
+			"imageURL": "/images/dining.png",
+			"menu": [
+				{
+				"name": "Quinoa", 
+				"imageURL": "images/dining.png",
+				"upvotes": 7,
+				"downvotes": 10,
+				"dining_hall": "Arrillaga", 
+				"nutritional_info": "Protein in Quinoa:One of the best reasons to enjoy quinoa is because it has a high-protein content, which makes it a great cholesterol-free and low-fat source of protein for vegetarians and vegans. According to the USDA nutrient database, 1 cup of cooked quinoa (185 g) contains 8.14 grams of protein. To put that in reference, the recommended daily protein intake is about 56 grams for most men and 46 for most women. See also: Six Sources of Protein for Vegetarians",
+				"favorites": 50, 
+				"tags": ["vegetarian", "vegan", "health++"]
+				}, 
+				{
+				"name": "Pizza", 
+				"imageURL": "dining.png",
+				"upvotes": 7,
+				"downvotes": 10,
+				"dining_hall": "Arrillaga", 
+				"nutritional_info": "At Pizza Hut, we believe in using nothing but tasty, real ingredients that you can feel good about. From 100% real cheese and premium meats to fresh vegetables and vine-ripened tomatoes, we know that your pizza will only taste as good as the quality of ingredients used to build each hand-crafted layer, before baking to a golden brown.",
+				"favorites": 50, 
+				"tags": ["vegetarian"]
+				},
+				{
+				"name": "Grilled Chicken", 
+				"imageURL": "dining.png",
+				"upvotes": 7,
+				"downvotes": 10,
+				"dining_hall": "Arrillaga", 
+				"nutritional_info": "Hmmmmmmm",
+				"favorites": 50, 
+				"tags": ["non-vegetarian", "spicy"]
+				},
+				{
+				"name": "Dosa", 
+				"imageURL": "dining.png",
+				"upvotes": 7,
+				"downvotes": 10,
+				"dining_hall": "Arrillaga", 
+				"nutritional_info": "Dosa is beautiful. Daryl is in love",
+				"favorites": 50, 
+				"tags": ["vegetarian", "indian", "health++"]
+				},
+				{
+				"name": "Pesto Chicken", 
+				"imageURL": "dining.png",
+				"upvotes": 7,
+				"downvotes": 10,
+				"dining_hall": "Arrillaga", 
+				"nutritional_info": "Yup",
+				"favorites": 50, 
+				"tags": ["non-vegetarian", "spicy", "protein"]
+				},
+				{
+				"name": "Mimosa", 
+				"imageURL": "dining.png",
+				"upvotes": 70,
+				"downvotes": 10,
+				"dining_hall": "Arrillaga", 
+				"nutritional_info": "The favorite item on teh menu",
+				"favorites": 50, 
+				"tags": ["beverage", "alcoholic"]
+				}
+			]	
 		},
 		{
 			"name": "Ricker",
@@ -37,7 +99,69 @@
 				"closed": ["Friday", "Saturday"],
 				"latenightDays": []
 			},
-			"imageURL": "/images/dining.png"	
+			"imageURL": "/images/dining.png",
+			"menu": [
+				{
+				"name": "Quinoa", 
+				"imageURL": "images/dining.png",
+				"upvotes": 7,
+				"downvotes": 10,
+				"dining_hall": "Arrillaga", 
+				"nutritional_info": "Protein in Quinoa:One of the best reasons to enjoy quinoa is because it has a high-protein content, which makes it a great cholesterol-free and low-fat source of protein for vegetarians and vegans. According to the USDA nutrient database, 1 cup of cooked quinoa (185 g) contains 8.14 grams of protein. To put that in reference, the recommended daily protein intake is about 56 grams for most men and 46 for most women. See also: Six Sources of Protein for Vegetarians",
+				"favorites": 50, 
+				"tags": ["vegetarian", "vegan", "health++"]
+				}, 
+				{
+				"name": "Pizza", 
+				"imageURL": "dining.png",
+				"upvotes": 7,
+				"downvotes": 10,
+				"dining_hall": "Arrillaga", 
+				"nutritional_info": "At Pizza Hut, we believe in using nothing but tasty, real ingredients that you can feel good about. From 100% real cheese and premium meats to fresh vegetables and vine-ripened tomatoes, we know that your pizza will only taste as good as the quality of ingredients used to build each hand-crafted layer, before baking to a golden brown.",
+				"favorites": 50, 
+				"tags": ["vegetarian"]
+				},
+				{
+				"name": "Grilled Chicken", 
+				"imageURL": "dining.png",
+				"upvotes": 7,
+				"downvotes": 10,
+				"dining_hall": "Arrillaga", 
+				"nutritional_info": "Hmmmmmmm",
+				"favorites": 50, 
+				"tags": ["non-vegetarian", "spicy"]
+				},
+				{
+				"name": "Dosa", 
+				"imageURL": "dining.png",
+				"upvotes": 7,
+				"downvotes": 10,
+				"dining_hall": "Arrillaga", 
+				"nutritional_info": "Dosa is beautiful. Daryl is in love",
+				"favorites": 50, 
+				"tags": ["vegetarian", "indian", "health++"]
+				},
+				{
+				"name": "Pesto Chicken", 
+				"imageURL": "dining.png",
+				"upvotes": 7,
+				"downvotes": 10,
+				"dining_hall": "Arrillaga", 
+				"nutritional_info": "Yup",
+				"favorites": 50, 
+				"tags": ["non-vegetarian", "spicy", "protein"]
+				},
+				{
+				"name": "Mimosa", 
+				"imageURL": "dining.png",
+				"upvotes": 70,
+				"downvotes": 10,
+				"dining_hall": "Arrillaga", 
+				"nutritional_info": "The favorite item on teh menu",
+				"favorites": 50, 
+				"tags": ["beverage", "alcoholic"]
+				}
+			]	
 		},
 		{
 			"name": "Lakeside",
@@ -57,7 +181,69 @@
 				"latenightHours": ["9:30pm", "2:00am"],
 				"latenightDays": ["Monday", "Tuesday", "Wednesday", "Thursday", "Sunday"]
 			},
-			"imageURL": "/images/dining.png"	
+			"imageURL": "/images/dining.png",
+			"menu": [
+				{
+				"name": "Quinoa", 
+				"imageURL": "images/dining.png",
+				"upvotes": 7,
+				"downvotes": 10,
+				"dining_hall": "Arrillaga", 
+				"nutritional_info": "Protein in Quinoa:One of the best reasons to enjoy quinoa is because it has a high-protein content, which makes it a great cholesterol-free and low-fat source of protein for vegetarians and vegans. According to the USDA nutrient database, 1 cup of cooked quinoa (185 g) contains 8.14 grams of protein. To put that in reference, the recommended daily protein intake is about 56 grams for most men and 46 for most women. See also: Six Sources of Protein for Vegetarians",
+				"favorites": 50, 
+				"tags": ["vegetarian", "vegan", "health++"]
+				}, 
+				{
+				"name": "Pizza", 
+				"imageURL": "dining.png",
+				"upvotes": 7,
+				"downvotes": 10,
+				"dining_hall": "Arrillaga", 
+				"nutritional_info": "At Pizza Hut, we believe in using nothing but tasty, real ingredients that you can feel good about. From 100% real cheese and premium meats to fresh vegetables and vine-ripened tomatoes, we know that your pizza will only taste as good as the quality of ingredients used to build each hand-crafted layer, before baking to a golden brown.",
+				"favorites": 50, 
+				"tags": ["vegetarian"]
+				},
+				{
+				"name": "Grilled Chicken", 
+				"imageURL": "dining.png",
+				"upvotes": 7,
+				"downvotes": 10,
+				"dining_hall": "Arrillaga", 
+				"nutritional_info": "Hmmmmmmm",
+				"favorites": 50, 
+				"tags": ["non-vegetarian", "spicy"]
+				},
+				{
+				"name": "Dosa", 
+				"imageURL": "dining.png",
+				"upvotes": 7,
+				"downvotes": 10,
+				"dining_hall": "Arrillaga", 
+				"nutritional_info": "Dosa is beautiful. Daryl is in love",
+				"favorites": 50, 
+				"tags": ["vegetarian", "indian", "health++"]
+				},
+				{
+				"name": "Pesto Chicken", 
+				"imageURL": "dining.png",
+				"upvotes": 7,
+				"downvotes": 10,
+				"dining_hall": "Arrillaga", 
+				"nutritional_info": "Yup",
+				"favorites": 50, 
+				"tags": ["non-vegetarian", "spicy", "protein"]
+				},
+				{
+				"name": "Mimosa", 
+				"imageURL": "dining.png",
+				"upvotes": 70,
+				"downvotes": 10,
+				"dining_hall": "Arrillaga", 
+				"nutritional_info": "The favorite item on teh menu",
+				"favorites": 50, 
+				"tags": ["beverage", "alcoholic"]
+				}
+			]	
 		},
 		{
 			"name": "Branner Dining",
@@ -73,7 +259,69 @@
 				"closed": ["Saturday", "Sunday"],
 				"latenightDays": []
 			},
-			"imageURL": "/images/dining.png"
+			"imageURL": "/images/dining.png",
+			"menu": [
+				{
+				"name": "Quinoa", 
+				"imageURL": "images/dining.png",
+				"upvotes": 7,
+				"downvotes": 10,
+				"dining_hall": "Arrillaga", 
+				"nutritional_info": "Protein in Quinoa:One of the best reasons to enjoy quinoa is because it has a high-protein content, which makes it a great cholesterol-free and low-fat source of protein for vegetarians and vegans. According to the USDA nutrient database, 1 cup of cooked quinoa (185 g) contains 8.14 grams of protein. To put that in reference, the recommended daily protein intake is about 56 grams for most men and 46 for most women. See also: Six Sources of Protein for Vegetarians",
+				"favorites": 50, 
+				"tags": ["vegetarian", "vegan", "health++"]
+				}, 
+				{
+				"name": "Pizza", 
+				"imageURL": "dining.png",
+				"upvotes": 7,
+				"downvotes": 10,
+				"dining_hall": "Arrillaga", 
+				"nutritional_info": "At Pizza Hut, we believe in using nothing but tasty, real ingredients that you can feel good about. From 100% real cheese and premium meats to fresh vegetables and vine-ripened tomatoes, we know that your pizza will only taste as good as the quality of ingredients used to build each hand-crafted layer, before baking to a golden brown.",
+				"favorites": 50, 
+				"tags": ["vegetarian"]
+				},
+				{
+				"name": "Grilled Chicken", 
+				"imageURL": "dining.png",
+				"upvotes": 7,
+				"downvotes": 10,
+				"dining_hall": "Arrillaga", 
+				"nutritional_info": "Hmmmmmmm",
+				"favorites": 50, 
+				"tags": ["non-vegetarian", "spicy"]
+				},
+				{
+				"name": "Dosa", 
+				"imageURL": "dining.png",
+				"upvotes": 7,
+				"downvotes": 10,
+				"dining_hall": "Arrillaga", 
+				"nutritional_info": "Dosa is beautiful. Daryl is in love",
+				"favorites": 50, 
+				"tags": ["vegetarian", "indian", "health++"]
+				},
+				{
+				"name": "Pesto Chicken", 
+				"imageURL": "dining.png",
+				"upvotes": 7,
+				"downvotes": 10,
+				"dining_hall": "Arrillaga", 
+				"nutritional_info": "Yup",
+				"favorites": 50, 
+				"tags": ["non-vegetarian", "spicy", "protein"]
+				},
+				{
+				"name": "Mimosa", 
+				"imageURL": "dining.png",
+				"upvotes": 70,
+				"downvotes": 10,
+				"dining_hall": "Arrillaga", 
+				"nutritional_info": "The favorite item on teh menu",
+				"favorites": 50, 
+				"tags": ["beverage", "alcoholic"]
+				}
+			]
 		},
 		{
 			"name": "FloMo Dining",
@@ -92,7 +340,69 @@
 				"closed": [],
 				"latenightDays": []
 			},
-			"imageURL": "/images/dining.png"
+			"imageURL": "/images/dining.png",
+			"menu": [
+				{
+				"name": "Quinoa", 
+				"imageURL": "images/dining.png",
+				"upvotes": 7,
+				"downvotes": 10,
+				"dining_hall": "Arrillaga", 
+				"nutritional_info": "Protein in Quinoa:One of the best reasons to enjoy quinoa is because it has a high-protein content, which makes it a great cholesterol-free and low-fat source of protein for vegetarians and vegans. According to the USDA nutrient database, 1 cup of cooked quinoa (185 g) contains 8.14 grams of protein. To put that in reference, the recommended daily protein intake is about 56 grams for most men and 46 for most women. See also: Six Sources of Protein for Vegetarians",
+				"favorites": 50, 
+				"tags": ["vegetarian", "vegan", "health++"]
+				}, 
+				{
+				"name": "Pizza", 
+				"imageURL": "dining.png",
+				"upvotes": 7,
+				"downvotes": 10,
+				"dining_hall": "Arrillaga", 
+				"nutritional_info": "At Pizza Hut, we believe in using nothing but tasty, real ingredients that you can feel good about. From 100% real cheese and premium meats to fresh vegetables and vine-ripened tomatoes, we know that your pizza will only taste as good as the quality of ingredients used to build each hand-crafted layer, before baking to a golden brown.",
+				"favorites": 50, 
+				"tags": ["vegetarian"]
+				},
+				{
+				"name": "Grilled Chicken", 
+				"imageURL": "dining.png",
+				"upvotes": 7,
+				"downvotes": 10,
+				"dining_hall": "Arrillaga", 
+				"nutritional_info": "Hmmmmmmm",
+				"favorites": 50, 
+				"tags": ["non-vegetarian", "spicy"]
+				},
+				{
+				"name": "Dosa", 
+				"imageURL": "dining.png",
+				"upvotes": 7,
+				"downvotes": 10,
+				"dining_hall": "Arrillaga", 
+				"nutritional_info": "Dosa is beautiful. Daryl is in love",
+				"favorites": 50, 
+				"tags": ["vegetarian", "indian", "health++"]
+				},
+				{
+				"name": "Pesto Chicken", 
+				"imageURL": "dining.png",
+				"upvotes": 7,
+				"downvotes": 10,
+				"dining_hall": "Arrillaga", 
+				"nutritional_info": "Yup",
+				"favorites": 50, 
+				"tags": ["non-vegetarian", "spicy", "protein"]
+				},
+				{
+				"name": "Mimosa", 
+				"imageURL": "dining.png",
+				"upvotes": 70,
+				"downvotes": 10,
+				"dining_hall": "Arrillaga", 
+				"nutritional_info": "The favorite item on teh menu",
+				"favorites": 50, 
+				"tags": ["beverage", "alcoholic"]
+				}
+			]
 		},
 		{
 			"name": "Manzanita Dining",
@@ -108,7 +418,69 @@
 				"closed": ["Saturday", "Sunday"],
 				"latenightDays": []
 			},
-			"imageURL": "/images/dining.png"
+			"imageURL": "/images/dining.png",
+			"menu": [
+				{
+				"name": "Quinoa", 
+				"imageURL": "images/dining.png",
+				"upvotes": 7,
+				"downvotes": 10,
+				"dining_hall": "Arrillaga", 
+				"nutritional_info": "Protein in Quinoa:One of the best reasons to enjoy quinoa is because it has a high-protein content, which makes it a great cholesterol-free and low-fat source of protein for vegetarians and vegans. According to the USDA nutrient database, 1 cup of cooked quinoa (185 g) contains 8.14 grams of protein. To put that in reference, the recommended daily protein intake is about 56 grams for most men and 46 for most women. See also: Six Sources of Protein for Vegetarians",
+				"favorites": 50, 
+				"tags": ["vegetarian", "vegan", "health++"]
+				}, 
+				{
+				"name": "Pizza", 
+				"imageURL": "dining.png",
+				"upvotes": 7,
+				"downvotes": 10,
+				"dining_hall": "Arrillaga", 
+				"nutritional_info": "At Pizza Hut, we believe in using nothing but tasty, real ingredients that you can feel good about. From 100% real cheese and premium meats to fresh vegetables and vine-ripened tomatoes, we know that your pizza will only taste as good as the quality of ingredients used to build each hand-crafted layer, before baking to a golden brown.",
+				"favorites": 50, 
+				"tags": ["vegetarian"]
+				},
+				{
+				"name": "Grilled Chicken", 
+				"imageURL": "dining.png",
+				"upvotes": 7,
+				"downvotes": 10,
+				"dining_hall": "Arrillaga", 
+				"nutritional_info": "Hmmmmmmm",
+				"favorites": 50, 
+				"tags": ["non-vegetarian", "spicy"]
+				},
+				{
+				"name": "Dosa", 
+				"imageURL": "dining.png",
+				"upvotes": 7,
+				"downvotes": 10,
+				"dining_hall": "Arrillaga", 
+				"nutritional_info": "Dosa is beautiful. Daryl is in love",
+				"favorites": 50, 
+				"tags": ["vegetarian", "indian", "health++"]
+				},
+				{
+				"name": "Pesto Chicken", 
+				"imageURL": "dining.png",
+				"upvotes": 7,
+				"downvotes": 10,
+				"dining_hall": "Arrillaga", 
+				"nutritional_info": "Yup",
+				"favorites": 50, 
+				"tags": ["non-vegetarian", "spicy", "protein"]
+				},
+				{
+				"name": "Mimosa", 
+				"imageURL": "dining.png",
+				"upvotes": 70,
+				"downvotes": 10,
+				"dining_hall": "Arrillaga", 
+				"nutritional_info": "The favorite item on teh menu",
+				"favorites": 50, 
+				"tags": ["beverage", "alcoholic"]
+				}
+			]
 		},
 		{
 			"name": "Stern Dining",
@@ -127,7 +499,69 @@
 				"closed": [],
 				"latenightDays": []
 			},
-			"imageURL": "/images/dining.png"
+			"imageURL": "/images/dining.png",
+			"menu": [
+				{
+				"name": "Quinoa", 
+				"imageURL": "images/dining.png",
+				"upvotes": 7,
+				"downvotes": 10,
+				"dining_hall": "Arrillaga", 
+				"nutritional_info": "Protein in Quinoa:One of the best reasons to enjoy quinoa is because it has a high-protein content, which makes it a great cholesterol-free and low-fat source of protein for vegetarians and vegans. According to the USDA nutrient database, 1 cup of cooked quinoa (185 g) contains 8.14 grams of protein. To put that in reference, the recommended daily protein intake is about 56 grams for most men and 46 for most women. See also: Six Sources of Protein for Vegetarians",
+				"favorites": 50, 
+				"tags": ["vegetarian", "vegan", "health++"]
+				}, 
+				{
+				"name": "Pizza", 
+				"imageURL": "dining.png",
+				"upvotes": 7,
+				"downvotes": 10,
+				"dining_hall": "Arrillaga", 
+				"nutritional_info": "At Pizza Hut, we believe in using nothing but tasty, real ingredients that you can feel good about. From 100% real cheese and premium meats to fresh vegetables and vine-ripened tomatoes, we know that your pizza will only taste as good as the quality of ingredients used to build each hand-crafted layer, before baking to a golden brown.",
+				"favorites": 50, 
+				"tags": ["vegetarian"]
+				},
+				{
+				"name": "Grilled Chicken", 
+				"imageURL": "dining.png",
+				"upvotes": 7,
+				"downvotes": 10,
+				"dining_hall": "Arrillaga", 
+				"nutritional_info": "Hmmmmmmm",
+				"favorites": 50, 
+				"tags": ["non-vegetarian", "spicy"]
+				},
+				{
+				"name": "Dosa", 
+				"imageURL": "dining.png",
+				"upvotes": 7,
+				"downvotes": 10,
+				"dining_hall": "Arrillaga", 
+				"nutritional_info": "Dosa is beautiful. Daryl is in love",
+				"favorites": 50, 
+				"tags": ["vegetarian", "indian", "health++"]
+				},
+				{
+				"name": "Pesto Chicken", 
+				"imageURL": "dining.png",
+				"upvotes": 7,
+				"downvotes": 10,
+				"dining_hall": "Arrillaga", 
+				"nutritional_info": "Yup",
+				"favorites": 50, 
+				"tags": ["non-vegetarian", "spicy", "protein"]
+				},
+				{
+				"name": "Mimosa", 
+				"imageURL": "dining.png",
+				"upvotes": 70,
+				"downvotes": 10,
+				"dining_hall": "Arrillaga", 
+				"nutritional_info": "The favorite item on teh menu",
+				"favorites": 50, 
+				"tags": ["beverage", "alcoholic"]
+				}
+			]
 		},
 		{
 			"name": "Wilbur Dining",
@@ -146,14 +580,7 @@
 				"closed": [],
 				"latenightDays": []
 			},
-			"imageURL": "/images/dining.png"
-		}
-	],
-	"menuItems": [
-
-		{
-			"dining_hall": "Arrillaga",
-			"hall_index": 0,
+			"imageURL": "/images/dining.png",
 			"menu": [
 				{
 				"name": "Quinoa", 
@@ -215,160 +642,6 @@
 				"favorites": 50, 
 				"tags": ["beverage", "alcoholic"]
 				}
-			]
-		},
-		{
-			"dining_hall": "Lakeside",
-			"hall_index": 2,
-			"menu": [
-
-				{
-				"name": "Grilled Chicken", 
-				"imageURL": "dining.png",
-				"upvotes": 7,
-				"downvotes": 10,
-				"dining_hall": "Lakeside", 
-				"nutritional_info": "Hmmmmmmm",
-				"favorites": 50, 
-				"tags": ["non-vegetarian", "spicy"]
-				},
-				{
-				"name": "Quinoa", 
-				"imageURL": "images/dining.png",
-				"upvotes": 7,
-				"downvotes": 10,
-				"dining_hall": "Lakeside", 
-				"nutritional_info": "Protein in Quinoa:One of the best reasons to enjoy quinoa is because it has a high-protein content, which makes it a great cholesterol-free and low-fat source of protein for vegetarians and vegans. According to the USDA nutrient database, 1 cup of cooked quinoa (185 g) contains 8.14 grams of protein. To put that in reference, the recommended daily protein intake is about 56 grams for most men and 46 for most women. See also: Six Sources of Protein for Vegetarians",
-				"favorites": 50, 
-				"tags": ["vegetarian", "vegan", "health++"]
-				}, 
-				{
-				"name": "Pizza", 
-				"imageURL": "dining.png",
-				"upvotes": 7,
-				"downvotes": 10,
-				"dining_hall": "Lakeside", 
-				"nutritional_info": "At Pizza Hut, we believe in using nothing but tasty, real ingredients that you can feel good about. From 100% real cheese and premium meats to fresh vegetables and vine-ripened tomatoes, we know that your pizza will only taste as good as the quality of ingredients used to build each hand-crafted layer, before baking to a golden brown.",
-				"favorites": 50, 
-				"tags": ["vegetarian"]
-				},
-				{
-				"name": "Dosa", 
-				"imageURL": "dining.png",
-				"upvotes": 7,
-				"downvotes": 10,
-				"dining_hall": "Lakeside", 
-				"nutritional_info": "Dosa is beautiful. Daryl is in love",
-				"favorites": 50, 
-				"tags": ["vegetarian", "indian", "health++"]
-				},
-				{
-				"name": "Pesto Chicken", 
-				"imageURL": "dining.png",
-				"upvotes": 7,
-				"downvotes": 10,
-				"dining_hall": "Lakeside", 
-				"nutritional_info": "Yup",
-				"favorites": 50, 
-				"tags": ["non-vegetarian", "spicy", "protein"]
-				},
-				{
-				"name": "Mimosa", 
-				"imageURL": "dining.png",
-				"upvotes": 70,
-				"downvotes": 10,
-				"dining_hall": "Lakeside", 
-				"nutritional_info": "The favorite item on teh menu",
-				"favorites": 50, 
-				"tags": ["beverage", "alcoholic"]
-				}
-			]
-		},
-		{
-			"dining_hall": "Ricker",
-			"hall_index": 1,
-			"menu": [
-				{
-				"name": "Pesto Chicken", 
-				"imageURL": "dining.png",
-				"upvotes": 7,
-				"downvotes": 10,
-				"dining_hall": "Ricker", 
-				"nutritional_info": "Yup",
-				"favorites": 50, 
-				"tags": ["non-vegetarian", "spicy", "protein"]
-				},
-				{
-				"name": "Mimosa", 
-				"imageURL": "dining.png",
-				"upvotes": 700000,
-				"downvotes": 100,
-				"dining_hall": "Ricker", 
-				"nutritional_info": "The favorite item on teh menu",
-				"favorites": 5000, 
-				"tags": ["beverage", "alcoholic"]
-				},
-				{
-				"name": "Quinoa", 
-				"imageURL": "images/dining.png",
-				"upvotes": 7,
-				"downvotes": 10,
-				"dining_hall": "Ricker", 
-				"nutritional_info": "Protein in Quinoa:One of the best reasons to enjoy quinoa is because it has a high-protein content, which makes it a great cholesterol-free and low-fat source of protein for vegetarians and vegans. According to the USDA nutrient database, 1 cup of cooked quinoa (185 g) contains 8.14 grams of protein. To put that in reference, the recommended daily protein intake is about 56 grams for most men and 46 for most women. See also: Six Sources of Protein for Vegetarians",
-				"favorites": 50, 
-				"tags": ["vegetarian", "vegan", "health++"]
-				}, 
-				{
-				"name": "Pizza", 
-				"imageURL": "dining.png",
-				"upvotes": 7,
-				"downvotes": 10,
-				"dining_hall": "Ricker", 
-				"nutritional_info": "At Pizza Hut, we believe in using nothing but tasty, real ingredients that you can feel good about. From 100% real cheese and premium meats to fresh vegetables and vine-ripened tomatoes, we know that your pizza will only taste as good as the quality of ingredients used to build each hand-crafted layer, before baking to a golden brown.",
-				"favorites": 500, 
-				"tags": ["vegetarian"]
-				},
-				{
-				"name": "Grilled Chicken", 
-				"imageURL": "dining.png",
-				"upvotes": 7,
-				"downvotes": 10,
-				"dining_hall": "Ricker", 
-				"nutritional_info": "Hmmmmmmm",
-				"favorites": 50, 
-				"tags": ["non-vegetarian", "spicy"]
-				},
-				{
-				"name": "Dosa", 
-				"imageURL": "dining.png",
-				"upvotes": 7,
-				"downvotes": 10,
-				"dining_hall": "Ricker", 
-				"nutritional_info": "Dosa is beautiful. Daryl is in love",
-				"favorites": 50, 
-				"tags": ["vegetarian", "indian", "health++"]
-				},
-				{
-				"name": "Pesto Chicken", 
-				"imageURL": "dining.png",
-				"upvotes": 7,
-				"downvotes": 10,
-				"dining_hall": "Ricker", 
-				"nutritional_info": "Yup",
-				"favorites": 50, 
-				"tags": ["non-vegetarian", "spicy", "protein"]
-				},
-				{
-				"name": "Mimosa", 
-				"imageURL": "dining.png",
-				"upvotes": 70,
-				"downvotes": 10,
-				"dining_hall": "Ricker", 
-				"nutritional_info": "The favorite item on teh menu",
-				"favorites": 50, 
-				"tags": ["beverage", "alcoholic"]
-				}
-
 			]
 		}
 	]
