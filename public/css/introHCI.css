@@ -22,6 +22,10 @@ body {
 	overflow: auto;
 }
 
+.metro .panel .panel-header {
+	cursor: pointer;
+}
+
 .ratings {
 	float: right;
 }

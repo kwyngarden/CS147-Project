@@ -33,37 +33,39 @@
     </div>
 
 	{{#each halls}}
-	<div class="panel" id="diningPanel">
-    	<div class="panel-header bg-lightBlue fg-white">
-    		<h3>{{name}}</h3>
-    	</div>
-
-    	<div class="panel-content">
-    		<div>
-    			Hours: {{hours.weekdays.dinner}}
-    		</div>
-
-    		<div>
-	    		<p>Today's menu:</p>
-	    		<ul>
-	    			<li>Grilled chicken</li>
-	    			<li>Couscous</li>
-	    			<li>Quinoa</li>
-	    		</ul>
+	<a href="/dining/{{name}}">
+		<div class="panel" id="diningPanel">
+	    	<div class="panel-header bg-lightBlue fg-white">
+	    		<h3>{{name}}</h3>
 	    	</div>
 
-	    	<div class="rating">
-			    <ul>
-			        <li class="rated"></li>
-			        <li class="rated"></li>
-			        <li class="rated"></li>
-			        <li></li>
-			        <li></li>
-			    </ul>
-			    <span class="score-hint"></span>
-			</div>
-    	</div>
-    </div>
+	    	<div class="panel-content">
+	    		<div>
+	    			Hours: {{hours.weekdays.dinner}}
+	    		</div>
+
+	    		<div>
+		    		<p>Today's menu:</p>
+		    		<ul>
+		    			<li>Grilled chicken</li>
+		    			<li>Couscous</li>
+		    			<li>Quinoa</li>
+		    		</ul>
+		    	</div>
+
+		    	<div class="rating">
+				    <ul>
+				        <li class="rated"></li>
+				        <li class="rated"></li>
+				        <li class="rated"></li>
+				        <li></li>
+				        <li></li>
+				    </ul>
+				    <span class="score-hint"></span>
+				</div>
+	    	</div>
+	    </div>
+	</a>
     {{/each}}
 
     <script src="js/search.js"></script>
