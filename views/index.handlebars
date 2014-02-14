@@ -41,16 +41,14 @@
 	    	</div>
 
 	    	<div class="panel-content">
-	    		<div>
-	    			Hours: {{hours.weekdays.dinner}}
-	    		</div>
-
 	    		{{#each menu}}
-	    			<div class="tile foodTile">
-							<img src="/images/{{name}}.jpg">
-							<div class="brand bg-dark fg-white">{{name}}
-							</div>
-					</div>
+		    		<a href="/food/{{dining_hall}}/{{name}}">
+		    			<div class="tile foodTile">
+								<img src="/images/{{name}}.jpg">
+								<div class="brand bg-dark fg-white">{{name}}
+								</div>
+						</div>
+					</a>
 	    		{{/each}}
 
 	    	</div>
