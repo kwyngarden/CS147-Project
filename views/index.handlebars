@@ -33,11 +33,11 @@
         </form>
     </div>
 
-	{{#each halls}}
+	{{#each menuItems}}
 	<a href="/dining/{{name}}">
 		<div class="panel" id="diningPanel">
 	    	<div class="panel-header bg-lightBlue fg-white">
-	    		<h3>{{name}} Dining</h3>
+	    		<h3>{{dining_hall}} Dining</h3>
 	    	</div>
 
 	    	<div class="panel-content">
@@ -45,25 +45,14 @@
 	    			Hours: {{hours.weekdays.dinner}}
 	    		</div>
 
-	    		<div>
-		    		<p>Today's menu:</p>
-		    		<ul>
-		    			<li>Grilled chicken</li>
-		    			<li>Couscous</li>
-		    			<li>Quinoa</li>
-		    		</ul>
-		    	</div>
+	    		{{#each menu}}
+	    			<div class="tile foodTile">
+							<img src="/images/{{name}}.jpg">
+							<div class="brand bg-dark fg-white">{{name}}
+							</div>
+					</div>
+	    		{{/each}}
 
-		    	<div class="rating">
-				    <ul>
-				        <li class="rated"></li>
-				        <li class="rated"></li>
-				        <li class="rated"></li>
-				        <li></li>
-				        <li></li>
-				    </ul>
-				    <span class="score-hint"></span>
-				</div>
 	    	</div>
 	    </div>
 	</a>

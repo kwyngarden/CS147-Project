@@ -27,8 +27,6 @@
 			        <a href="#" class="heading">
 			        	<span id="expandIcon" class="icon-arrow-right-2"></span>
 			        	Open till 8pm
-        				<span class="ratings icon-thumbs-down fg-red">23</span>
-						<span class="ratings icon-thumbs-up fg-green">374</span>
 			        </a>
 			        <div class="content">
 			        	Weekdays
@@ -49,9 +47,10 @@
 
 			{{#each menu}}
 			<a href="/food/{{../hallName}}/{{name}}">
-				<div class="tile">
+				<div class="tile foodTile">
 					<img src="/images/{{name}}.jpg">
-					<div class="brand bg-dark fg-white">{{name}}</div>
+					<div class="brand bg-dark fg-white">{{name}}
+					</div>
 				</div>
 			</a>
 			{{/each}}

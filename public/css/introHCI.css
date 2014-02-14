@@ -29,3 +29,7 @@ body {
 .ratings {
 	float: right;
 }
+
+.foodTile {
+	text-align: center;
+}
