@@ -54,3 +54,8 @@ body {
 .panel-header h3{
 	color: white;
 }
+
+#brandButtonPanel {
+	height:18px;
+	min-height:18px;
+}
