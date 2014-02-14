@@ -1,7 +1,9 @@
 .searchform {
     display: inline-block;
     zoom: 1; /* ie7 hack for display:inline-block */
-    *display: inline;
+    
+    /**display: inline;*/
+    display: none;
     border: solid 1px #d2d2d2;
     /*padding: 3px 5px;*/
     padding: 5px 12px;

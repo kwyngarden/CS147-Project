@@ -24,19 +24,11 @@
 <div>
     {{>navMenu}}
 	<!-- {{>nav}} -->
-    <div>
-        <form class="searchform">
-            <input id="searchtext" class="searchfield" type="text" placeholder="Search food...">
-
-             <!-- value="Search food..." onfocus="if (this.value == 'Search...') {this.value = '';}" onblur="if (this.value == '') {this.value = 'Search...';}" /> -->
-            <input id="searchsubmit" class="searchbutton" type="button" value="Go" />
-        </form>
-    </div>
 
 	{{#each menuItems}}
 	<a href="/dining/{{dining_hall}}">
 		<div class="panel" id="diningPanel">
-	    	<div class="panel-header bg-lightBlue fg-white">
+	    	<div class="panel-header bg-crimson fg-white">
 	    		<h3>{{dining_hall}} Dining</h3>
 	    	</div>
 
@@ -56,8 +48,6 @@
 	    </div>
 	</a>
     {{/each}}
-
-    <script src="js/search.js"></script>
 
 </div>
 </body>

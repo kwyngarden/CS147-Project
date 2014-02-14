@@ -48,13 +48,16 @@
     {{>navMenu}}       
 
     <div class="panel">
-        <div class="panel-header  fg-white">
-            <button id="back"  type="submit" onclick="window.location.href='/dining/{{dining_hall}}'"><i class="icon-arrow-left"></i></button> 
-            <h2> {{name}} </h2>
+
+        <div class="panel-header bg-darkRed fg-white">
+            <button id="back"  type="submit" onclick="window.location.href='/dining/{{dining_hall}}/'" class="bg-darkRed">
+                <i class="icon-arrow-left fg-white"></i>
+            </button> 
+            <h3 class="fg-white">{{name}}</h3>
         </div>
 
         <div class="panel-content">
-              <div class="button-set rating">
+            <div class="button-set rating">
                 <button id="thumbs-up" class="fg-green" type="button" onclick="incrementLikes()"><i class="icon-thumbs-up"> {{upvotes}}</i></button>
                 <button id="thumbs-down" class="fg-red" type="button" onclick="decrementLikes()"><i class="icon-thumbs-down"> {{downvotes}}</i></button>
                 <button id="favorites" class="fg-amber" type="button" onclick="addFavorite()"><i class="icon-star-3"> {{favorites}}</i></button>
