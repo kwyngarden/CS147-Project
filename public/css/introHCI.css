@@ -36,4 +36,10 @@ body {
 
 .button-set .foodTag {
 	cursor: default;
+
+}
+
+#brandButtonPanel {
+	height:18px;
+	min-height:18px;
 }
