@@ -47,9 +47,12 @@
 
 	    		{{#each menu}}
 	    			<div class="tile foodTile">
-							<img src="/images/{{name}}.jpg">
-							<div class="brand bg-dark fg-white">{{name}}
-							</div>
+                        <div class="bg-dark fg-white">{{name}}</div>
+                        <img src="/images/{{name}}.jpg">
+                        <div id="brandButtonPanel" class="brand button-set">
+                            <button style="float:right;padding:0px;margin:0px;"class="thumbs-down" type="button"><i class="fg-red icon-thumbs-down">{{downvotes}}</i></button>
+                            <button style="float:right;padding:0px;margin:0px;" class="thumbs-up" type="button"><i class="fg-green icon-thumbs-up">{{upvotes}}</i></button>
+                        </div>
 					</div>
 	    		{{/each}}
 

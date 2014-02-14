@@ -33,3 +33,8 @@ body {
 .foodTile {
 	text-align: center;
 }
+
+#brandButtonPanel {
+	height:18px;
+	min-height:18px;
+}
