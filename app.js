@@ -44,6 +44,7 @@ app.get('/', index.view);
 app.get('/events', events.view);
 app.get('/map', map.view);
 app.get('/favorites', favorites.view);
+app.get('/search/:searchtext', index.search);
 //app.get('/project/:name', project.viewProject)
 // Example route
 // app.get('/users', user.list);
