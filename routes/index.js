@@ -6,7 +6,7 @@
 var data = require('../data.json')
 
 exports.view = function(req, res){
-  var reducedMenuItems = data['menuItems'];
+  var reducedMenuItems = data['menuItems'].slice();
   for (var i=0; i<reducedMenuItems.length; i++) {
   	reducedMenuItems[i]['menu'] = reducedMenuItems[i]['menu'].slice(0, 2)
   }
