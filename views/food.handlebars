@@ -17,7 +17,7 @@
     function incrementLikes()
     {
         var b = document.getElementById("thumbs-up")
-        b.className = "active";
+        b.className += " active";
         var numLikes = {{upvotes}} + 1;
         var likeCount = b.children[0];
         likeCount.textContent = " " + numLikes;
@@ -25,7 +25,7 @@
     function decrementLikes()
     {
         var b = document.getElementById("thumbs-down")
-        b.className = "active";
+        b.className += "active";
         var numLikes = {{downvotes}} - 1;
         var likeCount = b.children[0];
         likeCount.textContent = " " + numLikes;
@@ -33,7 +33,7 @@
         function addFavorite()
     {
         var b = document.getElementById("favorites")
-        b.className = "active";
+        b.className += "active";
         var numLikes = {{favorites}} + 1;
         var likeCount = b.children[0];
         likeCount.textContent = " " + numLikes;
@@ -60,9 +60,9 @@
 
         <div class="button-set">
 
-            <button id="thumbs-up"  type="button" onclick="incrementLikes()"><i class="icon-thumbs-up"> {{upvotes}}</i></button>
-                <button id="thumbs-down" type="button" onclick="decrementLikes()"><i class="icon-thumbs-down"> {{downvotes}}</i></button>
-                <button id="favorites" type="button" onclick="addFavorite()"><i class="icon-star-3"> {{favorites}}</i></button>
+            <button id="thumbs-up" class="fg-green" type="button" onclick="incrementLikes()"><i class="icon-thumbs-up"> {{upvotes}}</i></button>
+                <button id="thumbs-down" class="fg-red" type="button" onclick="decrementLikes()"><i class="icon-thumbs-down"> {{downvotes}}</i></button>
+                <button id="favorites" class="fg-amber" type="button" onclick="addFavorite()"><i class="icon-star-3"> {{favorites}}</i></button>
         
 
         </div>
@@ -70,7 +70,8 @@
 
     </div>
     <div class="panel-content">
-        <img src='/images/{{name}}.jpg' width="200px"/ >
+        <img src='/images/{{name}}.jpg' width="300px"/ >
+
        
     </div>
 </div>
@@ -82,7 +83,6 @@
       <h3> Attributes: </h3>
     </div>
     <div class="panel-content">
-            
             <p> {{tags}} </p>
     </div>
 </div>

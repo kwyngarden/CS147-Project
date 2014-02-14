@@ -12,6 +12,7 @@ exports.view = function(req, res){
   for (var i=0; i<data["menuItems"].length; i++) {
   	if (data["menuItems"][i]["dining_hall"] == hallName) {
   		menu = data["menuItems"][i]["menu"];
+  		console.log(menu);
   		break;
   	}
   }
