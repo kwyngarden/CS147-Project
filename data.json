@@ -152,14 +152,15 @@
 	"menuItems": [
 
 		{
-			"dining_hall": "Roble",
+			"dining_hall": "Lakeside Dining",
+			"hall_index": 2,
 			"menu": [
 				{
 				"name": "Quinoa", 
 				"imageURL": "images/dining.png",
 				"upvotes": 7,
 				"downvotes": 10,
-				"dining_hall": "Roble", 
+				"dining_hall": "Lakeside Dining", 
 				"nutritional_info": "Protein in Quinoa:One of the best reasons to enjoy quinoa is because it has a high-protein content, which makes it a great cholesterol-free and low-fat source of protein for vegetarians and vegans. According to the USDA nutrient database, 1 cup of cooked quinoa (185 g) contains 8.14 grams of protein. To put that in reference, the recommended daily protein intake is about 56 grams for most men and 46 for most women. See also: Six Sources of Protein for Vegetarians",
 				"favorites": 50, 
 				"tags": ["vegetarian", "vegan", "health++"]
@@ -169,7 +170,7 @@
 				"imageURL": "dining.png",
 				"upvotes": 7,
 				"downvotes": 10,
-				"dining_hall": "Roble", 
+				"dining_hall": "Lakeside Dining", 
 				"nutritional_info": "At Pizza Hut, we believe in using nothing but tasty, real ingredients that you can feel good about. From 100% real cheese and premium meats to fresh vegetables and vine-ripened tomatoes, we know that your pizza will only taste as good as the quality of ingredients used to build each hand-crafted layer, before baking to a golden brown.",
 				"favorites": 500, 
 				"tags": ["vegetarian"]
@@ -179,7 +180,7 @@
 				"imageURL": "dining.png",
 				"upvotes": 7,
 				"downvotes": 10,
-				"dining_hall": "Roble", 
+				"dining_hall": "Lakeside Dining", 
 				"nutritional_info": "Hmmmmmmm",
 				"favorites": 50, 
 				"tags": ["non-vegetarian", "spicy"]
@@ -189,7 +190,7 @@
 				"imageURL": "dining.png",
 				"upvotes": 7,
 				"downvotes": 10,
-				"dining_hall": "Roble", 
+				"dining_hall": "Lakeside Dining", 
 				"nutritional_info": "Dosa is beautiful. Daryl is in love",
 				"favorites": 50, 
 				"tags": ["vegetarian", "indian", "health++"]
@@ -199,7 +200,7 @@
 				"imageURL": "dining.png",
 				"upvotes": 7,
 				"downvotes": 10,
-				"dining_hall": "Roble", 
+				"dining_hall": "Lakeside Dining", 
 				"nutritional_info": "Yup",
 				"favorites": 50, 
 				"tags": ["non-vegetarian", "spicy", "protein"]
@@ -209,7 +210,7 @@
 				"imageURL": "dining.png",
 				"upvotes": 700000,
 				"downvotes": 100,
-				"dining_hall": "Roble", 
+				"dining_hall": "Lakeside Dining", 
 				"nutritional_info": "The favorite item on teh menu",
 				"favorites": 5000, 
 				"tags": ["beverage", "alcoholic"]
@@ -217,14 +218,15 @@
 			]
 		},
 		{
-			"dining_hall": "Arrillaga",
+			"dining_hall": "Arrillaga Family Dining Commons",
+			"hall_index": 0,
 			"menu": [
 				{
 				"name": "Chicken", 
 				"imageURL": "dining.png",
 				"upvotes": 90,
 				"downvotes": 11,
-				"dining_hall": "Arrillaga", 
+				"dining_hall": "Arrillaga Family Dining Commons", 
 				"nutritional_info": "",
 				"favorites": 50, 
 				"tags": ["non-vegetarian", "spicy"]
