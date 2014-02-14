@@ -3,7 +3,7 @@
  * GET home page.
  */
 
-var data = require('../data.json')
+var data = require('../data.json');
 
 exports.view = function(req, res){
     var halls = JSON.parse(JSON.stringify(data.halls));
