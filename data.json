@@ -61,17 +61,36 @@
 		}
 	],
 	"menuItems": [
+
 		{
-			"name": "Quinoa"
+			"dining_hall": "Roble",
+			"menu": [
+				{
+				"name": "Quinoa", 
+				"imageURL": "dining.png",
+				"upvotes": 7,
+				"downvotes": 10,
+				"dining_hall": "Roble", 
+				"nutritional_info": "Protein in Quinoa:One of the best reasons to enjoy quinoa is because it has a high-protein content, which makes it a great cholesterol-free and low-fat source of protein for vegetarians and vegans. According to the USDA nutrient database, 1 cup of cooked quinoa (185 g) contains 8.14 grams of protein. To put that in reference, the recommended daily protein intake is about 56 grams for most men and 46 for most women. See also: Six Sources of Protein for Vegetarians",
+				"favorites": 50, 
+				"tags": ["vegetarian", "vegan", "health++"]
+				}
+			]
 		},
 		{
-			"name": "Grilled chicken"
-		},
-		{
-			"name": "Spaghetti and Meatballs"
-		},
-		{
-			"name": "Cantaloupe"
+			"dining_hall": "Arrillaga",
+			"menu": [
+				{
+				"name": "Chicken", 
+				"imageURL": "dining.png",
+				"upvotes": 90,
+				"downvotes": 11,
+				"dining_hall": "Arrillaga", 
+				"nutritional_info": "",
+				"favorites": 50, 
+				"tags": ["non-vegetarian", "spicy"]
+				}
+			]
 		}
 	]
 }
