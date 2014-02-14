@@ -6,13 +6,12 @@
 var data = require('../data.json')
 
 exports.view = function(req, res){
-  var reducedMenuItems = JSON.parse(JSON.stringify(data['menuItems']));
-  for (var i=0; i<reducedMenuItems.length; i++) {
-  	reducedMenuItems[i]['menu'] = reducedMenuItems[i]['menu'].slice(0, 2)
-  }
+  // var reducedMenuItems = JSON.parse(JSON.stringify(data['menuItems']));
+  // for (var i=0; i<reducedMenuItems.length; i++) {
+  // 	reducedMenuItems[i]['menu'] = reducedMenuItems[i]['menu'].slice(0, 2)
+  // }
   res.render('index', {
-    'halls': data['halls'],
-    'menuItems': reducedMenuItems
+    'halls': data['halls']
   });
 };
 

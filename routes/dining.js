@@ -8,25 +8,22 @@ var data = require('../data.json')
 exports.view = function(req, res){
   var hallName = req.params.name;
   var menu;
-  var hours;
-  for (var i=0; i<data["menuItems"].length; i++) {
-  	if (data["menuItems"][i]["dining_hall"] == hallName) {
-  		menu = data["menuItems"][i]["menu"];
-  		console.log(menu);
-  		break;
-  	}
+  var weekdayHours;
+  var weekendHours;
+  
+  for (var i=0; i<data["halls"].length; i++) {
+    if (data["halls"][i]["name"] == hallName) {
+      menu = data["halls"][i]["menu"];
+      weekdayHours = data["halls"][i]["hours"]["weekdays"];
+      weekendHours = data["halls"][i]["hours"]["weekends"];
+    }
   }
 
-  for (var i=0; i<data["halls"].length; i++) { 
-  	if (data["halls"][i]["name"] == hallName) {
-  		hours = data["halls"][i]["hours"];
-  	}
-  }
   // for (var i = 0; i < data[])
   res.render('dining', {
   	'hallName': hallName,
   	'menu': menu,
-  	'weekdayHours': hours['weekdays'],
-  	'weekendHours': hours['weekends']
+  	'weekdayHours':weekdayHours,
+  	'weekendHours': weekendHours
   });
 };
