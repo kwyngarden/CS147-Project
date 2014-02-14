@@ -6,31 +6,37 @@
 var data = require('../data.json')
 
 exports.view = function(req, res){
+    var halls = JSON.parse(JSON.stringify(data.halls));
+    for(var i = 0; i < halls.length; i++) {
+        var menu = halls[i].menu.slice(0,2);
+        halls[i].menu = menu;
+    }
+
   // var reducedMenuItems = JSON.parse(JSON.stringify(data['menuItems']));
   // for (var i=0; i<reducedMenuItems.length; i++) {
   // 	reducedMenuItems[i]['menu'] = reducedMenuItems[i]['menu'].slice(0, 2)
   // }
-  res.render('index', {
-    'halls': data['halls']
-  });
+    res.render('index', {
+        'halls': halls
+    });
 };
 
 exports.search = function(req, res) {
     var text = req.params.searchtext;
-    console.log(text);
+    console.log("Search term: " + text);
     var searchTokens = text.split(/\s+/);
     var retHalls = [];
 
     // Search menus for matching hall/menu combos
-    var menus = data.menuItems;
-    var halls = data.halls;
-    for(var i = 0; i < menus.length; i++) {
-        var hallMenu = menus[i];
-        var hall = halls[hallMenu.hall_index];
+    var halls = JSON.parse(JSON.stringify(data.halls));
+    for(var i = 0; i < halls.length; i++) {
+        var hall = halls[i];
+        var hallMenu = hall.menu;
         var menuMatches = [];
 
-        for(var j = 0; j < hallMenu.menu.length; j++) {
-            var menuItem = hallMenu.menu[j];
+        for(var j = 0; j < hallMenu.length; j++) {
+            var menuItem = hallMenu[j];
+            console.log("Checking: " + menuItem.name);
             var nameTokens = menuItem.name.split(/\s+/);
             var nameMatches = arrMatches(searchTokens, nameTokens);
             if(nameMatches > 0) {
@@ -39,13 +45,13 @@ exports.search = function(req, res) {
             }
         }
 
-        if(menuMatches.length > 0) {
-            hall["menuMatches"] = menuMatches;
+        if (menuMatches.length > 0) {
+            hall.menu = menuMatches;
             retHalls.push(hall);
         }
     }
 
-    res.json({
+    res.render('index', {
         "halls": retHalls
     });
 };
