@@ -3,8 +3,10 @@
  * GET map page.
  */
 
+var data = require('../data.json')
+
 exports.view = function(req, res){
   res.render('map', {
-    // params
+    'halls': data['halls']
   });
 };
