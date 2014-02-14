@@ -33,3 +33,24 @@ body {
 .foodTile {
 	text-align: center;
 }
+
+.logo {
+	color: white;
+}
+
+.element .icon-lines {
+	position: relative;
+	bottom: 5px;
+}
+
+.element h3 {
+	color: white;
+	position: relative;
+	bottom: 15px;
+	width: 150px;
+	text-align: center;
+}
+
+.panel-header h3{
+	color: white;
+}

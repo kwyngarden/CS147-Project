@@ -1,17 +1,47 @@
 <header class="main">
-    <a id="simple-menu" href="#sidr" style="float:left;"><button type="button">Menu</button></a>
-    <h2 class="logo"><a href="/" class="ss-list" style="margin-left:10px;">Delp!</a></h2>
-    <div id="sidr">
-        <ul>
-            <li><a href="/">Home</a></li>
-            <li><a href="/map">Nearby</a></li>
-            <li><a href="/favorites">Favorites</a></li>
-            <li><a href="/events">Events</a></li>
-        </ul>
+    <nav class="navigation-bar bg-black">
+        <nav class="navigation-bar-content">
+            <item class="element">
+                <a id="simple-menu" href="#sidr" style="float:left;"><button type="button" class="icon-lines fg-white bg-black"></button></a>
+                <div id="sidr">
+                    <ul>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/map">Nearby</a></li>
+                        <li><a href="/favorites">Favorites</a></li>
+                        <li><a href="/events">Events</a></li>
+                    </ul>
+                </div>
+            </item>
+            <item class="element-divider">
+            </item>
+            <item class="element">
+                <div class="logo">
+                    <a href="/" class="ss-list">
+                        <h3>Delp!</h3>
+                    </a>
+                </div>
+            </item>
+            <item class="element-divider">
+            </item>
+            <item class="element searchButton">
+                <div class="icon-search">
+                </div>
+            </item>
+        </nav>
+    </nav>
+
+    <div>
+        <form class="searchform">
+            <input id="searchtext" class="searchfield" type="text" placeholder="Search food...">
+
+            <input id="searchsubmit" class="searchbutton" type="button" value="Go" />
+        </form>
     </div>
+
     <script>
         $(document).ready(function() {
           $('#simple-menu').sidr();
         });
     </script>
+    <script src="js/search.js"></script>
 </header>
