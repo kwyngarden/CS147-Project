@@ -17,6 +17,10 @@ body {
 	background-color: #C41E3A;
 }
 
-#diningPanel {
-	width: 300px;
+.panel-content {
+	overflow: auto;
+}
+
+.ratings {
+	float: right;
 }

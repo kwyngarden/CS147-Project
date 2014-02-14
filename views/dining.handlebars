@@ -7,45 +7,51 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link href="/css/metro-bootstrap.css" rel="stylesheet">
 	<link href="/css/introHCI.css" rel="stylesheet">
-	<script src="js/jquery/jquery.min.js"></script>
+	<script src="/js/jquery.min.js"></script>
 </head>
 
 <body class="metro">
-	<div class="tile triple quadro-vertical bg-cyan">
-		<h1>{{name}} Dining</h1>
-		<p> Open till 8:00pm </p>
-		<div class="tile triple bg-green">
-			<p> Menu: </p>
-        	<ul>
-        		<li>Roasted Cauliflower</li>
-        		<li>Sauteed Vegetables</li>
-        		<li>Spit-Roasted Quinoa</li>
-        	</ul>
-    	</div>
+	<div class="panel">
+		<div class="panel-header bg-lightBlue fg-white">
+			{{hallName}} Dining
+		</div>
 
-    	<div class="tile triple bg-yellow">
-    		<p> Reviews: </p>
-    		<ul>
-    			<li>Absolutely smashing! Greatest dining hall...</li>
-    			<li>Lacking in vegetarian options...</li>
-    		</ul>
-    	</div>
-
-    	<div class="tile triple bg-red">
-    		<p> Rate your meal: </p>
-    		<div class="rating">
-			    <ul>
-			        <li class="rated"></li>
-			        <li class="rated"></li>
-			        <li class="rated"></li>
-			        <li></li>
-			        <li></li>
-			    </ul>
-			    <span class="score-hint"></span>
+		<div class="panel-content">
+			<div class="accordion" data-role="accordion">
+			    <div class="accordion-frame">
+			        <a href="#" class="heading">
+			        	<span id="expandIcon" class="icon-arrow-right-2"></span>
+			        	Open till 8pm
+        				<span class="ratings icon-arrow-down fg-red">23</span>
+						<span class="ratings icon-arrow-up fg-green">374</span>
+			        </a>
+			        <div class="content">...asda</div>
+			    </div>
 			</div>
-    	</div>
 
+			{{#each menuItems}}
+			<div class="tile">
+				<img src="/images/arrillaga.jpg">
+				<div class="brand bg-dark fg-white">{{itemName}}</div>
+			</div>
+			{{/each}}
+
+		</div>
 	</div>
+
+	<script>
+		$('.accordion').click(function(){
+			$('.content').toggle(200);
+			var expandIcon = $('#expandIcon');
+			if (expandIcon.hasClass('icon-arrow-down-2')) {
+				expandIcon.removeClass('icon-arrow-down-2');
+				expandIcon.addClass('icon-arrow-right-2');
+			} else if (expandIcon.hasClass('icon-arrow-right-2')) {
+				expandIcon.removeClass('icon-arrow-right-2');
+				expandIcon.addClass('icon-arrow-down-2');
+			}
+		});
+	</script>
 </body>
 </html>
 
