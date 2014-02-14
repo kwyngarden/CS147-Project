@@ -1,0 +1,58 @@
+<!doctype html>
+
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="/css/metro-bootstrap.css" rel="stylesheet">
+	<link href="/css/introHCI.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="/css/jquery.sidr.dark.css">
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>  
+</head>
+
+<body class="metro">
+
+    {{>navMenu}}
+
+
+<h1></h1>
+       
+
+<div class="panel">
+    <div class="panel-header bg-darkblue fg-white">
+      <h1> {{name}} </h1>
+    </div>
+    <div class="panel-content">
+        <img src={{imageURL}} >
+        <p> <i class="icon-thumbs-up"> {{upvotes}}</i>
+            <i class="icon-thumbs-down"> {{downvotes}}</i>
+            <i class="icon-star-3"> {{favorites}}</i>
+         </p>
+    </div>
+</div>
+
+<div class="panel" data-role="panel">
+    <div class="panel-header">
+    <h3> Nutritional Details: </h3>
+        </div>
+    <div class="panel-content">
+            <p>{{nutritional_info}}</p>
+    </div>
+</div>
+
+<div class="panel">
+    <div class="panel-header bg-lightBlue fg-white">
+      <h3> Other Tags: </h3>
+    </div>
+    <div class="panel-content">
+            <p> {{tags}} </p>
+    </div>
+</div>
+    	
+
+
+</body>
+</html>
+
