@@ -11,3 +11,11 @@ exports.view = function(req, res){
     'menu': data['menuItems']
   });
 };
+
+exports.search = function(req, res) {
+    var text = req.params.searchtext;
+    console.log(text);
+    res.json({
+        "searchtext": text
+    });
+};
