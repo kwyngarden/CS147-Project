@@ -33,3 +33,7 @@ body {
 .foodTile {
 	text-align: center;
 }
+
+.button-set .foodTag {
+	cursor: default;
+}

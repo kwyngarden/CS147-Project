@@ -25,15 +25,15 @@
     function decrementLikes()
     {
         var b = document.getElementById("thumbs-down")
-        b.className += "active";
-        var numLikes = {{downvotes}} - 1;
+        b.className += " active";
+        var numLikes = {{downvotes}} + 1;
         var likeCount = b.children[0];
         likeCount.textContent = " " + numLikes;
     }
         function addFavorite()
     {
         var b = document.getElementById("favorites")
-        b.className += "active";
+        b.className += " active";
         var numLikes = {{favorites}} + 1;
         var likeCount = b.children[0];
         likeCount.textContent = " " + numLikes;
@@ -83,7 +83,13 @@
       <h3> Attributes: </h3>
     </div>
     <div class="panel-content">
-            <p> {{tags}} </p>
+        <div class="button-set">
+            <span>
+        {{#each tags}}
+           <button class="foodTag"> {{this}} </button>
+        {{/each}}
+    </span>
+    </div>
     </div>
 </div>
     	
