@@ -9,7 +9,8 @@
 	<link href="/css/introHCI.css" rel="stylesheet">
     <link rel="stylesheet" href="/css/jquery.sidr.dark.css">
     <script src="/js/jquery.min.js"></script>
-    <script src="/js/bootstrap.min.js"></script>    
+    <script src="/js/jquery.sidr.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -22,6 +23,14 @@
 <div>
     {{>navMenu}}
 	<!-- {{>nav}} -->
+    <div>
+        <form class="searchform">
+            <input id="searchtext" class="searchfield" type="text" placeholder="Search food...">
+
+             <!-- value="Search food..." onfocus="if (this.value == 'Search...') {this.value = '';}" onblur="if (this.value == '') {this.value = 'Search...';}" /> -->
+            <input id="searchsubmit" class="searchbutton" type="button" value="Go" />
+        </form>
+    </div>
 
 	{{#each halls}}
 	<div class="panel" id="diningPanel">
@@ -56,6 +65,8 @@
     	</div>
     </div>
     {{/each}}
+
+    <script src="js/search.js"></script>
 
 </div>
 </body>

@@ -1,5 +1,6 @@
 body {
      width: 100%;
+     margin-left:5px;
 }
 
 .tile h1, .tile p, .tile ul{
@@ -17,6 +18,10 @@ body {
 	background-color: #C41E3A;
 }
 
-#diningPanel {
-	width: 300px;
+.panel-content {
+	overflow: auto;
+}
+
+.ratings {
+	float: right;
 }

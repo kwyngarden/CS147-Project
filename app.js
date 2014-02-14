@@ -13,6 +13,7 @@ var events = require('./routes/events');
 var map = require('./routes/map');
 var favorites = require('./routes/favorites');
 var food = require('./routes/food');
+var dining = require('./routes/dining');
 //var project = require('./routes/project');
 // Example route
 // var user = require('./routes/user');
@@ -46,6 +47,7 @@ app.get('/events', events.view);
 app.get('/map', map.view);
 app.get('/food/:dhall/:name', food.view);
 app.get('/favorites', favorites.view);
+app.get('/dining/:name', dining.view);
 //app.get('/project/:name', project.viewProject)
 // Example route
 // app.get('/users', user.list);
