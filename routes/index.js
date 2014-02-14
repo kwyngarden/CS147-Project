@@ -23,7 +23,6 @@ exports.view = function(req, res){
 
 exports.search = function(req, res) {
     var text = req.params.searchtext;
-    console.log("Search term: " + text);
     var searchTokens = text.split(/\s+/);
     var retHalls = [];
 
@@ -36,7 +35,6 @@ exports.search = function(req, res) {
 
         for(var j = 0; j < hallMenu.length; j++) {
             var menuItem = hallMenu[j];
-            console.log("Checking: " + menuItem.name);
             var nameTokens = menuItem.name.split(/\s+/);
             var nameMatches = arrMatches(searchTokens, nameTokens);
             if(nameMatches > 0) {
