@@ -53,19 +53,20 @@
 
 <div class="panel">
     <div class="panel-header  fg-white">
-      
+ 
+                    <h2 float="left"> <button id="back"  type="submit" onclick="window.location.href='/dining/{{dining_hall}}'"><i class="icon-arrow-left"></i></button> {{name}} </h2>
+ 
+
 
         <div class="button-set">
-            <span><h1 float="left"> {{name}} </h1>
 
-                <div float="right">
             <button id="thumbs-up"  type="button" onclick="incrementLikes()"><i class="icon-thumbs-up"> {{upvotes}}</i></button>
                 <button id="thumbs-down" type="button" onclick="decrementLikes()"><i class="icon-thumbs-down"> {{downvotes}}</i></button>
                 <button id="favorites" type="button" onclick="addFavorite()"><i class="icon-star-3"> {{favorites}}</i></button>
-            </div>
-        </span>
+        
 
         </div>
+
 
     </div>
     <div class="panel-content">
