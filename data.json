@@ -246,7 +246,7 @@
 			]	
 		},
 		{
-			"name": "Branner Dining",
+			"name": "Branner",
 			"latitude": 37.425406,
 			"longitude": -122.162867,
 			"hours": {
@@ -324,7 +324,7 @@
 			]
 		},
 		{
-			"name": "FloMo Dining",
+			"name": "FloMo",
 			"latitude": 37.421869,
 			"longitude": -122.171799,
 			"hours": {
@@ -405,7 +405,7 @@
 			]
 		},
 		{
-			"name": "Manzanita Dining",
+			"name": "Manzanita",
 			"latitude": 37.425031,
 			"longitude": -122.161869,
 			"hours": {
@@ -483,7 +483,7 @@
 			]
 		},
 		{
-			"name": "Stern Dining",
+			"name": "Stern",
 			"latitude": 37.424726,
 			"longitude": -122.165595,
 			"hours": {
@@ -564,7 +564,7 @@
 			]
 		},
 		{
-			"name": "Wilbur Dining",
+			"name": "Wilbur",
 			"latitude": 37.423959,
 			"longitude": -122.163146,
 			"hours": {
