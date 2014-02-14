@@ -34,6 +34,7 @@ body {
 	text-align: center;
 }
 
+<<<<<<< HEAD
 .logo {
 	color: white;
 }
@@ -53,6 +54,25 @@ body {
 
 .panel-header h3{
 	color: white;
+}
+
+.button-set .foodTag {
+	cursor: default;
+
+}
+.panel-header{
+	text-align: center;
+}
+
+.metro .rating {
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+	width: 178px;
+}
+
+#back {
+	float: left;
 }
 
 #brandButtonPanel {

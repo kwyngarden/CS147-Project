@@ -25,15 +25,15 @@
     function decrementLikes()
     {
         var b = document.getElementById("thumbs-down")
-        b.className += "active";
-        var numLikes = {{downvotes}} - 1;
+        b.className += " active";
+        var numLikes = {{downvotes}} + 1;
         var likeCount = b.children[0];
         likeCount.textContent = " " + numLikes;
     }
         function addFavorite()
     {
         var b = document.getElementById("favorites")
-        b.className += "active";
+        b.className += " active";
         var numLikes = {{favorites}} + 1;
         var likeCount = b.children[0];
         likeCount.textContent = " " + numLikes;
@@ -45,58 +45,52 @@
 
 <body class="metro">
 
-    {{>navMenu}}
+    {{>navMenu}}       
 
+    <div class="panel">
+        <div class="panel-header  fg-white">
+            <button id="back"  type="submit" onclick="window.location.href='/dining/{{dining_hall}}'"><i class="icon-arrow-left"></i></button> 
+            <h2> {{name}} 
+            </h2>
 
-<h1></h1>
-       
-
-<div class="panel">
-    <div class="panel-header  fg-white">
- 
-                    <h2 float="left"> <button id="back"  type="submit" onclick="window.location.href='/dining/{{dining_hall}}'"><i class="icon-arrow-left"></i></button> {{name}} </h2>
- 
-
-
-        <div class="button-set">
-
-            <button id="thumbs-up" class="fg-green" type="button" onclick="incrementLikes()"><i class="icon-thumbs-up"> {{upvotes}}</i></button>
+            <div class="button-set rating">
+                <button id="thumbs-up" class="fg-green" type="button" onclick="incrementLikes()"><i class="icon-thumbs-up"> {{upvotes}}</i></button>
                 <button id="thumbs-down" class="fg-red" type="button" onclick="decrementLikes()"><i class="icon-thumbs-down"> {{downvotes}}</i></button>
                 <button id="favorites" class="fg-amber" type="button" onclick="addFavorite()"><i class="icon-star-3"> {{favorites}}</i></button>
+            </div>
+        </div>
+
+        <div class="panel-content">
+            <img src='/images/{{name}}.jpg' width="300px"/ >   
+        </div>
+
+    </div>
+
+
+    <div class="panel">
+        <div class="panel-header fg-white">
+          <h3> Attributes: </h3>
+        </div>
+        <div class="panel-content">
+            <div class="button-set">
+                <span>
+                    {{#each tags}}
+                    <button class="foodTag"> {{this}} </button>
+                    {{/each}}
+                </span>
+            </div>
+        </div>
+    </div>
+        	
+    <div class="panel">
+        <div class="panel-header  fg-white">
+            <h3> Nutritional Details: </h3>
+        </div>
         
-
+        <div class="panel-content">
+                <p>{{nutritional_info}}</p>
         </div>
-
-
     </div>
-    <div class="panel-content">
-        <img src='/images/{{name}}.jpg' width="300px"/ >
-
-       
-    </div>
-</div>
-
-
-
-<div class="panel">
-    <div class="panel-header fg-white">
-      <h3> Attributes: </h3>
-    </div>
-    <div class="panel-content">
-            <p> {{tags}} </p>
-    </div>
-</div>
-    	
-<div class="panel">
-    <div class="panel-header  fg-white">
-    <h3> Nutritional Details: </h3>
-        </div>
-    <div class="panel-content">
-            <p>{{nutritional_info}}</p>
-    </div>
-</div>
-
-
 </body>
 </html>
 
