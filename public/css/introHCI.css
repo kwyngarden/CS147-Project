@@ -57,7 +57,6 @@ body {
 
 .button-set .foodTag {
 	cursor: default;
-
 }
 
 .panel-header{
@@ -78,4 +77,8 @@ body {
 #brandButtonPanel {
 	height:18px;
 	min-height:18px;
+}
+
+.fg-white .icon-arrow-left {
+	float: left;
 }
