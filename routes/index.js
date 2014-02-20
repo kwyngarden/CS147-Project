@@ -5,6 +5,14 @@
 
 var data = require('../data.json');
 
+// HOW-TO: write JSON to file
+var fs = require('fs');
+// To make a permanent change:
+// 1. Make sure using current data: data = require('../data.json')
+// 2. Modify data JSON object (data.halls[0].property = newvalue, etc)
+// 3. fs.writeFile('../data.json', JSON.stringify(data));
+
+
 exports.view = function(req, res){
     var halls = JSON.parse(JSON.stringify(data.halls));
     for(var i = 0; i < halls.length; i++) {

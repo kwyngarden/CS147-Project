@@ -2,6 +2,10 @@ body {
      width: 100%;
 }
 
+#searchMsg {
+	margin-left: 5px;
+}
+
 .tile h1, .tile p, .tile ul{
      color: #ffffff;
 }
