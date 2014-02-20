@@ -23,7 +23,6 @@
 <body class="metro">
 <div>
     {{>navMenu}}
-	<!-- {{>nav}} -->
 
 	{{#each halls}}
 	<a href="/dining/{{name}}">
@@ -33,23 +32,27 @@
 	    	</div>
 
 	    	<div class="panel-content">
-    			<div class="tile foodTile">
-                    <div class="bg-dark fg-white">{{menu.0.name}}</div>
-                    <img src="/images/{{menu.0.name}}.jpg">
-                    <div id="brandButtonPanel" class="brand button-set">
-                        <button style="float:right;padding:0px;margin:0px;"class="thumbs-down" type="button"><i class="fg-red icon-thumbs-down">{{menu.0.downvotes}}</i></button>
-                        <button style="float:right;padding:0px;margin:0px;" class="thumbs-up" type="button"><i class="fg-green icon-thumbs-up">{{menu.0.upvotes}}</i></button>
-                    </div>
-				</div>
+                <a href="food/{{name}}/{{menu.0.name}}">
+        			<div class="tile foodTile">
+                        <div class="bg-dark fg-white">{{menu.0.name}}</div>
+                        <img src="/images/{{menu.0.name}}.jpg">
+                        <div id="brandButtonPanel" class="brand button-set">
+                            <button style="float:right;padding:0px;margin:0px;"class="thumbs-down" type="button"><i class="fg-red icon-thumbs-down">{{menu.0.downvotes}}</i></button>
+                            <button style="float:right;padding:0px;margin:0px;" class="thumbs-up" type="button"><i class="fg-green icon-thumbs-up">{{menu.0.upvotes}}</i></button>
+                        </div>
+    				</div>
+                </a>
 
-				<div class="tile foodTile">
-                    <div class="bg-dark fg-white">{{menu.1.name}}</div>
-                    <img src="/images/{{menu.1.name}}.jpg">
-                    <div id="brandButtonPanel" class="brand button-set">
-                        <button style="float:right;padding:0px;margin:0px;"class="thumbs-down" type="button"><i class="fg-red icon-thumbs-down">{{menu.1.downvotes}}</i></button>
-                        <button style="float:right;padding:0px;margin:0px;" class="thumbs-up" type="button"><i class="fg-green icon-thumbs-up">{{menu.1.upvotes}}</i></button>
-                    </div>
-				</div>
+                <a href="food/{{name}}/{{menu.1.name}}">
+    				<div class="tile foodTile">
+                        <div class="bg-dark fg-white">{{menu.1.name}}</div>
+                        <img src="/images/{{menu.1.name}}.jpg">
+                        <div id="brandButtonPanel" class="brand button-set">
+                            <button style="float:right;padding:0px;margin:0px;"class="thumbs-down" type="button"><i class="fg-red icon-thumbs-down">{{menu.1.downvotes}}</i></button>
+                            <button style="float:right;padding:0px;margin:0px;" class="thumbs-up" type="button"><i class="fg-green icon-thumbs-up">{{menu.1.upvotes}}</i></button>
+                        </div>
+    				</div>
+                </a>
 	    	</div>
 	    </div>
 	</a>
