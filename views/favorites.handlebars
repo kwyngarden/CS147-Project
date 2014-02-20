@@ -26,38 +26,28 @@
 
 	<div class="panel" id="diningPanel">
     	<div class="panel-header bg-darkRed fg-white">
-    		<h3>Favorite food</h3>
+    		<h3>Favorite Foods</h3>
     	</div>
 
     	<div class="panel-content">
     		<div>
 	    		<ul>
-	    			<li>Grilled chicken</li>
-	    			<li>Couscous</li>
-	    			<li>Quinoa</li>
+                {{#each favorites}}
+                    <li>
+                        <div class="tile foodTile">
+                            {{name}}<br>
+                            <img src="/images/{{name}}.jpg">
+                        </div>
+                        <p>Served at:</p>
+                        {{#each dining_halls}}
+                            <p><a href="/dining/{{this}}">{{this}}</a></p>
+                        {{/each}}<br><br>
+                    </li><br>
+                {{/each}}
 	    		</ul>
 	    	</div>
-	</div>
-    	</div>
-
-	<br><br>
-
-  	<div class="panel" id="diningPanel">
-        <div class="panel-header bg-darkRed fg-white">
-                <h3>Favorite Dining Halls</h3>
-        </div>
-
-        <div class="panel-content">
-                <div>
-                        <ul>
-                                <li>Branner</li>
-                                <li>FloMo</li>
-                                <li>Ricker</li>
-                        </ul>
-                </div>
-        </div>
-        </div>
-
+	    </div>
+    </div>
 
 </body>
 </html>
