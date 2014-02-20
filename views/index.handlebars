@@ -24,7 +24,9 @@
 <div>
     {{>navMenu}}
 	<!-- {{>nav}} -->
-
+    {{#if isSearch}}
+        <p>Your search for '{{query}}' returned results at {{halls.length}} halls. <a href="/">Clear</a></p>
+    {{/if}}
 	{{#each halls}}
 	<a href="/dining/{{name}}">
 		<div class="panel" id="diningPanel">
