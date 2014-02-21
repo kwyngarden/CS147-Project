@@ -1,12 +1,12 @@
 html {
 	height: 100%;
-	max-width: 480px;
+	max-width: 100%;
 	overflow: hidden;
 }
 
 body {
-	max-width: 480px;
-    /*width: 100%;*/
+	max-width: 100%;
+    width: 100%;
 }
 
 #searchMsg {
@@ -37,7 +37,7 @@ body {
 }
 
 .metro .panel .homePageDiningPanel {
-	max-width: 480px;
+	max-width: 100%;
 	white-space: nowrap;
 	overflow-x: scroll;
 }
