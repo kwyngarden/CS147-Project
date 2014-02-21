@@ -56,6 +56,8 @@ app.get('/search', index.view); // If no parameters sent, reroute to homepage
 app.get('/login', login.view);
 app.get('/user_login', login.login);
 app.get('/user_logout', login.logout);
+app.post('/food/upvote/:dhall/:name/:number', food.upvote);
+app.post('/food/downvote/:dhall/:name/:number', food.downvote);
 app.post('/addFavorite', favorites.addFavorite);
 
 //app.get('/project/:name', project.viewProject)
