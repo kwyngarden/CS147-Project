@@ -1,6 +1,10 @@
+html {
+	height: 100%;
+	overflow: hidden;
+}
+
 body {
 	max-width: 480px;
-	overflow-x: scroll;
     /*width: 100%;*/
 }
 
@@ -32,7 +36,7 @@ body {
 }
 
 .metro .panel .homePageDiningPanel {
-	width: 480px;
+	max-width: 480px;
 	white-space: nowrap;
 	overflow-x: scroll;
 }
