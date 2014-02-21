@@ -8,7 +8,7 @@ var data = require('../data.json');
 exports.view = function(req, res){
     var halls = JSON.parse(JSON.stringify(data.halls));
     for(var i = 0; i < halls.length; i++) {
-        var menu = halls[i].menu.slice(0,2);
+        var menu = halls[i].menu;
         halls[i].menu = menu;
     }
 
