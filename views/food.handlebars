@@ -18,7 +18,7 @@
     {
         var b = document.getElementById("thumbs-up")
         b.className = "fg-green bg-black active";
-        var numLikes = {{upvotes}} + 1;
+        var numLikes = {{menuItem.upvotes}} + 1;
         var likeCount = b.children[0];
         likeCount.textContent = " " + numLikes;
     }
@@ -26,7 +26,7 @@
     {
         var b = document.getElementById("thumbs-down")
         b.className = "fg-red bg-black active";
-        var numLikes = {{downvotes}} + 1;
+        var numLikes = {{menuItem.downvotes}} + 1;
         var likeCount = b.children[0];
         likeCount.textContent = " " + numLikes;
     }
@@ -34,7 +34,7 @@
     {
         var b = document.getElementById("favorites")
         b.className += "fg-amber bg-black active";
-        var numLikes = {{favorites}} + 1;
+        var numLikes = {{menuItem.favorites}} + 1;
         var likeCount = b.children[0];
         likeCount.textContent = " " + numLikes;
     }
@@ -55,18 +55,18 @@
                 <button id="back"  type="submit" onclick="window.location.href='/'" class="bg-darkRed">
                     <i class="icon-arrow-left fg-white"></i>
                 </button>
-                {{name}}  
+                {{menuItem.name}}  
             </h3>
         </div>
         <div class="panel-header bg-white fg-white">
             <div class="button-set rating">
-                <button id="thumbs-up" class="fg-green bg-white" type="button" onclick="incrementLikes()"><i class="icon-thumbs-up"> {{upvotes}}</i></button>
-                <button id="thumbs-down" class="fg-red bg-white" type="button" onclick="decrementLikes()"><i class="icon-thumbs-down"> {{downvotes}}</i></button>
-                <button id="favorites" class="fg-amber bg-white" type="button" onclick="addFavorite()"><i class="icon-star-3"> {{favorites}}</i></button>
+                <button id="thumbs-up" class="fg-green bg-white" type="button" onclick="incrementLikes()"><i class="icon-thumbs-up"> {{menuItem.upvotes}}</i></button>
+                <button id="thumbs-down" class="fg-red bg-white" type="button" onclick="decrementLikes()"><i class="icon-thumbs-down"> {{menuItem.downvotes}}</i></button>
+                <button id="favorites" class="fg-amber bg-white" type="button" onclick="addFavorite()"><i class="icon-star-3"> {{menuItem.favorites}}</i></button>
             </div>
         </div>
         <div class="panel-content">
-            <img src='/images/{{name}}.jpg' width="300px"/ >   
+            <img src='/images/{{menuItem.name}}.jpg' width="300px"/ >   
         </div>
 
     </div>
@@ -79,7 +79,7 @@
         <div class="panel-content">
             <div class="button-set">
                 <span>
-                    {{#each tags}}
+                    {{#each menuItem.tags}}
                     <button class="foodTag"> {{this}} </button>
                     {{/each}}
                 </span>
@@ -93,7 +93,7 @@
         </div>
         
         <div class="panel-content">
-                <p>{{nutritional_info}}</p>
+                <p>{{menuItem.nutritional_info}}</p>
         </div>
     </div>
 </body>

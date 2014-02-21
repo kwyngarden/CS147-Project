@@ -21,5 +21,8 @@ for (var i=0; i<data["halls"].length; i++) {
 		}
 	}
 }
-  res.render('food', menuItem);
+  res.render('food', {
+  	'username': req.session.username,
+  	'menuItem': menuItem
+  });
 };

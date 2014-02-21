@@ -30,6 +30,9 @@
     	</div>
 
     	<div class="panel-content">
+            {{#if !username}}
+                <p>Please <a href="/login">log in</a> to access your favorites.</p>
+            {{else}}
     		<div>
 	    		<ul>
                 {{#each favorites}}
@@ -46,6 +49,7 @@
                 {{/each}}
 	    		</ul>
 	    	</div>
+            {{/if}}
 	    </div>
     </div>
 
