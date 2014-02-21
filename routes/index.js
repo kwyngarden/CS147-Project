@@ -16,7 +16,7 @@ var fs = require('fs');
 exports.view = function(req, res){
     var halls = JSON.parse(JSON.stringify(data.halls));
     for(var i = 0; i < halls.length; i++) {
-        var menu = halls[i].menu.slice(0,2);
+        var menu = halls[i].menu.slice(0,4);
         halls[i].menu = menu;
     }
 
