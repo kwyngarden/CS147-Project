@@ -21,12 +21,31 @@ body {
 	background-color: #C41E3A;
 }
 
-.panel-content {
-	overflow: auto;
+div.panel-content {
+	/*overflow: auto;
+box-sizing: content-box !important;
+
+	*/
+    background: none repeat scroll 0 0;
+    margin: 5px;
+    padding: 5px;
+    position: static;
+    overflow: hidden;
+    vertical-align: baseline;
+
 }
+
+.metro .panel .panel-content {
+width: 200%;
+height: auto;
+padding: 10px;
+}
+
 
 .metro .panel .panel-header {
 	cursor: pointer;
+    width: 200%;
+
 }
 
 .ratings {

@@ -14,6 +14,7 @@ var map = require('./routes/map');
 var favorites = require('./routes/favorites');
 var food = require('./routes/food');
 var dining = require('./routes/dining');
+var about = require('./routes/about');
 //var project = require('./routes/project');
 // Example route
 // var user = require('./routes/user');
@@ -49,6 +50,7 @@ app.get('/food/:dhall/:name', food.view);
 app.get('/favorites', favorites.view);
 app.get('/dining/:name', dining.view);
 app.get('/search/:searchtext', index.search);
+app.get('/about', about.view);
 app.get('/search', index.view); // If no parameters sent, reroute to homepage
 
 //app.get('/project/:name', project.viewProject)

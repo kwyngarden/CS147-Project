@@ -12,6 +12,7 @@
     <script src="/js/jquery.min.js"></script>
     <script src="/js/jquery.sidr.min.js"></script>
     <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/delp.js"></script>
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -23,10 +24,11 @@
 <body class="metro">
 <div>
     {{>navMenu}}
-	<!-- {{>nav}} -->
+
     {{#if isSearch}}
         <p id="searchMsg">Your search for '{{query}}' returned results at {{halls.length}} halls. <a href="/">Clear</a></p>
     {{/if}}
+
 	{{#each halls}}
 	<a href="/dining/{{name}}">
 		<div class="panel" id="diningPanel">
@@ -36,16 +38,19 @@
 
 	    	<div class="panel-content">
                 {{#each menu}}
+                <a href="food/{{../name}}/{{name}}">
         			<div class="tile foodTile">
                         <div class="bg-dark fg-white">{{name}}</div>
-                        <img src="/images/{{name}}.jpg">
+                        <img class="foodImage" id="{{../name}}_{{name}}" src="">
                         <div id="brandButtonPanel" class="brand button-set">
                             <button style="float:right;padding:0px;margin:0px;"class="thumbs-down" type="button"><i class="fg-red icon-thumbs-down">{{downvotes}}</i></button>
                             <button style="float:right;padding:0px;margin:0px;" class="thumbs-up" type="button"><i class="fg-green icon-thumbs-up">{{upvotes}}</i></button>
                         </div>
     				</div>
+                </a>
                 {{/each}}
 	    	</div>
+
 	    </div>
 	</a>
     {{/each}}
