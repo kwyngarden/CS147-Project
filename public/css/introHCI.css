@@ -28,6 +28,7 @@ body {
 	background-color: #C41E3A;
 }
 
+
 .panel-content {
 	overflow: auto;
 
@@ -53,6 +54,9 @@ body {
 
 .metro .panel .panel-content .foodTile {
 	display: inline-block;
+}
+.metro .panel .panel-content .foodTile .foodItemName {
+	white-space: normal;
 }
 
 .metro .panel .panel-header {
