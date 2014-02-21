@@ -22,6 +22,7 @@ exports.view = function(req, res){
     }
     res.render('index', {
         'halls': halls,
+        'username': req.session.username,
         'isSearch': false
     });
 };

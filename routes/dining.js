@@ -21,6 +21,7 @@ exports.view = function(req, res){
 
   // for (var i = 0; i < data[])
   res.render('dining', {
+    'username': req.session.username,
   	'hallName': hallName,
   	'menu': menu,
   	'weekdayHours':weekdayHours,
