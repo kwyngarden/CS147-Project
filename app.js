@@ -51,6 +51,8 @@ app.get('/favorites', favorites.view);
 app.get('/dining/:name', dining.view);
 app.get('/search/:searchtext', index.search);
 app.get('/about', about.view);
+app.get('/search', index.view); // If no parameters sent, reroute to homepage
+
 //app.get('/project/:name', project.viewProject)
 // Example route
 // app.get('/users', user.list);

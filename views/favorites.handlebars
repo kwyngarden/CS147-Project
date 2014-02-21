@@ -35,7 +35,7 @@
                 {{#each favorites}}
                     <li>
                         <div class="tile foodTile">
-                            {{name}}<br>
+                            <a href='/search/{{name}}'><div class="bg-dark fg-white">{{name}}</div></a>
                             <img src="/images/{{name}}.jpg">
                         </div>
                         <p>Served at:</p>
