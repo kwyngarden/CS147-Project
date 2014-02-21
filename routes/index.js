@@ -4,7 +4,6 @@
  */
 
 var data = require('../data.json');
-var https = require('https');
 
 // HOW-TO: write JSON to file
 var fs = require('fs');
