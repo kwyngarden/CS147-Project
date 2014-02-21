@@ -1,5 +1,6 @@
 body {
 	max-width: 480px;
+	overflow-x: scroll;
     /*width: 100%;*/
 }
 
