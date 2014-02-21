@@ -15,6 +15,7 @@ var favorites = require('./routes/favorites');
 var food = require('./routes/food');
 var dining = require('./routes/dining');
 var about = require('./routes/about');
+var login = require('./routes/login');
 //var project = require('./routes/project');
 // Example route
 // var user = require('./routes/user');
@@ -52,6 +53,9 @@ app.get('/dining/:name', dining.view);
 app.get('/search/:searchtext', index.search);
 app.get('/about', about.view);
 app.get('/search', index.view); // If no parameters sent, reroute to homepage
+app.get('/login', login.view);
+app.get('/user_login', login.login);
+app.get('/user_logout', login.logout);
 
 //app.get('/project/:name', project.viewProject)
 // Example route

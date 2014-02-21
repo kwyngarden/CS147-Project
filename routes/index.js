@@ -4,6 +4,7 @@
  */
 
 var data = require('../data.json');
+var https = require('https');
 
 // HOW-TO: write JSON to file
 var fs = require('fs');
@@ -19,13 +20,9 @@ exports.view = function(req, res){
         var menu = halls[i].menu;
         halls[i].menu = menu;
     }
-
-  // var reducedMenuItems = JSON.parse(JSON.stringify(data['menuItems']));
-  // for (var i=0; i<reducedMenuItems.length; i++) {
-  // 	reducedMenuItems[i]['menu'] = reducedMenuItems[i]['menu'].slice(0, 2)
-  // }
     res.render('index', {
         'halls': halls,
+        'username': req.session.username,
         'isSearch': false
     });
 };
