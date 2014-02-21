@@ -2,7 +2,7 @@ var data = require('../data.json')
 
 exports.view = function(req, res){
   res.render('login', {
-    'username': req.session.username
+    'username': req.session.username,
   });
 };
 
@@ -15,11 +15,20 @@ exports.login = function(req, res) {
   req.session.username = username;
   req.session.favorites = [];
 
-  res.redirect('/');
+  if(req.session.lastPage) {
+    res.redirect(req.session.lastPage);
+  } else {
+    res.redirect('/');
+  }
 }
 
 exports.logout = function(req, res) {
-  req.session = null;
+  req.session.username = null;
+  req.session.favorites = [];
 
-  res.redirect('/');
+  if(req.session.lastPage) {
+    res.redirect(req.session.lastPage);
+  } else {
+    res.redirect('/');
+  }
 }
