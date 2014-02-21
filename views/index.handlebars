@@ -31,24 +31,31 @@
 
 	{{#each halls}}
 	<a href="/dining/{{name}}">
-		<div class="panel" id="diningPanel">
+		<div class="panel">
 	    	<div class="panel-header bg-darkRed fg-white">
 	    		<h3>{{name}} Dining</h3>
 	    	</div>
 
-	    	<div class="panel-content">
+	    	<div class="panel-content homePageDiningPanel">
+                <div class="homePageMenuPanel">
+                <table><tr>
                 {{#each menu}}
-                <a href="food/{{../name}}/{{name}}">
-        			<div class="tile foodTile">
-                        <div class="bg-dark fg-white">{{name}}</div>
-                        <img class="foodImage" id="{{../name}}_{{name}}" src="">
-                        <div id="brandButtonPanel" class="brand button-set">
-                            <button style="float:right;padding:0px;margin:0px;"class="thumbs-down" type="button"><i class="fg-red icon-thumbs-down">{{downvotes}}</i></button>
-                            <button style="float:right;padding:0px;margin:0px;" class="thumbs-up" type="button"><i class="fg-green icon-thumbs-up">{{upvotes}}</i></button>
-                        </div>
-    				</div>
-                </a>
+                    <td>
+                    <a href="food/{{../name}}/{{name}}">
+            			<div class="tile foodTile homePageMenuPanelItem">
+                            <div class="bg-dark fg-white">{{name}}</div>
+                            <img class="foodImage" id="{{../name}}_{{name}}" src="">
+                            <div id="brandButtonPanel" class="brand button-set">
+                                <button style="float:right;padding:0px;margin:0px;"class="thumbs-down" type="button"><i class="fg-red icon-thumbs-down">{{downvotes}}</i></button>
+                                <button style="float:right;padding:0px;margin:0px;" class="thumbs-up" type="button"><i class="fg-green icon-thumbs-up">{{upvotes}}</i></button>
+                            </div>
+        				</div>
+                    </a>
+                    </td>
                 {{/each}}
+                <tr></table>
+                </div>
+
 	    	</div>
 
 	    </div>

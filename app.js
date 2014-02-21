@@ -56,6 +56,7 @@ app.get('/search', index.view); // If no parameters sent, reroute to homepage
 app.get('/login', login.view);
 app.get('/user_login', login.login);
 app.get('/user_logout', login.logout);
+app.post('/addFavorite', favorites.addFavorite);
 
 //app.get('/project/:name', project.viewProject)
 // Example route
