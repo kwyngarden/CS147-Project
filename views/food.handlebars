@@ -70,6 +70,7 @@
         var numLikes = {{menuItem.favorites}} + 1;
         var likeCount = b.children[0];
         likeCount.textContent = " " + numLikes;
+        $.post('/addFavorite', { 'name':'{{menuItem.name}}' });
     }
 
     </script>

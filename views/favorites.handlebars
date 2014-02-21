@@ -26,7 +26,7 @@
 
 	<div class="panel" id="diningPanel">
     	<div class="panel-header bg-darkRed fg-white">
-    		<h3>Favorite Foods</h3>
+    		<h3>{{#if username}}{{username}}'s {{/if}}Favorite Foods</h3>
     	</div>
 
     	<div class="panel-content">
@@ -34,16 +34,18 @@
     		<div>
 	    		<ul>
                 {{#each favorites}}
+                    <div style="clear:both;">
                     <li>
                         <div class="tile foodTile">
                             <a href='/search/{{name}}'><div class="bg-dark fg-white">{{name}}</div></a>
                             <img src="/images/{{name}}.jpg">
                         </div>
-                        <p>Served at:</p>
+                        <p class='servedList'>Served at:<br>
                         {{#each dining_halls}}
-                            <p><a href="/dining/{{this}}">{{this}}</a></p>
-                        {{/each}}<br><br>
-                    </li><br>
+                            <a href="/dining/{{this}}">{{this}}</a>, 
+                        {{/each}}</p>
+                    </li>
+                    </div>
                 {{/each}}
 	    		</ul>
 	    	</div>
@@ -52,6 +54,19 @@
             {{/if}}
 	    </div>
     </div>
+
+    <script>
+        window.onload = function() {
+            var lists = $('.servedList');
+            for(var i = 0; i < lists.length; i++) {
+                var list = lists[i];
+                var html = list.innerHTML;
+                var lastComma = html.lastIndexOf(',');
+                list.innerHTML = html.substring(0, lastComma);
+            }
+        }
+
+    </script>
 
 </body>
 </html>

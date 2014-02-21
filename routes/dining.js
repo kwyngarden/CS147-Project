@@ -6,6 +6,7 @@
 var data = require('../data.json')
 
 exports.view = function(req, res){
+  req.session.lastPage = '/dining/'+encodeURIComponent(req.params.name);
   var hallName = req.params.name;
   var menu;
   var weekdayHours;
