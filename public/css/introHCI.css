@@ -34,7 +34,19 @@ body {
 */
 }
 
+.metro .panel .panel-content {
+	cursor: pointer;
+}
 
+.metro .panel .homePageDiningPanel {
+	width: 480px;
+	white-space: nowrap;
+	overflow-x: scroll;
+}
+
+.metro .panel .panel-content .foodTile {
+	display: inline-block;
+}
 
 .metro .panel .panel-header {
 	cursor: pointer;

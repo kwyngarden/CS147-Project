@@ -15,6 +15,7 @@ var fs = require('fs');
 
 
 exports.view = function(req, res){
+    req.session.lastPage = '/';
     var halls = JSON.parse(JSON.stringify(data.halls));
     for(var i = 0; i < halls.length; i++) {
         var menu = halls[i].menu;
@@ -28,6 +29,7 @@ exports.view = function(req, res){
 };
 
 exports.search = function(req, res) {
+    req.session.lastPage = '/search/'+encodeURIComponent(req.params.searchtext);
     var text = req.params.searchtext;
     var searchTokens = text.split(/\s+/);
     var retHalls = [];
