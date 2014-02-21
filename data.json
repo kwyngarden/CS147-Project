@@ -31,14 +31,14 @@
 				"tags": ["vegetarian", "vegan", "health++"]
 				}, 
 				{
-				"name": "Pizza", 
+				"name": "Pepperoni Pizza", 
 				"imageURL": "dining.png",
 				"upvotes": 16,
 				"downvotes": 9,
 				"dining_hall": "Arrillaga", 
-				"nutritional_info": "At Pizza Hut, we believe in using nothing but tasty, real ingredients that you can feel good about. From 100% real cheese and premium meats to fresh vegetables and vine-ripened tomatoes, we know that your pizza will only taste as good as the quality of ingredients used to build each hand-crafted layer, before baking to a golden brown.",
+				"nutritional_info": "From 100% real cheese and premium meats to fresh vegetables and vine-ripened tomatoes, we know that your pizza will only taste as good as the quality of ingredients used to build each hand-crafted layer, before baking to a golden brown.",
 				"favorites": 8, 
-				"tags": ["vegetarian"]
+				"tags": ["non-vegetarian"]
 				},
 				{
 				"name": "Grilled Chicken", 
@@ -51,14 +51,14 @@
 				"tags": ["non-vegetarian", "spicy"]
 				},
 				{
-				"name": "Dosa", 
+				"name": "Green Beans", 
 				"imageURL": "dining.png",
-				"upvotes": 7,
-				"downvotes": 10,
+				"upvotes": 30,
+				"downvotes": 14,
 				"dining_hall": "Arrillaga", 
-				"nutritional_info": "Dosa is beautiful. Daryl is in love",
-				"favorites": 50, 
-				"tags": ["vegetarian", "indian", "health++"]
+				"nutritional_info": "Garlic sauteed green beans with Tofu",
+				"favorites": 34, 
+				"tags": ["vegetarian", "health++"]
 				},
 				{
 				"name": "Pesto Chicken", 
@@ -66,19 +66,19 @@
 				"upvotes": 7,
 				"downvotes": 10,
 				"dining_hall": "Arrillaga", 
-				"nutritional_info": "Yup",
+				"nutritional_info": "Healthy wheat pasta tossed in fresh pesto and accompanied with chicken breast",
 				"favorites": 50, 
 				"tags": ["non-vegetarian", "spicy", "protein"]
 				},
 				{
-				"name": "Mimosa", 
+				"name": "Death By Chocolate", 
 				"imageURL": "dining.png",
-				"upvotes": 70,
-				"downvotes": 10,
+				"upvotes": 700,
+				"downvotes": 2,
 				"dining_hall": "Arrillaga", 
-				"nutritional_info": "The favorite item on teh menu",
-				"favorites": 50, 
-				"tags": ["beverage", "alcoholic"]
+				"nutritional_info": "Freshly baked brownies topped with molten hot fudge and served with Vanilla Bean Ice-cream",
+				"favorites": 500, 
+				"tags": ["desert", "chocolate"]
 				}
 			]	
 		},
@@ -102,64 +102,64 @@
 			"imageURL": "/images/dining.png",
 			"menu": [
 				{
-				"name": "Grilled Chicken", 
+				"name": "Just-in-time Pasta", 
 				"imageURL": "dining.png",
-				"upvotes": 23,
+				"upvotes": 95,
 				"downvotes": 10,
-				"dining_hall": "Arrillaga", 
-				"nutritional_info": "Hmmmmmmm",
-				"favorites": 20, 
-				"tags": ["non-vegetarian", "spicy"]
+				"dining_hall": "Ricker", 
+				"nutritional_info": "A live pasta counter where you can pick your ingredients of choice to make a pasta suited to your tastes and health requirements",
+				"favorites": 39, 
+				"tags": ["non-vegetarian", "vegetarian"]
 				},
 				{
-				"name": "Dosa", 
+				"name": "Vegetable Stir-Fry", 
 				"imageURL": "dining.png",
-				"upvotes": 22,
-				"downvotes": 15,
+				"upvotes": 32,
+				"downvotes": 5,
 				"dining_hall": "Arrillaga", 
-				"nutritional_info": "Dosa is beautiful. Daryl is in love",
-				"favorites": 7, 
-				"tags": ["vegetarian", "indian", "health++"]
+				"nutritional_info": "Fresh vegeatbles tossed in a black bean sauce served with brown rice on the side",
+				"favorites": 17, 
+				"tags": ["vegetarian", "oriental", "health++"]
 				},
 				{
-				"name": "Quinoa", 
+				"name": "Tilapia with Mussels", 
 				"imageURL": "images/dining.png",
-				"upvotes": 7,
-				"downvotes": 10,
-				"dining_hall": "Arrillaga", 
-				"nutritional_info": "Protein in Quinoa:One of the best reasons to enjoy quinoa is because it has a high-protein content, which makes it a great cholesterol-free and low-fat source of protein for vegetarians and vegans. According to the USDA nutrient database, 1 cup of cooked quinoa (185 g) contains 8.14 grams of protein. To put that in reference, the recommended daily protein intake is about 56 grams for most men and 46 for most women. See also: Six Sources of Protein for Vegetarians",
-				"favorites": 50, 
-				"tags": ["vegetarian", "vegan", "health++"]
+				"upvotes": 8,
+				"downvotes": 80,
+				"dining_hall": "Ricker", 
+				"nutritional_info": "Fresh-water Tilapia to provide you with a high-protein low-fat to provide you with the perfect meal",
+				"favorites": 1, 
+				"tags": ["non-vegetarian", "health++", "protein"]
 				}, 
 				{
-				"name": "Pizza", 
+				"name": "Honey Butter Biscuits", 
 				"imageURL": "dining.png",
-				"upvotes": 7,
-				"downvotes": 10,
-				"dining_hall": "Arrillaga", 
-				"nutritional_info": "At Pizza Hut, we believe in using nothing but tasty, real ingredients that you can feel good about. From 100% real cheese and premium meats to fresh vegetables and vine-ripened tomatoes, we know that your pizza will only taste as good as the quality of ingredients used to build each hand-crafted layer, before baking to a golden brown.",
-				"favorites": 50, 
-				"tags": ["vegetarian"]
+				"upvotes": 120,
+				"downvotes": 3,
+				"dining_hall": "Ricker", 
+				"nutritional_info": "Heaven on a biscuit. It's covered with our special Honey Butter sauce, which some folks call “liquid gold.",
+				"favorites": 89, 
+				"tags": ["vegetarian", "desert"]
 				},
 				{
-				"name": "Pesto Chicken", 
+				"name": "Hummus and Pita", 
 				"imageURL": "dining.png",
-				"upvotes": 7,
-				"downvotes": 10,
-				"dining_hall": "Arrillaga", 
-				"nutritional_info": "Yup",
+				"upvotes": 87,
+				"downvotes": 12,
+				"dining_hall": "Ricker", 
+				"nutritional_info": "Whole wheat pita served with freshly made roasted hummus",
 				"favorites": 50, 
-				"tags": ["non-vegetarian", "spicy", "protein"]
+				"tags": ["vegetarian", "protein"]
 				},
 				{
-				"name": "Mimosa", 
+				"name": "Freshly Squeezed Orange Juice", 
 				"imageURL": "dining.png",
-				"upvotes": 70,
-				"downvotes": 10,
-				"dining_hall": "Arrillaga", 
-				"nutritional_info": "The favorite item on teh menu",
+				"upvotes": 35,
+				"downvotes": 0,
+				"dining_hall": "Ricker", 
+				"nutritional_info": "The perfect drink to freshen up your day",
 				"favorites": 50, 
-				"tags": ["beverage", "alcoholic"]
+				"tags": ["beverage", "juice"]
 				}
 			]	
 		},
@@ -643,38 +643,6 @@
 				"tags": ["vegetarian", "indian", "health++"]
 				}
 			]
-		}
-	],
-	"favorites": [
-		{
-			"name": "Quinoa", 
-			"imageURL": "images/dining.png",
-			"upvotes": 7,
-			"downvotes": 10,
-			"dining_halls": ["Arrillaga", "Ricker"],
-			"nutritional_info": "Protein in Quinoa:One of the best reasons to enjoy quinoa is because it has a high-protein content, which makes it a great cholesterol-free and low-fat source of protein for vegetarians and vegans. According to the USDA nutrient database, 1 cup of cooked quinoa (185 g) contains 8.14 grams of protein. To put that in reference, the recommended daily protein intake is about 56 grams for most men and 46 for most women. See also: Six Sources of Protein for Vegetarians",
-			"favorites": 50, 
-			"tags": ["vegetarian", "vegan", "health++"]
-		}, 
-		{
-			"name": "Pizza", 
-			"imageURL": "dining.png",
-			"upvotes": 7,
-			"downvotes": 10,
-			"dining_halls": ["Arrillaga", "Lakeside"],
-			"nutritional_info": "At Pizza Hut, we believe in using nothing but tasty, real ingredients that you can feel good about. From 100% real cheese and premium meats to fresh vegetables and vine-ripened tomatoes, we know that your pizza will only taste as good as the quality of ingredients used to build each hand-crafted layer, before baking to a golden brown.",
-			"favorites": 50, 
-			"tags": ["vegetarian"]
-		},
-		{
-			"name": "Grilled Chicken", 
-			"imageURL": "dining.png",
-			"upvotes": 7,
-			"downvotes": 10,
-			"dining_halls": ["Manzanita", "Stern"],
-			"nutritional_info": "Hmmmmmmm",
-			"favorites": 50, 
-			"tags": ["non-vegetarian", "spicy"]
 		}
 	]
 }
