@@ -111,7 +111,7 @@
             <div class="button-set">
                 <span>
                     {{#each menuItem.tags}}
-                    <button class="foodTag"> {{this}} </button>
+                    <button class="foodTag" onclick="window.location.href='/search/{{this}}'"> {{this}} </button>
                     {{/each}}
                 </span>
             </div>
