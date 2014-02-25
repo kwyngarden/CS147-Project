@@ -14,6 +14,7 @@ var fs = require('fs');
 
 
 exports.view = function(req, res){
+    var lastPage = req.session.lastPage;
     req.session.lastPage = '/';
     var halls = JSON.parse(JSON.stringify(data.halls));
     for(var i = 0; i < halls.length; i++) {
@@ -21,6 +22,7 @@ exports.view = function(req, res){
         halls[i].menu = menu;
     }
     res.render('index', {
+        'lastPage': lastPage,
         'halls': halls,
         'username': req.session.username,
         'isSearch': false

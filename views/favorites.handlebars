@@ -26,7 +26,11 @@
 
 	<div class="panel" id="diningPanel">
     	<div class="panel-header bg-darkRed fg-white">
-    		<h3>{{#if username}}{{username}}'s {{/if}}Favorite Foods</h3>
+    		<h3 float="left">
+                <button id="back"  type="submit" onclick="window.location.href='{{lastPage}}'" class="bg-darkRed">
+                        <i class="icon-arrow-left fg-white"></i>
+                </button>
+                {{#if username}}{{username}}'s {{/if}}Favorite Foods</h3>
     	</div>
 
     	<div class="panel-content">

@@ -6,6 +6,7 @@
 var data = require('../data.json')
 
 exports.view = function(req, res){
+  var lastPage = req.session.lastPage;
   req.session.lastPage = '/dining/'+encodeURIComponent(req.params.name);
   var hallName = req.params.name;
   var menu;
@@ -22,6 +23,7 @@ exports.view = function(req, res){
 
   // for (var i = 0; i < data[])
   res.render('dining', {
+    'lastPage': lastPage,
     'username': req.session.username,
   	'hallName': hallName,
   	'menu': menu,

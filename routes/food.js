@@ -41,6 +41,7 @@ exports.downvote = function(req, res) {
 };
 
 exports.view = function(req, res){
+    var lastPage = req.session.lastPage;
     req.session.lastPage = '/food/'+encodeURIComponent(req.params.dhall)+"/"+req.params.name;
     var name = req.params.name;
     var dhall = req.params.dhall;
@@ -58,6 +59,7 @@ exports.view = function(req, res){
     }
 
   res.render('food', {
+    'lastPage': lastPage,
   	'username': req.session.username,
   	'hall': dhall,
   	'menuItem': menuItem
