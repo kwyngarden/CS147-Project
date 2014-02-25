@@ -5,6 +5,7 @@ html {
 }
 
 body {
+	overflow: scroll;
 	max-width: 100%;
     width: 100%;
 }
@@ -69,6 +70,7 @@ body {
 
 .foodTile {
 	text-align: center;
+	white-space: normal;
 }
 
 .logo {
