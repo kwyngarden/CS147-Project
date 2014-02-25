@@ -16,11 +16,26 @@
 
 <body class="metro">
 	{{>navMenu}}
-	<h3>What is Delp?</h3>
-	<p>Delp is a dining hall app designed to make dining hall information more accessible and useful.</p>
 
-	<h3>What can I do on Delp?</h3>
-	<p>Glad you asked! You can browse the top menu items being offered at each dining hall on the home page, or look at the menu in depth at a dining hall page.  You can also upvote and downvote different menu items, which we relay to dining halls so they adjust their menus.  Finally, you can favorite items so you can quickly view where your favorite items are being served.</p>
+    <div class="panel">
+        <div class="panel-header bg-darkRed fg-white"> 
+                <h3 float="left" class="fg-white">
+                    <button id="back"  type="submit" onclick="window.location.href='{{lastPage}}'" class="bg-darkRed">
+                        <i class="icon-arrow-left fg-white"></i>
+                    </button>
+                    Delp Help
+                </h3>
+        </div>
+
+
+        <div class="panel-content">
+        	<h3>What is Delp?</h3>
+        	<p>Delp is a dining hall app designed to make dining hall information more accessible and useful.</p>
+
+        	<h3>What can I do on Delp?</h3>
+        	<p>Glad you asked! You can browse the top menu items being offered at each dining hall on the home page, or look at the menu in depth at a dining hall page.  You can also upvote and downvote different menu items, which we relay to dining halls so they adjust their menus.  Finally, you can favorite items so you can quickly view where your favorite items are being served.</p>
+        </div>
+    </div>
 </body>
 
 </html>

@@ -16,6 +16,7 @@ exports.login = function(req, res) {
   var username = req.query.username;
   console.log('username is: '+username);
   req.session.username = username;
+  req.session.lastPage = '/';
   req.session.favorites = [];
 
   if(req.session.lastPage) {
