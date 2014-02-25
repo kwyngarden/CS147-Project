@@ -4,7 +4,7 @@
     <nav class="navigation-bar bg-black">
         <nav class="navigation-bar-content">
             <a id="simple-menu" href="#sidr" style="float:left;">
-                <item class="element">
+                <item class="element" id="menuElem">
                     <button type="button" class="icon-lines fg-white bg-black"></button>
                         <div id="sidr">
                             <ul>
@@ -22,31 +22,24 @@
                         </div>
                 </item>
             </a>
-            <item class="element-divider">
-            </item>
-            <item class="element">
+            <item class="element" id="delpElem">
                 <div class="logo">
                     <a href="/" class="ss-list">
                         <h3>Delp!</h3>
                     </a>
                 </div>
             </item>
-            <item class="element-divider">
-            </item>
-            <item class="element searchButton">
-                <div class="icon-search">
-                </div>
+            <item class="element" id="searchElem">
+              <div>
+                <span class="searchform">
+                    <input id="searchtext" class="searchfield" type="text" placeholder="Search food names/tags...">
+                </span>
+                <span id="searchsubmit" class="icon-search">
+                </span>
+              </div>
             </item>
         </nav>
     </nav>
-
-    <div>
-        <form class="searchform">
-            <input id="searchtext" class="searchfield" type="text" placeholder="Search food names/tags...">
-
-            <input id="searchsubmit" class="searchbutton fg-white" type="button" value="Go" />
-        </form>
-    </div>
 
     <script>
         $(document).ready(function() {
