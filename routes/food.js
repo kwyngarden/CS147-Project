@@ -4,40 +4,32 @@
  */
 
 var data = require('../data.json');
-var fs = require('fs');
+var models = require('../models');
 
 exports.upvote = function(req, res) {
 	var name = req.params.name;
 	var dhall = req.params.dhall;
 	var number = req.params.number;
-	for (var i=0; i<data["halls"].length; i++) {
-		if (data["halls"][i]["name"] == dhall) {
-			for (var j=0; j<data["halls"][i]["menu"].length; j++) {
-				if (data["halls"][i]["menu"][j]["name"] == name) {
-					menuItem = data["halls"][i]["menu"][j];
-					menuItem["upvotes"] = number;
-					fs.writeFile('../data.json', JSON.stringify(data));
-				}
-			}
-		}
-	}
+	models.MenuItem
+		  .findOneAndUpdate({'name': name, 'dining_hall': dhall},
+							{'upvotes': number},
+							function(err, menuItem) {
+								console.log(menuItem.upvotes);
+							 	res.send(200);
+							});
 };
 
 exports.downvote = function(req, res) {
 	var name = req.params.name;
 	var dhall = req.params.dhall;
 	var number = req.params.number;
-	for (var i=0; i<data["halls"].length; i++) {
-		if (data["halls"][i]["name"] == dhall) {
-			for (var j=0; j<data["halls"][i]["menu"].length; j++) {
-				if (data["halls"][i]["menu"][j]["name"] == name) {
-					menuItem = data["halls"][i]["menu"][j];
-					menuItem["downvotes"] = number;
-					fs.writeFile('../data.json', JSON.stringify(data));
-				}
-			}
-		}
-	}
+	models.MenuItem
+		  .findOneAndUpdate({'name': name, 'dining_hall': dhall},
+							{'downvotes': number},
+		  					function(err, menuItem) {
+		  						console.log(menuItem.upvotes);
+		  						res.send(200);
+		  					});
 };
 
 exports.view = function(req, res){
@@ -45,23 +37,15 @@ exports.view = function(req, res){
     req.session.lastPage = '/food/'+encodeURIComponent(req.params.dhall)+"/"+req.params.name;
     var name = req.params.name;
     var dhall = req.params.dhall;
-    var menuItem;
 
-    for (var i=0; i<data["halls"].length; i++) {
-    	if (data["halls"][i]["name"] == dhall) {
-    		for (var j=0; j<data["halls"][i]["menu"].length; j++) {
-    			if (data["halls"][i]["menu"][j]["name"] == name) {
-    				menuItem = data["halls"][i]["menu"][j];
-    				break;
-    			}
-    		}
-    	}
-    }
-
-  res.render('food', {
-    'lastPage': lastPage,
-  	'username': req.session.username,
-  	'hall': dhall,
-  	'menuItem': menuItem
-  });
+    models.MenuItem
+          .findOne({'name': name, 'dining_hall': dhall})
+		  .exec(function(err, menuItem) {
+		   		res.render('food', {
+				  'lastPage': lastPage,
+				  'username': req.session.username,
+				  'hall': dhall,
+				  'menuItem': menuItem
+				});
+		   });
 };

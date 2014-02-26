@@ -8,6 +8,10 @@ var http = require('http');
 var path = require('path');
 var handlebars = require('express3-handlebars')
 var partials = require('express-partials');
+var mongoose = require('mongoose');
+var dburl = process.env.MONGOHQ_URL || 'mongodb://localhost/myDatabase';
+var db = mongoose.connect(dburl);
+
 var index = require('./routes/index');
 var events = require('./routes/events');
 var map = require('./routes/map');
@@ -16,9 +20,7 @@ var food = require('./routes/food');
 var dining = require('./routes/dining');
 var about = require('./routes/about');
 var login = require('./routes/login');
-//var project = require('./routes/project');
-// Example route
-// var user = require('./routes/user');
+var model = require('./models');
 
 var app = express();
 

@@ -37,13 +37,13 @@
 			        	Weekdays
 			        	<ul>
 				        	{{#each weekdayHours}}
-	    						<li>{{@key}}: {{this}}</li>
+	    						<li>{{@key}}: {{this.[0]}} - {{this.[1]}}</li>
 							{{/each}}
 						</ul>
 						Weekends
 						<ul>
 							{{#each weekendHours}}
-								<li>{{@key}}: {{this}}</li>
+								<li>{{@key}}: {{this.[0]}} - {{this.[1]}}</li>
 							{{/each}}
 						</ul>
 			        </div>

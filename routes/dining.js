@@ -3,7 +3,8 @@
  * GET dining hall page.
  */
 
-var data = require('../data.json')
+var data = require('../data.json');
+var models = require('../models');
 
 exports.view = function(req, res){
   var lastPage = req.session.lastPage;
@@ -12,22 +13,24 @@ exports.view = function(req, res){
   var menu;
   var weekdayHours;
   var weekendHours;
-  
-  for (var i=0; i<data["halls"].length; i++) {
-    if (data["halls"][i]["name"] == hallName) {
-      menu = data["halls"][i]["menu"];
-      weekdayHours = data["halls"][i]["hours"]["weekdays"];
-      weekendHours = data["halls"][i]["hours"]["weekends"];
-    }
-  }
 
-  // for (var i = 0; i < data[])
-  res.render('dining', {
-    'lastPage': lastPage,
-    'username': req.session.username,
-  	'hallName': hallName,
-  	'menu': menu,
-  	'weekdayHours':weekdayHours,
-  	'weekendHours': weekendHours
-  });
+  models.Hall
+        .findOne({'name': hallName})
+        .populate('menu')
+        .exec(function(err, hall) {
+          var menu = hall.menu;
+          var hours = hall.hours;
+          var weekdayHours = hours.weekdays;
+          var weekendHours = hours.weekends;
+
+          // Render the dining hall page
+          res.render('dining', {
+            'lastPage': lastPage,
+            'username': req.session.username,
+            'hallName': hallName,
+            'menu': menu,
+            'weekdayHours':weekdayHours,
+            'weekendHours': weekendHours
+          });
+        });
 };

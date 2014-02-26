@@ -18,6 +18,7 @@
 #delpElem {
     border-right: none;
     width: 77%;
+    max-width: 250px;
 }
 
 #searchsubmit {

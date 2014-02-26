@@ -28,6 +28,7 @@
 
             var postURL = '/food/downvote/' + '{{hall}}' + '/' + '{{menuItem.name}}' + '/' + numLikes;
             $.post(postURL, function(data){});
+            
         }
         var b = document.getElementById("thumbs-up");
         b.className = "fg-green bg-black active";
@@ -63,14 +64,22 @@
         $.post(postURL, function(data){});
     }
     
-    function addFavorite()
+    function favorite()
     {
         var b = document.getElementById("favorites")
-        b.className += "fg-amber bg-black active";
-        var numLikes = {{menuItem.favorites}} + 1;
-        var likeCount = b.children[0];
-        likeCount.textContent = " " + numLikes;
-        $.post('/addFavorite', { 'name':'{{menuItem.name}}' });
+        if (b.className.indexOf('fg-amber bg-black active') >= 0) {
+            console.log("Hey");
+            b.className = 'fg-amber bg-white';
+            var numLikes = {{menuItem.favorites}};
+            var likeCount = b.children[0];
+            likeCount.textContent = " " + numLikes;
+        } else {
+            b.className += "fg-amber bg-black active";
+            var numLikes = {{menuItem.favorites}} + 1;
+            var likeCount = b.children[0];
+            likeCount.textContent = " " + numLikes;
+            $.post('/addFavorite', { 'name':'{{menuItem.name}}' });
+        }
     }
     </script>
 
@@ -95,7 +104,7 @@
             <div class="button-set rating">
                 <button id="thumbs-up" class="fg-green bg-white" type="button" onclick="upvote()"><i class="icon-thumbs-up"> {{menuItem.upvotes}}</i></button>
                 <button id="thumbs-down" class="fg-red bg-white" type="button" onclick="downvote()"><i class="icon-thumbs-down"> {{menuItem.downvotes}}</i></button>
-                <button id="favorites" class="fg-amber bg-white" type="button" onclick="addFavorite()"><i class="icon-star-3"> {{menuItem.favorites}}</i></button>
+                <button id="favorites" class="fg-amber bg-white" type="button" onclick="favorite()"><i class="icon-star-3"> {{menuItem.favorites}}</i></button>
             </div>
         </div>
         <div class="panel-content">

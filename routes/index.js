@@ -3,6 +3,7 @@
  * GET home page.
  */
 
+var models = require('../models');
 var data = require('../data.json');
 
 // HOW-TO: write JSON to file
@@ -16,17 +17,22 @@ var fs = require('fs');
 exports.view = function(req, res){
     var lastPage = req.session.lastPage;
     req.session.lastPage = '/';
-    var halls = JSON.parse(JSON.stringify(data.halls));
-    for(var i = 0; i < halls.length; i++) {
-        var menu = halls[i].menu;
-        halls[i].menu = menu;
-    }
-    res.render('index', {
-        'lastPage': lastPage,
-        'halls': halls,
-        'username': req.session.username,
-        'isSearch': false
-    });
+    models.Hall
+          .find()
+          .populate('menu')
+          .exec(function(err, halls) {
+              if(err) console.log(err);
+              for(var i = 0; i < halls.length; i++) {
+                  var menu = halls[i].menu;
+                  halls[i].menu = menu;
+              }
+              res.render('index', {
+                 'lastPage': lastPage,
+                 'halls': halls,
+                 'username': req.session.username,
+                 'isSearch': false
+              });
+          });
 };
 
 exports.search = function(req, res) {
@@ -36,37 +42,43 @@ exports.search = function(req, res) {
     var retHalls = [];
 
     // Search menus for matching hall/menu combos
-    var halls = JSON.parse(JSON.stringify(data.halls));
-    for(var i = 0; i < halls.length; i++) {
-        var hall = halls[i];
-        var hallMenu = hall.menu;
-        var menuMatches = [];
+    models.Hall
+          .find()
+          .populate('menu')
+          .exec(function(err, halls) {
+                if(err) { console.log(err); res.send(500) };
 
-        for(var j = 0; j < hallMenu.length; j++) {
-            var menuItem = hallMenu[j];
-            var nameTokens = menuItem.name.split(/\s+/);
-            for(var tagIndex = 0; tagIndex < menuItem.tags.length; tagIndex++) {
-                nameTokens.push(menuItem.tags[tagIndex]);
-            }
-            var nameMatches = arrMatches(searchTokens, nameTokens);
-            if(nameMatches > 0) {
-                menuItem["relevance"] = nameMatches;
-                menuMatches.push(menuItem);
-            }
-        }
+                for(var i = 0; i < halls.length; i++) {
+                    var hall = halls[i];
+                    var hallMenu = hall.menu;
+                    var menuMatches = [];
 
-        if (menuMatches.length > 0) {
-            sortMatches(menuMatches, 'relevance', false);
-            hall.menu = menuMatches;
-            retHalls.push(hall);
-        }
-    }
+                    for(var j = 0; j < hallMenu.length; j++) {
+                        var menuItem = hallMenu[j];
+                        var nameTokens = menuItem.name.split(/\s+/);
+                        for(var tagIndex = 0; tagIndex < menuItem.tags.length; tagIndex++) {
+                            nameTokens.push(menuItem.tags[tagIndex]);
+                        }
+                        var nameMatches = arrMatches(searchTokens, nameTokens);
+                        if(nameMatches > 0) {
+                            menuItem["relevance"] = nameMatches;
+                            menuMatches.push(menuItem);
+                        }
+                    }
 
-    res.render('index', {
-        'halls': retHalls,
-        'isSearch': true,
-        'query': text
-    });
+                    if (menuMatches.length > 0) {
+                        sortMatches(menuMatches, 'relevance', false);
+                        hall.menu = menuMatches;
+                        retHalls.push(hall);
+                    }
+                }
+
+                res.render('index', {
+                    'halls': retHalls,
+                    'isSearch': true,
+                    'query': text
+                });
+            });
 };
 
 // Standard JSON sorting algorithm.

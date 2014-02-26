@@ -6,13 +6,13 @@
 			"longitude": -122.164251,
 			"hours": {
 				"weekdays": {
-					"breakfast": ["8:00am", "10:30am"],
-					"lunch": ["11:00am", "4:00pm"],
-					"dinner": ["5:00pm", "8:00pm"]
+					"Breakfast": ["8:00am", "10:30am"],
+					"Lunch": ["11:00am", "4:00pm"],
+					"Dinner": ["5:00pm", "8:00pm"]
 				},
 				"weekends": {
-					"brunch": ["10:30am", "1:30pm"],
-					"dinner": ["5:00pm", "8:00pm"]
+					"Brunch": ["10:30am", "1:30pm"],
+					"Dinner": ["5:00pm", "8:00pm"]
 				},
 				"closed": [],
 				"latenightHours": ["9:00pm", "2:00am"],
@@ -78,7 +78,7 @@
 				"dining_hall": "Arrillaga", 
 				"nutritional_info": "Freshly baked brownies topped with molten hot fudge and served with Vanilla Bean Ice-cream",
 				"favorites": 500, 
-				"tags": ["desert", "chocolate"]
+				"tags": ["dessert", "chocolate"]
 				}
 			]	
 		},
@@ -88,13 +88,13 @@
 			"longitude": -122.180428,
 			"hours": {
 				"weekdays": {
-					"breakfast": ["8:00am", "9:30am"],
-					"lunch": ["11:30am", "1:00pm"],
-					"dinner": ["5:00pm", "7:00pm"]
+					"Breakfast": ["8:00am", "9:30am"],
+					"Lunch": ["11:30am", "1:00pm"],
+					"Dinner": ["5:00pm", "7:00pm"]
 				},
 				"weekends": {
-					"brunch": ["10:30am", "1:00pm"],
-					"dinner": ["5:00pm", "7:00pm"]
+					"Brunch": ["10:30am", "1:00pm"],
+					"Dinner": ["5:00pm", "7:00pm"]
 				},
 				"closed": ["Friday", "Saturday"],
 				"latenightDays": []
@@ -139,7 +139,7 @@
 				"dining_hall": "Ricker", 
 				"nutritional_info": "Heaven on a biscuit. It's covered with our special Honey Butter sauce, which some folks call “liquid gold.",
 				"favorites": 89, 
-				"tags": ["vegetarian", "desert"]
+				"tags": ["vegetarian", "dessert"]
 				},
 				{
 				"name": "Hummus and Pita", 
@@ -169,13 +169,13 @@
 			"longitude": -122.17634,
 			"hours": {
 				"weekdays": {
-					"breakfast": ["7:30am", "9:30am"],
-					"lunch": ["11:30am", "1:15pm"],
-					"dinner": ["5:00pm", "8:00pm"]
+					"Breakfast": ["7:30am", "9:30am"],
+					"Lunch": ["11:30am", "1:15pm"],
+					"Dinner": ["5:00pm", "8:00pm"]
 				},
 				"weekends": {
-					"brunch": ["10:30am", "1:00pm"],
-					"dinner": ["5:00pm", "7:00pm"]
+					"Brunch": ["10:30am", "1:00pm"],
+					"Dinner": ["5:00pm", "7:00pm"]
 				},
 				"closed": [],
 				"latenightHours": ["9:30pm", "2:00am"],
@@ -251,8 +251,8 @@
 			"longitude": -122.162867,
 			"hours": {
 				"weekdays": {
-					"lunch": ["11:30am", "1:15pm"],
-					"dinner": ["5:00pm", "7:00pm"]
+					"Lunch": ["11:30am", "1:15pm"],
+					"Dinner": ["5:00pm", "7:00pm"]
 				},
 				"weekends": {
 				},
@@ -329,13 +329,13 @@
 			"longitude": -122.171799,
 			"hours": {
 				"weekdays": {
-					"breakfast": ["8:00am", "9:30pm"],
-					"lunch": ["11:30am", "1:15pm"],
-					"dinner": ["5:00pm", "7:30pm"]
+					"Breakfast": ["8:00am", "9:30pm"],
+					"Lunch": ["11:30am", "1:15pm"],
+					"Dinner": ["5:00pm", "7:30pm"]
 				},
 				"weekends": {
-					"brunch": ["10:30am", "1:00pm"],
-					"dinner": ["5:00pm", "7:30pm"]
+					"Brunch": ["10:30am", "1:00pm"],
+					"Dinner": ["5:00pm", "7:30pm"]
 				},
 				"closed": [],
 				"latenightDays": []
@@ -410,8 +410,8 @@
 			"longitude": -122.161869,
 			"hours": {
 				"weekdays": {
-					"lunch": ["11:30am", "1:15pm"],
-					"dinner": ["5:00pm", "7:00pm"]
+					"Lunch": ["11:30am", "1:15pm"],
+					"Dinner": ["5:00pm", "7:00pm"]
 				},
 				"weekends": {
 				},
@@ -488,13 +488,13 @@
 			"longitude": -122.165595,
 			"hours": {
 				"weekdays": {
-					"breakfast": ["7:30am", "9:30pm"],
-					"lunch": ["11:30am", "1:15pm"],
-					"dinner": ["5:00pm", "7:00pm"]
+					"Breakfast": ["7:30am", "9:30pm"],
+					"Lunch": ["11:30am", "1:15pm"],
+					"Dinner": ["5:00pm", "7:00pm"]
 				},
 				"weekends": {
-					"brunch": ["10:30am", "1:00pm"],
-					"dinner": ["5:00pm", "7:00pm"]
+					"Brunch": ["10:30am", "1:00pm"],
+					"Dinner": ["5:00pm", "7:00pm"]
 				},
 				"closed": [],
 				"latenightDays": []
@@ -569,13 +569,13 @@
 			"longitude": -122.163146,
 			"hours": {
 				"weekdays": {
-					"breakfast": ["7:30am", "9:30pm"],
-					"lunch": ["11:30am", "1:15pm"],
-					"dinner": ["5:00pm", "7:00pm"]
+					"Breakfast": ["7:30am", "9:30pm"],
+					"Lunch": ["11:30am", "1:15pm"],
+					"Dinner": ["5:00pm", "7:00pm"]
 				},
 				"weekends": {
-					"brunch": ["10:30am", "1:00pm"],
-					"dinner": ["5:00pm", "7:00pm"]
+					"Brunch": ["10:30am", "1:00pm"],
+					"Dinner": ["5:00pm", "7:00pm"]
 				},
 				"closed": [],
 				"latenightDays": []
