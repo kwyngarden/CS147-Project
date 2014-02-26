@@ -118,6 +118,12 @@ body {
 	min-height:18px;
 }
 
+#getLocationButtonDiv {
+	text-align: center;
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+
 .fg-white .icon-arrow-left {
 	float: left;
 }

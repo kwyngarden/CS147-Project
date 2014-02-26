@@ -34,9 +34,12 @@
     </div>
   </div>
 
-
 	<div class="container">
-		<div class="row">
+		<div id="getLocationButtonDiv" class="row-fluid pagination-centered">
+      <button type='button' class='btn primary' onclick='centerOnMe()'>My Location</button>
+    </div>
+
+    <div class="row">
 			<div class="col-lg-12">
 				<div id="map-canvas" style='height:500px;margin-bottom:20px;'></div>
 			</div>
@@ -55,7 +58,8 @@
         var markers; // Hash of arrays of markers to display on map
         var imageDirectory = "../images/"; // Image directory in a node project
         var markerDimensions = 30; // Width/height of icons (assumed square TODO)
-        var zIndex = 0; // incremented to control drawing order
+        var zIndex = 1; // incremented to control drawing order
+        var currLocationMarker;
 
         var markerData = [
             {{#each halls}}
@@ -70,27 +74,38 @@
 
         // Initialize Google map in the div marked as 'map-canvas'
         function initialize() {
-          var centerLatLng = new google.maps.LatLng(37.427449, -122.170308); // Stanford quad
+          var centerLatLng = new google.maps.LatLng(37.421475 , -122.169719); // Middle of standard dining halls
           var mapOptions = {
             zoom: 15,
             center: centerLatLng,
             mapTypeId: google.maps.MapTypeId.ROADMAP
           };
           markers = [];
-
-          // Try W3C geolocation
-          /*
-          if(navigator.geolocation) {
-            navigator.geolocation.getCurrentPosition(function(position) {
-              initialLocation = new google.maps.LatLng(position.coords.latitude,position.coords.longitude);
-              mapOptions['center'] = initialLocation;
-            }, function() {} );
-          }
-          */
-          
           map = new google.maps.Map(document.getElementById('map-canvas'),
                                         mapOptions);
           loadMarkerData();
+        }
+
+        function centerOnMe() {
+          // W3C geolocation
+          if(navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(function(position) {
+              initialLocation = new google.maps.LatLng(position.coords.latitude,position.coords.longitude);
+              map.panTo(initialLocation);
+
+              // Add current location marker
+              if(!currLocationMarker) {
+                currLocationMarker = new google.maps.Marker({
+                  position: initialLocation,
+                  map: map,
+                  zIndex: 0, // always lowest to keep halls clickable
+                  icon: '/images/currentLocation.png'
+                });
+              } else {
+                currLocationMarker.setPosition(initialLocation);
+              }
+            }, function() {});
+          }
         }
 
         function loadMarkerData() {
