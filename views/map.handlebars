@@ -60,10 +60,18 @@
         var markerDimensions = 30; // Width/height of icons (assumed square TODO)
         var zIndex = 1; // incremented to control drawing order
         var currLocationMarker;
+        var lastInfoWindow;
 
         var markerData = [
             {{#each halls}}
-                {"name":"{{name}}", "latitude":{{latitude}}, "longitude":{{longitude}} },
+                {
+                  "name": "{{name}}",
+                  "latitude": {{latitude}},
+                  "longitude": {{longitude}},
+                  "mealHours": "{{hours.weekdays.dinner}}",
+                  "menu1": '{{menu.0.name}}',
+                  "menu2": '{{menu.1.name}}'
+                },
             {{/each}}
             {"name":"Fake", "latitude":50.0, "longitude":123.0}
           // {"name": "Arrillaga Family Dining Commons", "latitude": 37.425448, "longitude": -122.164251},
@@ -111,21 +119,29 @@
         function loadMarkerData() {
           for(var i = 0; i < markerData.length; i++) {
             var currMarker = markerData[i];
-            var marker = newMarker(currMarker.name, currMarker["latitude"], currMarker["longitude"]);
+            var marker = newMarker(currMarker);
             markers.push(marker);
           }
         }
 
-        function newMarker(name, lat, lng) {
+        function newMarker(markerObject) {
           var icon = {
             url: imageDirectory + defaultIconFilename,
             scaledSize: new google.maps.Size(30, 30)
           };
-          var myLatLng = new google.maps.LatLng(lat, lng);
+          var myLatLng = new google.maps.LatLng(markerObject.latitude, markerObject.longitude);
 
           // Set information window
+          var hours = markerObject.mealHours.split(',');
+          var infoWindowHTML = '<div style="width:200px;"> \
+            <p><a href="/dining/'+markerObject.name+'">'+markerObject.name+' Dining</a></p> \
+            <p>Open '+hours[0]+'-'+hours[1]+'</p> \
+            <p>Popular right now:</p> \
+            <p><a href="/food/'+markerObject.name+'/'+markerObject.menu1+'">'+markerObject.menu1+'</a>, \
+            <a href="/food/'+markerObject.name+'/'+markerObject.menu2+'">'+markerObject.menu2+'</a></p> \
+          </div>';
           var infowindow = new google.maps.InfoWindow({
-              content: name
+              content: infoWindowHTML
           });
 
           // Create marker (adds to map)
@@ -133,13 +149,16 @@
                 position: myLatLng,
                 map: map,
                 //icon: icon, // Image marker on map.
-                title: name,
+                title: markerObject.name,
                 zIndex: zIndex
           });
           google.maps.event.addListener(marker, 'click', function() {
+            if(lastInfoWindow) {
+              lastInfoWindow.close();
+            }
             infowindow.open(map,marker);
+            lastInfoWindow = infowindow;
           });
-          zIndex++;
           return marker;
         }
         // Can change visibility of marker with marker.setVisible(true/false), eg if dining hall is closed
