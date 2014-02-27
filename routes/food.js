@@ -156,6 +156,7 @@ exports.view = function(req, res){
 			  		res.render('food', {
 					  'lastPage': lastPage,
 					  'username': req.session.username,
+					  'notLoggedIn': !req.session.username,
 					  'hall': dhall,
 					  'menuItem': menuItem,
 					  'downvoted': downvoted,
