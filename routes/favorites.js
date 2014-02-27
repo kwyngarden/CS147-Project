@@ -14,6 +14,7 @@ exports.view = function(req, res){
 
   function callbackOne(err, user) {
     var favorites = user.favorites;
+    var numLeft = favorites.length;
     for (var i=0; i<favorites.length; i++) {
         models.MenuItem.findOne({'_id': favorites[i].toString()}, callbackTwo);
     }
@@ -23,7 +24,7 @@ exports.view = function(req, res){
                        .exec(callbackThree);
         
         function callbackThree(err, items) {
-            var dining_halls = []
+            var dining_halls = [];
             for (var i=0; i<items.length; i++) {
                 if (items[i].name == menuItem.name) {
                     var hall = items[i].dining_hall;
@@ -36,15 +37,18 @@ exports.view = function(req, res){
                 'name': menuItem.name,
                 'dining_halls': dining_halls
             });
+            numLeft--;
+
+            if (numLeft == 0) {
+                res.render('favorites', {
+                    'lastPage': lastPage,
+                    'username': username,
+                    'favorites': favoritesArr
+              });
+            }
         }
     }
   }
-
-  res.render('favorites', {
-    'lastPage': lastPage,
-    'username': username,
-    'favorites': favoritesArr
-  });
 };
 
 exports.addFavorite = function(req, res) {
