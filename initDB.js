@@ -16,7 +16,7 @@ var models   = require('./models');
 
 // Connect to the Mongo database, whether locally or on Heroku
 // MAKE SURE TO CHANGE THE NAME FROM 'lab7' TO ... IN OTHER PROJECTS
-var dburl = process.env.MONGOHQ_URL || 'mongodb://localhost/myDatabase';
+var dburl = process.env.MONGOLAB_URI || 'mongodb://localhost/myDatabase';
 var db = mongoose.connect(dburl);
 
 // Do the initialization here

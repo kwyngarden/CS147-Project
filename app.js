@@ -9,7 +9,7 @@ var path = require('path');
 var handlebars = require('express3-handlebars')
 var partials = require('express-partials');
 var mongoose = require('mongoose');
-var dburl = process.env.MONGOHQ_URL || 'mongodb://localhost/myDatabase';
+var dburl = process.env.MONGOLAB_URI || 'mongodb://localhost/myDatabase';
 var db = mongoose.connect(dburl);
 
 var index = require('./routes/index');
