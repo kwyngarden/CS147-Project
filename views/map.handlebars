@@ -23,9 +23,23 @@
 <body class="metro">
 
 	{{>navMenu}}	
+  <div class="panel">
+    <div class="panel-header bg-darkRed fg-white"> 
+      <h3 float="left" class="fg-white">
+          <button id="back"  type="submit" onclick="window.location.href='{{lastPage}}'" class="bg-darkRed">
+              <i class="icon-arrow-left fg-white"></i>
+          </button>
+          Dining Hall Map
+      </h3>
+    </div>
+  </div>
 
 	<div class="container">
-		<div class="row">
+		<div id="getLocationButtonDiv" class="row-fluid pagination-centered">
+      <button type='button' class='btn primary' onclick='centerOnMe()'>My Location</button>
+    </div>
+
+    <div class="row">
 			<div class="col-lg-12">
 				<div id="map-canvas" style='height:500px;margin-bottom:20px;'></div>
 			</div>
@@ -44,11 +58,20 @@
         var markers; // Hash of arrays of markers to display on map
         var imageDirectory = "../images/"; // Image directory in a node project
         var markerDimensions = 30; // Width/height of icons (assumed square TODO)
-        var zIndex = 0; // incremented to control drawing order
+        var zIndex = 1; // incremented to control drawing order
+        var currLocationMarker;
+        var lastInfoWindow;
 
         var markerData = [
             {{#each halls}}
-                {"name":"{{name}}", "latitude":{{latitude}}, "longitude":{{longitude}} },
+                {
+                  "name": "{{name}}",
+                  "latitude": {{latitude}},
+                  "longitude": {{longitude}},
+                  "mealHours": "{{hours.weekdays.dinner}}",
+                  "menu1": '{{menu.0.name}}',
+                  "menu2": '{{menu.1.name}}'
+                },
             {{/each}}
             {"name":"Fake", "latitude":50.0, "longitude":123.0}
           // {"name": "Arrillaga Family Dining Commons", "latitude": 37.425448, "longitude": -122.164251},
@@ -59,47 +82,66 @@
 
         // Initialize Google map in the div marked as 'map-canvas'
         function initialize() {
-          var centerLatLng = new google.maps.LatLng(37.427449, -122.170308); // Stanford quad
+          var centerLatLng = new google.maps.LatLng(37.421475 , -122.169719); // Middle of standard dining halls
           var mapOptions = {
             zoom: 15,
             center: centerLatLng,
             mapTypeId: google.maps.MapTypeId.ROADMAP
           };
           markers = [];
-
-          // Try W3C geolocation
-          /*
-          if(navigator.geolocation) {
-            navigator.geolocation.getCurrentPosition(function(position) {
-              initialLocation = new google.maps.LatLng(position.coords.latitude,position.coords.longitude);
-              mapOptions['center'] = initialLocation;
-            }, function() {} );
-          }
-          */
-          
           map = new google.maps.Map(document.getElementById('map-canvas'),
                                         mapOptions);
           loadMarkerData();
         }
 
+        function centerOnMe() {
+          // W3C geolocation
+          if(navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(function(position) {
+              initialLocation = new google.maps.LatLng(position.coords.latitude,position.coords.longitude);
+              map.panTo(initialLocation);
+
+              // Add current location marker
+              if(!currLocationMarker) {
+                currLocationMarker = new google.maps.Marker({
+                  position: initialLocation,
+                  map: map,
+                  zIndex: 0, // always lowest to keep halls clickable
+                  icon: '/images/currentLocation.png'
+                });
+              } else {
+                currLocationMarker.setPosition(initialLocation);
+              }
+            }, function() {});
+          }
+        }
+
         function loadMarkerData() {
           for(var i = 0; i < markerData.length; i++) {
             var currMarker = markerData[i];
-            var marker = newMarker(currMarker.name, currMarker["latitude"], currMarker["longitude"]);
+            var marker = newMarker(currMarker);
             markers.push(marker);
           }
         }
 
-        function newMarker(name, lat, lng) {
+        function newMarker(markerObject) {
           var icon = {
             url: imageDirectory + defaultIconFilename,
             scaledSize: new google.maps.Size(30, 30)
           };
-          var myLatLng = new google.maps.LatLng(lat, lng);
+          var myLatLng = new google.maps.LatLng(markerObject.latitude, markerObject.longitude);
 
           // Set information window
+          var hours = markerObject.mealHours.split(',');
+          var infoWindowHTML = '<div style="width:165px;"> \
+            <p><a href="/dining/'+markerObject.name+'">'+markerObject.name+' Dining</a></p> \
+            <p>Open '+hours[0]+'-'+hours[1]+'</p> \
+            <p>Popular right now:</p> \
+            <p><a href="/food/'+markerObject.name+'/'+markerObject.menu1+'">'+markerObject.menu1+'</a>, \
+            <a href="/food/'+markerObject.name+'/'+markerObject.menu2+'">'+markerObject.menu2+'</a></p> \
+          </div>';
           var infowindow = new google.maps.InfoWindow({
-              content: name
+              content: infoWindowHTML
           });
 
           // Create marker (adds to map)
@@ -107,13 +149,16 @@
                 position: myLatLng,
                 map: map,
                 //icon: icon, // Image marker on map.
-                title: name,
+                title: markerObject.name,
                 zIndex: zIndex
           });
           google.maps.event.addListener(marker, 'click', function() {
+            if(lastInfoWindow) {
+              lastInfoWindow.close();
+            }
             infowindow.open(map,marker);
+            lastInfoWindow = infowindow;
           });
-          zIndex++;
           return marker;
         }
         // Can change visibility of marker with marker.setVisible(true/false), eg if dining hall is closed

@@ -1,4 +1,5 @@
-var data = require('../data.json')
+var data = require('../data.json');
+var models = require('../models');
 
 exports.view = function(req, res){
   var lastPage = req.session.lastPage;
@@ -14,9 +15,21 @@ exports.view = function(req, res){
 exports.login = function(req, res) {
   // remember the username
   var username = req.query.username;
-  console.log('username is: '+username);
   req.session.username = username;
-  req.session.favorites = [];
+  req.session.lastPage = '/';
+
+  models.User.findOne({'username': username})
+             .exec(createUser);
+
+  function createUser(err, user){
+    if (err) {console.log(err); res.send(500);}
+    if (!user) {
+      var newUser = new models.User({'username': username, 'favorites':[]});
+      newUser.save(function(err){
+        if (err) console.log(err);
+      });
+    }
+  }
 
   if(req.session.lastPage) {
     res.redirect(req.session.lastPage);
@@ -27,7 +40,6 @@ exports.login = function(req, res) {
 
 exports.logout = function(req, res) {
   req.session.username = null;
-  req.session.favorites = [];
 
   if(req.session.lastPage) {
     res.redirect(req.session.lastPage);
