@@ -3,12 +3,47 @@ var models = require('../models');
 
 exports.view = function(req, res){
   var lastPage = req.session.lastPage;
+  var username = req.session.username;
   req.session.lastPage = '/favorites';
+
+  if (username) {
+    models.User.findOne({'username': username}, callbackOne);
+  }
+
+  var favoritesArr = [];
+
+  function callbackOne(err, user) {
+    var favorites = user.favorites;
+    for (var i=0; i<favorites.length; i++) {
+        models.MenuItem.findOne({'_id': favorites[i].toString()}, callbackTwo);
+    }
+
+    function callbackTwo(err, menuItem) {
+        models.MenuItem.find()
+                       .exec(callbackThree);
+        
+        function callbackThree(err, items) {
+            var dining_halls = []
+            for (var i=0; i<items.length; i++) {
+                if (items[i].name == menuItem.name) {
+                    var hall = items[i].dining_hall;
+                    if (dining_halls.indexOf(hall) < 0) {
+                        dining_halls.push(hall);
+                    }
+                }
+            }
+            favoritesArr.push({
+                'name': menuItem.name,
+                'dining_halls': dining_halls
+            });
+        }
+    }
+  }
 
   res.render('favorites', {
     'lastPage': lastPage,
-    'username': req.session.username,
-    'favorites': req.session.favorites
+    'username': username,
+    'favorites': favoritesArr
   });
 };
 
