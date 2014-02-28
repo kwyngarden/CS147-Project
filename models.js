@@ -26,7 +26,7 @@ var MenuItemSchema = new Schema({
 
 var UserSchema = new Schema({
 	'username': String,
-	//'password': String,
+	'passwordHash': String,
 	'favorites': [{ type: Schema.Types.ObjectId, ref: "MenuItem"}]
 });
 
