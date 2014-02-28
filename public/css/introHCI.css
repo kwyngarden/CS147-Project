@@ -131,18 +131,15 @@ body {
 	text-align: center;
 }
 
+.metro .panel .homePageFavoritesPanel {
+	overflow-x: scroll;
+}
+
 .tileWrapper {
-	overflow: auto;
 	width: 120px;
 	margin: 10px;
 	float: left;
 }
-
-.available {
-	clear: left;
-	float: left;
-}
-
 
 #restHalls {
 	display: none;
