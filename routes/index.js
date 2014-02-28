@@ -28,7 +28,6 @@ exports.viewAlt = function(req, res){
       if(err) console.log(err);
       for(var i = 0; i < halls.length; i++) {
           var menu = halls[i].menu;
-          halls[i].menu = menu;
       }
 
       var restHalls = halls.slice(2);
@@ -136,10 +135,10 @@ exports.view = function(req, res){
             .exec(callbackZero);
 
     function callbackZero(err, halls) {
+      console.log(halls.length);
       if(err) console.log(err);
       for(var i = 0; i < halls.length; i++) {
           var menu = halls[i].menu;
-          halls[i].menu = menu;
       }
 
       if (!username){
@@ -273,9 +272,9 @@ exports.search = function(req, res) {
             });
 };
 
-export.getNearby = function(req, res) {
+exports.getNearby = function(req, res) {
     var latitude = req.body.latitude;
-    var longitude = req.body.longtitude;
+    var longitude = req.body.longitude;
 
     models.Hall.find().exec(callbackOne);
 
@@ -292,7 +291,7 @@ export.getNearby = function(req, res) {
       hallArr.sort(function(a, b) {
         return b[1] - a[1];
       })
-      
+
       res.json(hallArr);
     }
 }

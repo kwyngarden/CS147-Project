@@ -49,6 +49,12 @@ var i = 0;
 function createHall(err) {
   if(err) console.log(err);
 
+  if (i >= data.halls.length) {
+    mongoose.connection.close();
+    console.log("Done!");
+    return;
+  }
+
   var hall = data.halls[i];
   var menu = hall.menu;
 
@@ -80,9 +86,7 @@ function createHall(err) {
 
         // Create a new dining hall instance with the menu items
         if (itemsLeft <= 0) {
-          i += 1;
-          if (i < data.halls.length) {
-
+            i += 1;
             // Create dining hall
             var newHall = new models.Hall({
               'name': hall.name,
@@ -99,13 +103,8 @@ function createHall(err) {
               models.Hall.find({'name': newHall.name})
                          .populate('menu')
                          .exec(function(){});
+              createHall();
             });
-
-            createHall();
-          } else {
-            mongoose.connection.close();
-            console.log("Done!");
-          }
         }
       }
     });
