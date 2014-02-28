@@ -86,6 +86,7 @@ function createHall(err) {
 
         // Create a new dining hall instance with the menu items
         if (itemsLeft <= 0) {
+          if (i < data.halls.length) {
             i += 1;
             // Create dining hall
             var newHall = new models.Hall({
@@ -99,12 +100,14 @@ function createHall(err) {
 
             // Save dining hall
             newHall.save(function(err, newHall) {
+              console.log(i, hall.name);
               if(err) console.log(err);
               models.Hall.find({'name': newHall.name})
                          .populate('menu')
                          .exec(function(){});
               createHall();
             });
+          }
         }
       }
     });

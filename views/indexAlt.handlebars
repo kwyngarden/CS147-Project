@@ -79,7 +79,7 @@
                     <button type="button" class="btn primary" onclick="getNearbyHallList()">List Nearby Halls</button>
                     <button type="button" class="btn primary" onclick="window.location.href='/map'">Dining Hall Map</button>
                 </div>
-                <div id="hallLocationSearchResultDiv"></div>
+                <span id="hallLocationSearchResultDiv"></span>
             </div>
         </div>
     </div>
@@ -169,8 +169,7 @@
             navigator.geolocation.getCurrentPosition(function(position) {
               var pos = new google.maps.LatLng(position.coords.latitude,
                                                position.coords.longitude);
-              console.log(pos);
-              $('#hallLocationSearchResultDiv').html('<br><p>'+pos+'</p>');
+              $.post('/getNearby', {'latitude': pos.lat(), 'longitude': pos.lng()}).done(handleNearbyHallsResponse);
             }, function() {
               handleNoGeolocation(true);
             });
@@ -178,6 +177,19 @@
             // Browser doesn't support Geolocation
             handleNoGeolocation(false);
         }
+    }
+
+    function handleNearbyHallsResponse(data) {
+        console.log(data);
+        var content = '<p><ol>';
+        for(var i = 0; i < Math.min(5, data.length); i++) {
+            var hallName = data[i][0];
+            var hallDistance = data[i][1].toFixed(2);
+            content += '<li>'+'<a href="/dining/'+hallName+'">'+hallName+' Dining</a>: ';
+            content += hallDistance+' mi</li>';
+        }
+        content += '</ol></p>';
+        $('#hallLocationSearchResultDiv').html('<br><p>'+content+'</p>');
     }
 
     function handleNoGeolocation(errorFlag) {

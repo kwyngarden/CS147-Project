@@ -289,7 +289,7 @@ exports.getNearby = function(req, res) {
       }
 
       hallArr.sort(function(a, b) {
-        return b[1] - a[1];
+        return a[1] - b[1];
       })
 
       res.json(hallArr);
