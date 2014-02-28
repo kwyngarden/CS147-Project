@@ -13,6 +13,7 @@
     <script src="/js/jquery.sidr.min.js"></script>
     <script src="/js/bootstrap.min.js"></script>
     <script src="/js/delp.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -62,6 +63,20 @@
             {{else}}
                 Please <a href="/login">login</a> to see favorites.
             {{/if}}
+        </div>
+    </div>
+
+    <div class="panel">
+        <div class="panel-header bg-darkRed fg-white">
+                <h3>Nearby Halls</h3>
+            </div>
+            <div class="panel-content">
+                <div class="text-center">
+                    <button type="button" class="btn primary" onclick="getNearbyHallList()">List Nearby Halls</button>
+                    <button type="button" class="btn primary" onclick="window.location.href='/map'">Dining Hall Map</button>
+                </div>
+                <div id="hallLocationSearchResultDiv"></div>
+            </div>
         </div>
     </div>
 
@@ -142,6 +157,31 @@
     function showAll(e){
         $('#showMore').hide(500);
         $('#restHalls').show(500);
+    }
+
+    function getNearbyHallList() {
+        $('#hallLocationSearchResultDiv').html('<br><p>Getting location...</p>');
+        if(navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(function(position) {
+              var pos = new google.maps.LatLng(position.coords.latitude,
+                                               position.coords.longitude);
+              console.log(pos);
+              $('#hallLocationSearchResultDiv').html('<br><p>'+pos+'</p>');
+            }, function() {
+              handleNoGeolocation(true);
+            });
+        } else {
+            // Browser doesn't support Geolocation
+            handleNoGeolocation(false);
+        }
+    }
+
+    function handleNoGeolocation(errorFlag) {
+        var content = '<br><p>Your browser doesn\'t support geolocation. Please use the map to search for nearby dining halls.</p>';
+        if (errorFlag) {
+            content = '<br><p>You must allow us to use your current location in order to see nearby dining halls.</p>';
+        }
+        $('#hallLocationSearchResultDiv').html(content);
     }
 </script>
 </body>
