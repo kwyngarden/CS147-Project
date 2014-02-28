@@ -29,6 +29,42 @@
         <p id="searchMsg">Your search for '{{query}}' returned results at {{halls.length}} halls. <a href="/">Clear</a> | <a href="{{lastPage}}">Back</a></p>
     {{/if}}
 
+    <div class="panel">
+        <div class="panel-header bg-darkRed fg-white">
+            <h3>Favorites</h3>
+        </div>
+        <div class="panel-content">
+            {{#if username}}
+                {{#if favorites}}
+                    {{#each favorites}}
+                        <div class="tileWrapper">
+                            <a href="food/{{dining_halls.[0]}}/{{name}}">
+                                <div class="tile">
+                                    <div class="bg-dark fg-white foodTitle">{{name}}</div>
+                                    <img class="foodImage" src="/images/{{name}}.jpg">
+                                    <div id="brandButtonPanel" class="brand button-set">
+                                        <button style="float:right;padding:0px;margin:0px;"class="thumbs-down" type="button"><i class="fg-red icon-thumbs-down">{{downvotes}}</i></button>
+                                        <button style="float:right;padding:0px;margin:0px;" class="thumbs-up" type="button"><i class="fg-green icon-thumbs-up">{{upvotes}}</i></button>
+                                    </div>
+                                </div>
+                            </a>
+                            <div class="available">
+                                Available now at:
+                                {{#each dining_halls}}
+                                    <a href="/dining/{{this}}">{{this}}</a>
+                                {{/each}}
+                            </div>
+                        </div>
+                    {{/each}}
+                {{else}}
+                    Favorite items for easy viewing here.
+                {{/if}}
+            {{else}}
+                Please <a href="/login">login</a> to see favorites.
+            {{/if}}
+        </div>
+    </div>
+
 	{{#each halls}}
 	<a href="/dining/{{name}}">
 		<div class="panel">
@@ -43,7 +79,8 @@
                     <td>
                     <a href="/food/{{../name}}/{{name}}">
             			<div class="tile foodTile homePageMenuPanelItem">
-                            <div class="bg-dark fg-white">{{name}}</div>
+                            <div class="bg-dark fg-white foodTitle
+                            asdadsf">{{name}}</div>
                             <img class="foodImage" id="{{../name}}_{{name}}" src="/images/{{name}}.jpg">
                             <div id="brandButtonPanel" class="brand button-set">
                                 <button style="float:right;padding:0px;margin:0px;"class="thumbs-down" type="button"><i class="fg-red icon-thumbs-down">{{downvotes}}</i></button>

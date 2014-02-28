@@ -126,3 +126,19 @@ body {
 .fg-white .icon-arrow-left {
 	float: left;
 }
+
+.foodTitle {
+	text-align: center;
+}
+
+.tileWrapper {
+	overflow: auto;
+	width: 120px;
+	margin: 10px;
+	float: left;
+}
+
+.available {
+	clear: left;
+	float: left;
+}
