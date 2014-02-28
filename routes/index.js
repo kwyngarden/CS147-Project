@@ -273,6 +273,45 @@ exports.search = function(req, res) {
             });
 };
 
+export.getNearby = function(req, res) {
+    var latitude = req.body.latitude;
+    var longitude = req.body.longtitude;
+
+    models.Hall.find().exec(callbackOne);
+
+    function callbackOne(err, halls) {
+      var latLong1 = [latitude, longitude];
+      var hallArr = [];
+
+      for (var i=0; i<halls.length; i++) {
+        var latLong2 = [halls[i].latitude, halls[i].longitude];
+        var distance = distanceBetween(latLong1, latLong2);
+        hallArr.push([halls[i].name, distance]);
+      }
+
+      hallArr.sort(function(a, b) {
+        return b[1] - a[1];
+      })
+      
+      res.json(hallArr);
+    }
+}
+
+// Implementation of Haversine formula. Returns distance between two points in miles.
+function distanceBetween(latLng1, latLng2) {
+  return distanceBetweenCoords(latLng1[0], latLng1[1], latLng2[0], latLng2[1]);
+}
+
+function distanceBetweenCoords(lat1, long1, lat2, long2) {
+  var dtor = Math.PI/180; var r = 3959.0; // Radius in miles
+  var rlat1 = lat1 * dtor; var rlong1 = long1 * dtor;
+  var rlat2 = lat2 * dtor; var rlong2 = long2 * dtor;
+  var dlon = rlong1 - rlong2; var dlat = rlat1 - rlat2;
+  var a = Math.pow(Math.sin(dlat/2),2) + Math.cos(rlat1) * Math.cos(rlat2) * Math.pow(Math.sin(dlon/2),2);
+  var c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a));
+  var d = r * c; return d;
+}
+
 // Standard JSON sorting algorithm.
 function sortMatches(menuMatches, prop, asc) {
     menuMatches.sort(function(a, b) {
