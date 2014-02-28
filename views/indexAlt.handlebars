@@ -1,0 +1,148 @@
+<!doctype html>
+
+<html>
+<head>
+	<title>Delp</title>	
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="/css/metro-bootstrap.css" rel="stylesheet">
+	<link href="/css/introHCI.css" rel="stylesheet">
+    <link href="/css/search.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/jquery.sidr.dark.css">
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/jquery.sidr.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/delp.js"></script>
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->        
+</head>
+
+<body class="metro">
+<div>
+    {{>navMenu}}
+
+    {{#if isSearch}}
+        <p id="searchMsg">Your search for '{{query}}' returned results at {{halls.length}} halls. <a href="/">Clear</a> | <a href="{{lastPage}}">Back</a></p>
+    {{/if}}
+
+    <div class="panel">
+        <div class="panel-header bg-darkRed fg-white">
+            <h3>Favorites</h3>
+        </div>
+        <div class="panel-content">
+            {{#if username}}
+                {{#if favorites}}
+                    {{#each favorites}}
+                        <div class="tileWrapper">
+                            <a href="food/{{dining_halls.[0]}}/{{name}}">
+                                <div class="tile">
+                                    <div class="bg-dark fg-white foodTitle">{{name}}</div>
+                                    <img class="foodImage" src="/images/{{name}}.jpg">
+                                    <div id="brandButtonPanel" class="brand button-set">
+                                        <button style="float:right;padding:0px;margin:0px;"class="thumbs-down" type="button"><i class="fg-red icon-thumbs-down">{{downvotes}}</i></button>
+                                        <button style="float:right;padding:0px;margin:0px;" class="thumbs-up" type="button"><i class="fg-green icon-thumbs-up">{{upvotes}}</i></button>
+                                    </div>
+                                </div>
+                            </a>
+                            <div class="available">
+                                Available now at:
+                                {{#each dining_halls}}
+                                    <a href="/dining/{{this}}">{{this}}</a>
+                                {{/each}}
+                            </div>
+                        </div>
+                    {{/each}}
+                {{else}}
+                    Favorite items for easy viewing here.
+                {{/if}}
+            {{else}}
+                Please <a href="/login">login</a> to see favorites.
+            {{/if}}
+        </div>
+    </div>
+
+	{{#each halls}}
+	<a href="/dining/{{name}}">
+		<div class="panel">
+	    	<div class="panel-header bg-darkRed fg-white">
+	    		<h3>{{name}} Dining</h3>
+	    	</div>
+
+	    	<div class="panel-content homePageDiningPanel">
+                <div class="homePageMenuPanel">
+                <table><tr>
+                {{#each menu}}
+                    <td>
+                    <a href="/food/{{../name}}/{{name}}">
+            			<div class="tile foodTile homePageMenuPanelItem">
+                            <div class="bg-dark fg-white foodTitle
+                            asdadsf">{{name}}</div>
+                            <img class="foodImage" id="{{../name}}_{{name}}" src="/images/{{name}}.jpg">
+                            <div id="brandButtonPanel" class="brand button-set">
+                                <button style="float:right;padding:0px;margin:0px;"class="thumbs-down" type="button"><i class="fg-red icon-thumbs-down">{{downvotes}}</i></button>
+                                <button style="float:right;padding:0px;margin:0px;" class="thumbs-up" type="button"><i class="fg-green icon-thumbs-up">{{upvotes}}</i></button>
+                            </div>
+        				</div>
+                    </a>
+                    </td>
+                {{/each}}
+                <tr></table>
+                </div>
+
+	    	</div>
+
+	    </div>
+	</a>
+    {{/each}}
+
+    <div class="panel" id="showMore"><div class="panel-header">Show more halls</div></div>
+    <div id="restHalls">
+        {{#each restHalls}}
+            <a href="/dining/{{name}}">
+                <div class="panel">
+                    <div class="panel-header bg-darkRed fg-white">
+                        <h3>{{name}} Dining</h3>
+                    </div>
+
+                    <div class="panel-content homePageDiningPanel">
+                        <div class="homePageMenuPanel">
+                        <table><tr>
+                        {{#each menu}}
+                            <td>
+                            <a href="/food/{{../name}}/{{name}}">
+                                <div class="tile foodTile homePageMenuPanelItem">
+                                    <div class="bg-dark fg-white foodTitle
+                                    asdadsf">{{name}}</div>
+                                    <img class="foodImage" id="{{../name}}_{{name}}" src="/images/{{name}}.jpg">
+                                    <div id="brandButtonPanel" class="brand button-set">
+                                        <button style="float:right;padding:0px;margin:0px;"class="thumbs-down" type="button"><i class="fg-red icon-thumbs-down">{{downvotes}}</i></button>
+                                        <button style="float:right;padding:0px;margin:0px;" class="thumbs-up" type="button"><i class="fg-green icon-thumbs-up">{{upvotes}}</i></button>
+                                    </div>
+                                </div>
+                            </a>
+                            </td>
+                        {{/each}}
+                        <tr></table>
+                        </div>
+
+                    </div>
+
+                </div>
+            </a>
+        {{/each}}
+    </div>
+</div>
+<script>
+    $('#showMore').click(showAll);
+
+    function showAll(e){
+        $('#showMore').hide(500);
+        $('#restHalls').show(500);
+    }
+</script>
+</body>
+</html>
