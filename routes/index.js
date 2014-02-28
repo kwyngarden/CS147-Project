@@ -273,10 +273,9 @@ exports.search = function(req, res) {
             });
 };
 
-export.getNearby = function(req, res) {
+exports.getNearby = function(req, res) {
     var latitude = req.body.latitude;
-    var longitude = req.body.longtitude;
-
+    var longitude = req.body.longitude;
     models.Hall.find().exec(callbackOne);
 
     function callbackOne(err, halls) {
@@ -290,7 +289,7 @@ export.getNearby = function(req, res) {
       }
 
       hallArr.sort(function(a, b) {
-        return b[1] - a[1];
+        return a[1] - b[1];
       })
       
       res.json(hallArr);

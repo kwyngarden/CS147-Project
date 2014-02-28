@@ -82,7 +82,6 @@ function createHall(err) {
         if (itemsLeft <= 0) {
           i += 1;
           if (i < data.halls.length) {
-
             // Create dining hall
             var newHall = new models.Hall({
               'name': hall.name,
@@ -92,7 +91,7 @@ function createHall(err) {
               'imageURL': hall.imageURL,
               'menu': menuItems
             });
-
+            console.log('updated to '+i);
             // Save dining hall
             newHall.save(function(err, newHall) {
               if(err) console.log(err);

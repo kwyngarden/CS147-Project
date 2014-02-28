@@ -79,7 +79,7 @@
                     <button type="button" class="btn primary" onclick="getNearbyHallList()">List Nearby Halls</button>
                     <button type="button" class="btn primary" onclick="window.location.href='/map'">Dining Hall Map</button>
                 </div>
-                <div id="hallLocationSearchResultDiv"></div>
+                <span id="hallLocationSearchResultDiv"></span>
             </div>
         </div>
     </div>
@@ -181,8 +181,8 @@
 
     function handleNearbyHallsResponse(data) {
         console.log(data);
-        var content = '<br><p><ol>';
-        for(var i = 0; i < data.length; i++) {
+        var content = '<p><ol>';
+        for(var i = 0; i < Math.min(5, data.length); i++) {
             var hallName = data[i][0];
             var hallDistance = data[i][1].toFixed(2);
             content += '<li>'+'<a href="/dining/'+hallName+'">'+hallName+' Dining</a>: ';
