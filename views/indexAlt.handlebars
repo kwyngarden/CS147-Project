@@ -35,8 +35,8 @@
             <h3>Favorites</h3>
         </div>
         <div class="panel-content homePageFavoritesPanel">
-            <table><tr>
-                {{#if username}}
+            {{#if username}}
+                <table><tr>
                     {{#if favorites}}
                         {{#each favorites}}
                             <td valign='top'>
@@ -63,7 +63,7 @@
                     {{else}}
                         Favorite items for easy viewing here.
                     {{/if}}
-            </table></tr>
+                </table></tr>
             {{else}}
                 Please <a href="/login">login</a> to see favorites.
             {{/if}}
