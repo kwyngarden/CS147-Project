@@ -77,14 +77,15 @@ exports.addFavorite = function(req, res) {
             }
 
             if (!containsItem) {
-                user.update({$push: {'favorites': menuItem._id}}, callbackThree);
+                user.update({$push: {'favorites': menuItem._id}, 
+                            $inc: {'numFavEvents': 1}}, callbackThree);
             }
 
             function callbackThree(err) {
                 menuItem.update({$inc: {'favorites': 1}}, callbackFour);
 
                 function callbackFour(err) {
-                    //models.User.findOne({'username': username}, function(err, m){console.log(m)});
+                    models.User.findOne({'username': username}, function(err, m){console.log(m)});
                     //models.MenuItem.findOne({'name': itemName, 'dining_hall': hall}, function(err, n){console.log(n)});
                     res.send(200);
                 }

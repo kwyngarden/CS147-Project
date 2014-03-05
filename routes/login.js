@@ -42,7 +42,14 @@ exports.login = function(req, res) {
     
     // Handle account creation
     if (!user) {
-      var newUser = new models.User({'username': username, 'passwordHash': hash, 'favorites':[]});
+      var newUser = new models.User({'username': username, 
+                                    'passwordHash': hash, 
+                                    'favorites':[],
+                                    'pageVersion': req.session.pageVersion,
+                                    'numFavEvents': 0
+                                    });
+      console.log(newUser);
+      console.log(req.session.pageVersion);
       newUser.save(function(err){
         if (err) console.log(err);
         if(req.session.lastPage) {

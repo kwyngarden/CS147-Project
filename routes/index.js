@@ -18,6 +18,7 @@ exports.viewAlt = function(req, res){
     var username = req.session.username;
     var favoritesArr = []
     req.session.lastPage = '/';
+    req.session.pageVersion = 'alt';
 
     models.Hall
             .find()
@@ -34,7 +35,6 @@ exports.viewAlt = function(req, res){
       halls = halls.slice(0, 2);
       
       if (!username){
-        console.log("NO USERNAME");
         res.render('indexAlt', {
                        'lastPage': lastPage,
                        'halls': halls,
@@ -128,6 +128,7 @@ exports.view = function(req, res){
     var username = req.session.username;
     var favoritesArr = []
     req.session.lastPage = '/';
+    req.session.pageVersion = 'original';
 
     models.Hall
             .find()

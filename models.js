@@ -27,7 +27,9 @@ var MenuItemSchema = new Schema({
 var UserSchema = new Schema({
 	'username': String,
 	'passwordHash': String,
-	'favorites': [{ type: Schema.Types.ObjectId, ref: "MenuItem"}]
+	'favorites': [{ type: Schema.Types.ObjectId, ref: "MenuItem"}],
+	'pageVersion': String,
+	'numFavEvents': Number
 });
 
 exports.Hall = Mongoose.model('Hall', HallSchema);
