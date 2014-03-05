@@ -1,39 +1,39 @@
-// (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-// (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-// m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-// })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-// ga('create', 'UA-48537417-2', 'cs147-delp.herokuapp.com');
-// ga('send', 'pageview');
+ga('create', 'UA-48537417-2', 'cs147-delp.herokuapp.com');
+ga('send', 'pageview');
 
-$(document).ready(loadImages);
+// $(document).ready(loadImages);
 
-function loadImages(){
-	var foodImageElems = $('.foodImage');
-	foodImageElems.each(function(index, element) {
-		var id = element.getAttribute('id');
-		var queryItem = id.split('_')[1].toLowerCase();
-		var searchURL = 'https://www.googleapis.com/customsearch/v1?' + 
-			'q=' + encodeURIComponent(queryItem) + 
-			'&cx=007705702159888673330:6b26r60qwy0' +
-			'&key=AIzaSyDX5OMXfxuKOT4Z6juTm5qh2oDD7UTFjnk' + 
-			'&searchType=image'
+// function loadImages(){
+// 	var foodImageElems = $('.foodImage');
+// 	foodImageElems.each(function(index, element) {
+// 		var id = element.getAttribute('id');
+// 		var queryItem = id.split('_')[1].toLowerCase();
+// 		var searchURL = 'https://www.googleapis.com/customsearch/v1?' + 
+// 			'q=' + encodeURIComponent(queryItem) + 
+// 			'&cx=007705702159888673330:6b26r60qwy0' +
+// 			'&key=AIzaSyDX5OMXfxuKOT4Z6juTm5qh2oDD7UTFjnk' + 
+// 			'&searchType=image'
 
-	    console.log(searchURL);
+// 	    console.log(searchURL);
 
-	    $.get(searchURL, showPhotos);
+// 	    $.get(searchURL, showPhotos);
 
-	    function showPhotos(data) {
-		    var photos = data.items;
-	        var img = $("[id='" + id + "']")[0];
-	        var matchFound = false;
-	        for (var i=0; i<photos.length; i++) {
-	        	var link = photos[i].link;
-	        }
-        	img.src = link;
-		}
-	});
-}
+// 	    function showPhotos(data) {
+// 		    var photos = data.items;
+// 	        var img = $("[id='" + id + "']")[0];
+// 	        var matchFound = false;
+// 	        for (var i=0; i<photos.length; i++) {
+// 	        	var link = photos[i].link;
+// 	        }
+//         	img.src = link;
+// 		}
+// 	});
+// }
 
 
 // $(document).ready(loadImages);
