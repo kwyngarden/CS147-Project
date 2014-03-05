@@ -53,7 +53,7 @@
 				"tags": ["vegetarian"]
 				}, 
 				{
-				"name": "Sweet Roasted Potatoes", 
+				"name": "Roasted Sweet Potatoes", 
 				"imageURL": "dining.png",
 				"mealList": ["1l"],
 				"upvotes": 0,
@@ -75,7 +75,7 @@
 				"tags": ["vegetarian", "health++"]
 				},
 				{
-				"name": "Chicken Ceasar",
+				"name": "Chicken Caesar",
 				"mealList": ["1l"], 
 				"imageURL": "dining.png",
 				"upvotes": 0,

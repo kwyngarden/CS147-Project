@@ -5,7 +5,7 @@
 
 var models = require('../models');
 var data = require('../data.json');
-var date = require('/routes/date');
+var date = require('./date');
 
 // HOW-TO: write JSON to file
 var fs = require('fs');

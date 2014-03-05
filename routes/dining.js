@@ -5,6 +5,7 @@
 
 var data = require('../data.json');
 var models = require('../models');
+var date = require('./date');
 
 exports.view = function(req, res){
   var lastPage = req.session.lastPage;
