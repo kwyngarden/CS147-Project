@@ -141,6 +141,19 @@ body {
 	float: left;
 }
 
+#thumbs-up{
+	border: 2px solid black;
+}
+
+#thumbs-down{
+	border: 2px solid black;
+}
+
+#favorites{
+	border: 2px solid black;
+}
+
+
 /*#restHalls {
 	display: none;
 }*/
