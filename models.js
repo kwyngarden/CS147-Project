@@ -21,7 +21,8 @@ var MenuItemSchema = new Schema({
 	'favorites': Number,
 	'upvoters': [{ type: Schema.Types.ObjectId, ref: "User"}],
 	'downvoters': [{ type: Schema.Types.ObjectId, ref: "User"}],
-	'tags': [String]
+	'tags': [String],
+	'mealList': [String]
 });
 
 var UserSchema = new Schema({
