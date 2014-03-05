@@ -33,6 +33,14 @@ var UserSchema = new Schema({
 	'numFavEvents': Number
 });
 
+var ClickSchema = new Schema({
+	'altHallClick': Number,
+	'hallClick': Number,
+	'altFoodClick': Number,
+	'foodClick': Number
+});
+
 exports.Hall = Mongoose.model('Hall', HallSchema);
+exports.Click = Mongoose.model('Click', ClickSchema);
 exports.MenuItem = Mongoose.model('MenuItem', MenuItemSchema);
 exports.User = Mongoose.model('User', UserSchema);
