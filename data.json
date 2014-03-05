@@ -329,7 +329,7 @@
 			"longitude": -122.171799,
 			"hours": {
 				"weekdays": {
-					"Breakfast": ["8:00am", "9:30pm"],
+					"Breakfast": ["8:00am", "9:30am"],
 					"Lunch": ["11:30am", "1:15pm"],
 					"Dinner": ["5:00pm", "7:30pm"]
 				},
@@ -488,7 +488,7 @@
 			"longitude": -122.165595,
 			"hours": {
 				"weekdays": {
-					"Breakfast": ["7:30am", "9:30pm"],
+					"Breakfast": ["7:30am", "9:30am"],
 					"Lunch": ["11:30am", "1:15pm"],
 					"Dinner": ["5:00pm", "7:00pm"]
 				},
@@ -569,7 +569,7 @@
 			"longitude": -122.163146,
 			"hours": {
 				"weekdays": {
-					"Breakfast": ["7:30am", "9:30pm"],
+					"Breakfast": ["7:30am", "9:30am"],
 					"Lunch": ["11:30am", "1:15pm"],
 					"Dinner": ["5:00pm", "7:00pm"]
 				},
