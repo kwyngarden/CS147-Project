@@ -41,14 +41,16 @@
                 {{#each favorites}}
                     <div style="clear:both;">
                     <li>
+                        <a href='/food/{{favorited_hall}}/{{name}}'>
                         <div class="tile foodTile">
-                            <a href='/search/{{name}}'><div class="bg-dark fg-white">{{name}}</div></a>
+                            <div class="bg-dark fg-white">{{name}}</div>
                             <img src="/images/{{name}}.jpg">
                         </div>
                         <p class='servedList'>Serving right now:<br>
                         {{#each dining_halls}}
                             <a href="/dining/{{this}}">{{this}}</a>, 
                         {{/each}}</p>
+                        </a>
                     </li>
                     </div>
                 {{/each}}
