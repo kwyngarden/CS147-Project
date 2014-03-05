@@ -81,6 +81,16 @@
 
 </div>
 <script>
+    $('.icon-redo').click(recordHallClick);
+    $('.foodTile').click(recordFoodClick);
+
+    function recordHallClick() {
+        ga("send", "event", "hall", "click");
+    }
+
+    function recordFoodClick() {
+        ga("send", "event", "food", "click");
+    }
 </script>
 </body>
 </html>
