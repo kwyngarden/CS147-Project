@@ -10,9 +10,8 @@
     <link rel="stylesheet" href="/css/jquery.sidr.dark.css">
     <script src="/js/jquery.min.js"></script>
     <script src="/js/jquery.sidr.min.js"></script>
-
     <script src="/js/bootstrap.min.js"></script>  
-
+    <script src="/js/delp.js"></script>
     <script type="text/javascript">
     var liked = false;
     var disliked = false;
@@ -98,6 +97,7 @@
             var b = document.getElementById("favorites");
             // Unfavorite
             if (favorited) {
+                ga("send", "event", "favorites", "unfavorite");  //Log the favorite
                 b.className = 'fg-amber bg-white';
                 var likeCount = b.children[0].textContent;
                 likeCount = (Number(likeCount) - 1).toString();
@@ -109,6 +109,7 @@
                       });
             // Favorite
             } else {
+                ga("send", "event", "favorites", "favorite");  //Log the favorite
                 var b = document.getElementById("favorites")
                 b.className += "fg-amber bg-black active";
                 var likeCount = b.children[0].textContent;
