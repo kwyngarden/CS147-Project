@@ -11,8 +11,8 @@ exports.view = function(req, res){
   req.session.lastPage = '/map';
 
   models.Hall
-  		.find()
-  		.exec(function(err, halls){
+  		.find().populate('menu')
+      .exec(function(err, halls){
   			 res.render('map', {
 			    'lastPage': lastPage,
 			    'halls': halls,
