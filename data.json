@@ -1,88 +1,6 @@
 {
 	"halls": [
 		{
-			"name": "Arrillaga",
-			"latitude": 37.425448,
-			"longitude": -122.164251,
-			"hours": {
-				"weekdays": {
-					"Breakfast": ["8:00am", "10:30am"],
-					"Lunch": ["11:00am", "4:00pm"],
-					"Dinner": ["5:00pm", "8:00pm"]
-				},
-				"weekends": {
-					"Brunch": ["10:30am", "1:30pm"],
-					"Dinner": ["5:00pm", "8:00pm"]
-				},
-				"closed": [],
-				"latenightHours": ["9:00pm", "2:00am"],
-				"latenightDays": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
-			},
-			"imageURL": "/images/dining.png",
-			"menu": [
-				{
-				"name": "Quinoa", 
-				"imageURL": "images/dining.png",
-				"upvotes": 18,
-				"downvotes": 5,
-				"dining_hall": "Arrillaga", 
-				"nutritional_info": "Protein in Quinoa:One of the best reasons to enjoy quinoa is because it has a high-protein content, which makes it a great cholesterol-free and low-fat source of protein for vegetarians and vegans. According to the USDA nutrient database, 1 cup of cooked quinoa (185 g) contains 8.14 grams of protein. To put that in reference, the recommended daily protein intake is about 56 grams for most men and 46 for most women. See also: Six Sources of Protein for Vegetarians",
-				"favorites": 11, 
-				"tags": ["vegetarian", "vegan", "health++"]
-				}, 
-				{
-				"name": "Pepperoni Pizza", 
-				"imageURL": "dining.png",
-				"upvotes": 16,
-				"downvotes": 9,
-				"dining_hall": "Arrillaga", 
-				"nutritional_info": "From 100% real cheese and premium meats to fresh vegetables and vine-ripened tomatoes, we know that your pizza will only taste as good as the quality of ingredients used to build each hand-crafted layer, before baking to a golden brown.",
-				"favorites": 8, 
-				"tags": ["non-vegetarian"]
-				},
-				{
-				"name": "Grilled Chicken", 
-				"imageURL": "dining.png",
-				"upvotes": 7,
-				"downvotes": 10,
-				"dining_hall": "Arrillaga", 
-				"nutritional_info": "Hmmmmmmm",
-				"favorites": 50, 
-				"tags": ["non-vegetarian", "spicy"]
-				},
-				{
-				"name": "Green Beans", 
-				"imageURL": "dining.png",
-				"upvotes": 30,
-				"downvotes": 14,
-				"dining_hall": "Arrillaga", 
-				"nutritional_info": "Garlic sauteed green beans with Tofu",
-				"favorites": 34, 
-				"tags": ["vegetarian", "health++"]
-				},
-				{
-				"name": "Pesto Chicken", 
-				"imageURL": "dining.png",
-				"upvotes": 7,
-				"downvotes": 10,
-				"dining_hall": "Arrillaga", 
-				"nutritional_info": "Healthy wheat pasta tossed in fresh pesto and accompanied with chicken breast",
-				"favorites": 50, 
-				"tags": ["non-vegetarian", "spicy", "protein"]
-				},
-				{
-				"name": "Death By Chocolate", 
-				"imageURL": "dining.png",
-				"upvotes": 700,
-				"downvotes": 2,
-				"dining_hall": "Arrillaga", 
-				"nutritional_info": "Freshly baked brownies topped with molten hot fudge and served with Vanilla Bean Ice-cream",
-				"favorites": 500, 
-				"tags": ["dessert", "chocolate"]
-				}
-			]	
-		},
-		{
 			"name": "Ricker",
 			"latitude": 37.425604,
 			"longitude": -122.180428,
@@ -102,547 +20,205 @@
 			"imageURL": "/images/dining.png",
 			"menu": [
 				{
-				"name": "Just-in-time Pasta", 
+				"name": "Garlicky White Bean Soup", 
+				"mealList": ["1l, 1d"],
 				"imageURL": "dining.png",
-				"upvotes": 95,
-				"downvotes": 10,
+				"upvotes": 0,
+				"downvotes": 0,
 				"dining_hall": "Ricker", 
 				"nutritional_info": "A live pasta counter where you can pick your ingredients of choice to make a pasta suited to your tastes and health requirements",
-				"favorites": 39, 
-				"tags": ["non-vegetarian", "vegetarian"]
+				"favorites": 0, 
+				"tags": ["soup", "vegetarian"]
 				},
 				{
-				"name": "Vegetable Stir-Fry", 
+				"name": "Baked Salmon", 
+				"mealList": ["1l"],
 				"imageURL": "dining.png",
-				"upvotes": 32,
-				"downvotes": 5,
+				"upvotes": 0,
+				"downvotes": 0,
 				"dining_hall": "Ricker", 
 				"nutritional_info": "Fresh vegeatbles tossed in a black bean sauce served with brown rice on the side",
-				"favorites": 17, 
-				"tags": ["vegetarian", "oriental", "health++"]
+				"favorites": 0, 
+				"tags": ["protein", "non-vegetarian"]
 				},
 				{
-				"name": "Tilapia with Mussels", 
+				"name": "Vegetarian Quesadilla", 
 				"imageURL": "images/dining.png",
-				"upvotes": 8,
-				"downvotes": 80,
+				"mealList": ["1l"],
+				"upvotes": 0,
+				"downvotes": 0,
 				"dining_hall": "Ricker", 
 				"nutritional_info": "Fresh-water Tilapia to provide you with a high-protein low-fat to provide you with the perfect meal",
-				"favorites": 1, 
-				"tags": ["non-vegetarian", "health++", "protein"]
+				"favorites": 0, 
+				"tags": ["vegetarian"]
 				}, 
 				{
-				"name": "Honey Butter Biscuits", 
+				"name": "Sweet Roasted Potatoes", 
 				"imageURL": "dining.png",
-				"upvotes": 120,
-				"downvotes": 3,
+				"mealList": ["1l"],
+				"upvotes": 0,
+				"downvotes": 0,
 				"dining_hall": "Ricker", 
 				"nutritional_info": "Heaven on a biscuit. It's covered with our special Honey Butter sauce, which some folks call “liquid gold.",
-				"favorites": 89, 
-				"tags": ["vegetarian", "dessert"]
+				"favorites": 0, 
+				"tags": ["vegetarian", "carbohydrates"]
 				},
 				{
-				"name": "Hummus and Pita", 
+				"name": "Roasted Cauliflower Deli", 
 				"imageURL": "dining.png",
-				"upvotes": 87,
-				"downvotes": 12,
+				"mealList": ["1l"],
+				"upvotes": 0,
+				"downvotes": 0,
 				"dining_hall": "Ricker", 
 				"nutritional_info": "Whole wheat pita served with freshly made roasted hummus",
-				"favorites": 50, 
-				"tags": ["vegetarian", "protein"]
+				"favorites": 0, 
+				"tags": ["vegetarian", "health++"]
 				},
 				{
-				"name": "Freshly Squeezed Orange Juice", 
+				"name": "Chicken Ceasar",
+				"mealList": ["1l"], 
 				"imageURL": "dining.png",
-				"upvotes": 35,
+				"upvotes": 0,
 				"downvotes": 0,
 				"dining_hall": "Ricker", 
 				"nutritional_info": "The perfect drink to freshen up your day",
-				"favorites": 50, 
-				"tags": ["beverage", "juice"]
-				}
-			]	
-		},
-		{
-			"name": "Lakeside",
-			"latitude": 37.424822,
-			"longitude": -122.17634,
-			"hours": {
-				"weekdays": {
-					"Breakfast": ["7:30am", "9:30am"],
-					"Lunch": ["11:30am", "1:15pm"],
-					"Dinner": ["5:00pm", "8:00pm"]
+				"favorites": 0, 
+				"tags": ["non-vegetarian", "salad"]
 				},
-				"weekends": {
-					"Brunch": ["10:30am", "1:00pm"],
-					"Dinner": ["5:00pm", "7:00pm"]
-				},
-				"closed": [],
-				"latenightHours": ["9:30pm", "2:00am"],
-				"latenightDays": ["Monday", "Tuesday", "Wednesday", "Thursday", "Sunday"]
-			},
-			"imageURL": "/images/dining.png",
-			"menu": [
 				{
-				"name": "Pesto Chicken", 
+				"name": "Vegetarian Nicoise Salad",
+				"mealList": ["1l"], 
 				"imageURL": "dining.png",
-				"upvotes": 35,
-				"downvotes": 5,
-				"dining_hall": "Lakeside", 
-				"nutritional_info": "Yup",
-				"favorites": 19, 
-				"tags": ["non-vegetarian", "spicy", "protein"]
+				"upvotes": 0,
+				"downvotes": 0,
+				"dining_hall": "Ricker", 
+				"nutritional_info": "The perfect drink to freshen up your day",
+				"favorites": 0, 
+				"tags": ["vegetarian", "salad"]
 				},
 				{
-				"name": "Quinoa", 
+				"name": "Cookies",
+				"mealList": ["1l"], 
+				"imageURL": "dining.png",
+				"upvotes": 0,
+				"downvotes": 0,
+				"dining_hall": "Ricker", 
+				"nutritional_info": "The perfect drink to freshen up your day",
+				"favorites": 0, 
+				"tags": ["desert"]
+				},
+				{
+				"name": "Fish and Chips", 
+				"mealList": ["1d"],
+				"imageURL": "dining.png",
+				"upvotes": 0,
+				"downvotes": 0,
+				"dining_hall": "Ricker", 
+				"nutritional_info": "A live pasta counter where you can pick your ingredients of choice to make a pasta suited to your tastes and health requirements",
+				"favorites": 0, 
+				"tags": ["protein","carbohydrates","non-vegetarian"]
+				},
+				{
+				"name": "Jorge's Southwest Fusili with Chicken", 
+				"mealList": ["1d"],
+				"imageURL": "dining.png",
+				"upvotes": 0,
+				"downvotes": 0,
+				"dining_hall": "Ricker", 
+				"nutritional_info": "Fresh vegeatbles tossed in a black bean sauce served with brown rice on the side",
+				"favorites": 0, 
+				"tags": ["protein", "non-vegetarian"]
+				},
+				{
+				"name": "Jorge's Gourmet Vegetable Pasta", 
 				"imageURL": "images/dining.png",
-				"upvotes": 24,
-				"downvotes": 12,
-				"dining_hall": "Lakeside", 
-				"nutritional_info": "Protein in Quinoa:One of the best reasons to enjoy quinoa is because it has a high-protein content, which makes it a great cholesterol-free and low-fat source of protein for vegetarians and vegans. According to the USDA nutrient database, 1 cup of cooked quinoa (185 g) contains 8.14 grams of protein. To put that in reference, the recommended daily protein intake is about 56 grams for most men and 46 for most women. See also: Six Sources of Protein for Vegetarians",
-				"favorites": 13, 
-				"tags": ["vegetarian", "vegan", "health++"]
+				"mealList": ["1d"],
+				"upvotes": 0,
+				"downvotes": 0,
+				"dining_hall": "Ricker", 
+				"nutritional_info": "Fresh-water Tilapia to provide you with a high-protein low-fat to provide you with the perfect meal",
+				"favorites": 0, 
+				"tags": ["vegetarian", "carbohydrates"]
 				}, 
 				{
-				"name": "Pizza", 
+				"name": "Kamut with Roasted Butterut Squash", 
 				"imageURL": "dining.png",
-				"upvotes": 7,
-				"downvotes": 10,
-				"dining_hall": "Lakeside", 
-				"nutritional_info": "At Pizza Hut, we believe in using nothing but tasty, real ingredients that you can feel good about. From 100% real cheese and premium meats to fresh vegetables and vine-ripened tomatoes, we know that your pizza will only taste as good as the quality of ingredients used to build each hand-crafted layer, before baking to a golden brown.",
-				"favorites": 50, 
-				"tags": ["vegetarian"]
+				"mealList": ["1d"],
+				"upvotes": 0,
+				"downvotes": 0,
+				"dining_hall": "Ricker", 
+				"nutritional_info": "Heaven on a biscuit. It's covered with our special Honey Butter sauce, which some folks call “liquid gold.",
+				"favorites": 0, 
+				"tags": ["vegetarian", "health++"]
 				},
 				{
-				"name": "Grilled Chicken", 
+				"name": "Zucchini", 
 				"imageURL": "dining.png",
-				"upvotes": 7,
-				"downvotes": 10,
-				"dining_hall": "Lakeside", 
-				"nutritional_info": "Hmmmmmmm",
-				"favorites": 50, 
-				"tags": ["non-vegetarian", "spicy"]
+				"mealList": ["1d"],
+				"upvotes": 0,
+				"downvotes": 0,
+				"dining_hall": "Ricker", 
+				"nutritional_info": "Whole wheat pita served with freshly made roasted hummus",
+				"favorites": 0, 
+				"tags": ["vegetarian", "health++"]
 				},
 				{
-				"name": "Dosa", 
+				"name": "Sauteed Kale with Cranberries",
+				"mealList": ["1d"], 
 				"imageURL": "dining.png",
-				"upvotes": 7,
-				"downvotes": 10,
-				"dining_hall": "Lakeside", 
-				"nutritional_info": "Dosa is beautiful. Daryl is in love",
-				"favorites": 50, 
-				"tags": ["vegetarian", "indian", "health++"]
+				"upvotes": 0,
+				"downvotes": 0,
+				"dining_hall": "Ricker", 
+				"nutritional_info": "The perfect drink to freshen up your day",
+				"favorites": 0, 
+				"tags": ["vegetarian", "health++"]
 				},
 				{
-				"name": "Mimosa", 
+				"name": "Ice Cream Social",
+				"mealList": ["1d"], 
 				"imageURL": "dining.png",
-				"upvotes": 70,
-				"downvotes": 10,
-				"dining_hall": "Lakeside", 
-				"nutritional_info": "The favorite item on teh menu",
-				"favorites": 50, 
-				"tags": ["beverage", "alcoholic"]
-				}
-			]	
-		},
-		{
-			"name": "Branner",
-			"latitude": 37.425406,
-			"longitude": -122.162867,
-			"hours": {
-				"weekdays": {
-					"Lunch": ["11:30am", "1:15pm"],
-					"Dinner": ["5:00pm", "7:00pm"]
-				},
-				"weekends": {
-				},
-				"closed": ["Saturday", "Sunday"],
-				"latenightDays": []
-			},
-			"imageURL": "/images/dining.png",
-			"menu": [
-				{
-				"name": "Mimosa", 
-				"imageURL": "dining.png",
-				"upvotes": 71,
-				"downvotes": 13,
-				"dining_hall": "Branner", 
-				"nutritional_info": "The favorite item on teh menu",
-				"favorites": 51,
-				"tags": ["beverage", "alcoholic"]
+				"upvotes": 0,
+				"downvotes": 0,
+				"dining_hall": "Ricker", 
+				"nutritional_info": "The perfect drink to freshen up your day",
+				"favorites": 0, 
+				"tags": ["desert"]
 				},
 				{
-				"name": "Pesto Chicken", 
+				"name": "Pizza",
+				"mealList": ["1l", "1d"], 
 				"imageURL": "dining.png",
-				"upvotes": 26,
-				"downvotes": 16,
-				"dining_hall": "Branner", 
-				"nutritional_info": "Yup",
-				"favorites": 10, 
-				"tags": ["non-vegetarian", "spicy", "protein"]
+				"upvotes": 0,
+				"downvotes": 0,
+				"dining_hall": "Ricker", 
+				"nutritional_info": "Cheese, Vegetable, Pepperoni, House Special",
+				"favorites": 0, 
+				"tags": ["vegetarian", "non-vegetarian"]
 				},
 				{
-				"name": "Quinoa", 
-				"imageURL": "images/dining.png",
-				"upvotes": 7,
-				"downvotes": 10,
-				"dining_hall": "Branner", 
-				"nutritional_info": "Protein in Quinoa:One of the best reasons to enjoy quinoa is because it has a high-protein content, which makes it a great cholesterol-free and low-fat source of protein for vegetarians and vegans. According to the USDA nutrient database, 1 cup of cooked quinoa (185 g) contains 8.14 grams of protein. To put that in reference, the recommended daily protein intake is about 56 grams for most men and 46 for most women. See also: Six Sources of Protein for Vegetarians",
-				"favorites": 50, 
-				"tags": ["vegetarian", "vegan", "health++"]
-				}, 
-				{
-				"name": "Pizza", 
+				"name": "Garlic Bread",
+				"mealList": ["1d"], 
 				"imageURL": "dining.png",
-				"upvotes": 7,
-				"downvotes": 10,
-				"dining_hall": "Branner", 
-				"nutritional_info": "At Pizza Hut, we believe in using nothing but tasty, real ingredients that you can feel good about. From 100% real cheese and premium meats to fresh vegetables and vine-ripened tomatoes, we know that your pizza will only taste as good as the quality of ingredients used to build each hand-crafted layer, before baking to a golden brown.",
-				"favorites": 50, 
-				"tags": ["vegetarian"]
+				"upvotes": 0,
+				"downvotes": 0,
+				"dining_hall": "Ricker", 
+				"nutritional_info": "Crunchy Carlic Bread with molten butter",
+				"favorites": 0, 
+				"tags": ["carbohydrates"]
 				},
 				{
-				"name": "Grilled Chicken", 
+				"name": "Burger Bar",
+				"mealList": ["1l", "1d"], 
 				"imageURL": "dining.png",
-				"upvotes": 7,
-				"downvotes": 10,
-				"dining_hall": "Branner", 
-				"nutritional_info": "Hmmmmmmm",
-				"favorites": 50, 
-				"tags": ["non-vegetarian", "spicy"]
-				},
-				{
-				"name": "Dosa", 
-				"imageURL": "dining.png",
-				"upvotes": 7,
-				"downvotes": 10,
-				"dining_hall": "Branner", 
-				"nutritional_info": "Dosa is beautiful. Daryl is in love",
-				"favorites": 50, 
-				"tags": ["vegetarian", "indian", "health++"]
+				"upvotes": 0,
+				"downvotes": 0,
+				"dining_hall": "Ricker", 
+				"nutritional_info": "Grass Fed Burger, Grilled Chicken, Hillary Adzuki Burger, Fries, Comdiments",
+				"favorites": 0, 
+				"tags": ["protein", "carbohydrates"]
 				}
 			]
-		},
-		{
-			"name": "FloMo",
-			"latitude": 37.421869,
-			"longitude": -122.171799,
-			"hours": {
-				"weekdays": {
-					"Breakfast": ["8:00am", "9:30am"],
-					"Lunch": ["11:30am", "1:15pm"],
-					"Dinner": ["5:00pm", "7:30pm"]
-				},
-				"weekends": {
-					"Brunch": ["10:30am", "1:00pm"],
-					"Dinner": ["5:00pm", "7:30pm"]
-				},
-				"closed": [],
-				"latenightDays": []
-			},
-			"imageURL": "/images/dining.png",
-			"menu": [
-				{
-				"name": "Pizza", 
-				"imageURL": "dining.png",
-				"upvotes": 73,
-				"downvotes": 23,
-				"dining_hall": "FloMo", 
-				"nutritional_info": "At Pizza Hut, we believe in using nothing but tasty, real ingredients that you can feel good about. From 100% real cheese and premium meats to fresh vegetables and vine-ripened tomatoes, we know that your pizza will only taste as good as the quality of ingredients used to build each hand-crafted layer, before baking to a golden brown.",
-				"favorites": 40, 
-				"tags": ["vegetarian"]
-				},
-				{
-				"name": "Grilled Chicken", 
-				"imageURL": "dining.png",
-				"upvotes": 28,
-				"downvotes": 9,
-				"dining_hall": "FloMo", 
-				"nutritional_info": "Hmmmmmmm",
-				"favorites": 6, 
-				"tags": ["non-vegetarian", "spicy"]
-				},
-				{
-				"name": "Quinoa", 
-				"imageURL": "images/dining.png",
-				"upvotes": 7,
-				"downvotes": 10,
-				"dining_hall": "FloMo", 
-				"nutritional_info": "Protein in Quinoa:One of the best reasons to enjoy quinoa is because it has a high-protein content, which makes it a great cholesterol-free and low-fat source of protein for vegetarians and vegans. According to the USDA nutrient database, 1 cup of cooked quinoa (185 g) contains 8.14 grams of protein. To put that in reference, the recommended daily protein intake is about 56 grams for most men and 46 for most women. See also: Six Sources of Protein for Vegetarians",
-				"favorites": 50, 
-				"tags": ["vegetarian", "vegan", "health++"]
-				},
-				{
-				"name": "Dosa", 
-				"imageURL": "dining.png",
-				"upvotes": 7,
-				"downvotes": 10,
-				"dining_hall": "FloMo", 
-				"nutritional_info": "Dosa is beautiful. Daryl is in love",
-				"favorites": 50, 
-				"tags": ["vegetarian", "indian", "health++"]
-				},
-				{
-				"name": "Pesto Chicken", 
-				"imageURL": "dining.png",
-				"upvotes": 7,
-				"downvotes": 10,
-				"dining_hall": "FloMo", 
-				"nutritional_info": "Yup",
-				"favorites": 50, 
-				"tags": ["non-vegetarian", "spicy", "protein"]
-				},
-				{
-				"name": "Mimosa", 
-				"imageURL": "dining.png",
-				"upvotes": 70,
-				"downvotes": 10,
-				"dining_hall": "FloMo", 
-				"nutritional_info": "The favorite item on teh menu",
-				"favorites": 50, 
-				"tags": ["beverage", "alcoholic"]
-				}
-			]
-		},
-		{
-			"name": "Manzanita",
-			"latitude": 37.425031,
-			"longitude": -122.161869,
-			"hours": {
-				"weekdays": {
-					"Lunch": ["11:30am", "1:15pm"],
-					"Dinner": ["5:00pm", "7:00pm"]
-				},
-				"weekends": {
-				},
-				"closed": ["Saturday", "Sunday"],
-				"latenightDays": []
-			},
-			"imageURL": "/images/dining.png",
-			"menu": [
-				{
-				"name": "Quinoa", 
-				"imageURL": "images/dining.png",
-				"upvotes": 23,
-				"downvotes": 12,
-				"dining_hall": "Manzanita", 
-				"nutritional_info": "Protein in Quinoa:One of the best reasons to enjoy quinoa is because it has a high-protein content, which makes it a great cholesterol-free and low-fat source of protein for vegetarians and vegans. According to the USDA nutrient database, 1 cup of cooked quinoa (185 g) contains 8.14 grams of protein. To put that in reference, the recommended daily protein intake is about 56 grams for most men and 46 for most women. See also: Six Sources of Protein for Vegetarians",
-				"favorites": 11, 
-				"tags": ["vegetarian", "vegan", "health++"]
-				},
-				{
-				"name": "Dosa", 
-				"imageURL": "dining.png",
-				"upvotes": 15,
-				"downvotes": 10,
-				"dining_hall": "Manzanita", 
-				"nutritional_info": "Dosa is beautiful. Daryl is in love",
-				"favorites": 3, 
-				"tags": ["vegetarian", "indian", "health++"]
-				},
-				{
-				"name": "Pizza", 
-				"imageURL": "dining.png",
-				"upvotes": 7,
-				"downvotes": 10,
-				"dining_hall": "Manzanita", 
-				"nutritional_info": "At Pizza Hut, we believe in using nothing but tasty, real ingredients that you can feel good about. From 100% real cheese and premium meats to fresh vegetables and vine-ripened tomatoes, we know that your pizza will only taste as good as the quality of ingredients used to build each hand-crafted layer, before baking to a golden brown.",
-				"favorites": 50, 
-				"tags": ["vegetarian"]
-				},
-				{
-				"name": "Grilled Chicken", 
-				"imageURL": "dining.png",
-				"upvotes": 7,
-				"downvotes": 10,
-				"dining_hall": "Manzanita", 
-				"nutritional_info": "Hmmmmmmm",
-				"favorites": 50, 
-				"tags": ["non-vegetarian", "spicy"]
-				},
-				{
-				"name": "Pesto Chicken", 
-				"imageURL": "dining.png",
-				"upvotes": 7,
-				"downvotes": 10,
-				"dining_hall": "Manzanita", 
-				"nutritional_info": "Yup",
-				"favorites": 50, 
-				"tags": ["non-vegetarian", "spicy", "protein"]
-				},
-				{
-				"name": "Mimosa", 
-				"imageURL": "dining.png",
-				"upvotes": 70,
-				"downvotes": 10,
-				"dining_hall": "Manzanita", 
-				"nutritional_info": "The favorite item on teh menu",
-				"favorites": 50, 
-				"tags": ["beverage", "alcoholic"]
-				}
-			]
-		},
-		{
-			"name": "Stern",
-			"latitude": 37.424726,
-			"longitude": -122.165595,
-			"hours": {
-				"weekdays": {
-					"Breakfast": ["7:30am", "9:30am"],
-					"Lunch": ["11:30am", "1:15pm"],
-					"Dinner": ["5:00pm", "7:00pm"]
-				},
-				"weekends": {
-					"Brunch": ["10:30am", "1:00pm"],
-					"Dinner": ["5:00pm", "7:00pm"]
-				},
-				"closed": [],
-				"latenightDays": []
-			},
-			"imageURL": "/images/dining.png",
-			"menu": [
-				{
-				"name": "Grilled Chicken", 
-				"imageURL": "dining.png",
-				"upvotes": 17,
-				"downvotes": 10,
-				"dining_hall": "Stern", 
-				"nutritional_info": "Hmmmmmmm",
-				"favorites": 5, 
-				"tags": ["non-vegetarian", "spicy"]
-				},
-				{
-				"name": "Dosa", 
-				"imageURL": "dining.png",
-				"upvotes": 16,
-				"downvotes": 10,
-				"dining_hall": "Stern", 
-				"nutritional_info": "Dosa is beautiful. Daryl is in love",
-				"favorites": 3, 
-				"tags": ["vegetarian", "indian", "health++"]
-				},
-				{
-				"name": "Quinoa", 
-				"imageURL": "images/dining.png",
-				"upvotes": 7,
-				"downvotes": 10,
-				"dining_hall": "Stern", 
-				"nutritional_info": "Protein in Quinoa:One of the best reasons to enjoy quinoa is because it has a high-protein content, which makes it a great cholesterol-free and low-fat source of protein for vegetarians and vegans. According to the USDA nutrient database, 1 cup of cooked quinoa (185 g) contains 8.14 grams of protein. To put that in reference, the recommended daily protein intake is about 56 grams for most men and 46 for most women. See also: Six Sources of Protein for Vegetarians",
-				"favorites": 50, 
-				"tags": ["vegetarian", "vegan", "health++"]
-				}, 
-				{
-				"name": "Pizza", 
-				"imageURL": "dining.png",
-				"upvotes": 7,
-				"downvotes": 10,
-				"dining_hall": "Stern", 
-				"nutritional_info": "At Pizza Hut, we believe in using nothing but tasty, real ingredients that you can feel good about. From 100% real cheese and premium meats to fresh vegetables and vine-ripened tomatoes, we know that your pizza will only taste as good as the quality of ingredients used to build each hand-crafted layer, before baking to a golden brown.",
-				"favorites": 50, 
-				"tags": ["vegetarian"]
-				},
-				{
-				"name": "Pesto Chicken", 
-				"imageURL": "dining.png",
-				"upvotes": 7,
-				"downvotes": 10,
-				"dining_hall": "Stern", 
-				"nutritional_info": "Yup",
-				"favorites": 50, 
-				"tags": ["non-vegetarian", "spicy", "protein"]
-				},
-				{
-				"name": "Mimosa", 
-				"imageURL": "dining.png",
-				"upvotes": 70,
-				"downvotes": 10,
-				"dining_hall": "Stern", 
-				"nutritional_info": "The favorite item on teh menu",
-				"favorites": 50, 
-				"tags": ["beverage", "alcoholic"]
-				}
-			]
-		},
-		{
-			"name": "Wilbur",
-			"latitude": 37.423959,
-			"longitude": -122.163146,
-			"hours": {
-				"weekdays": {
-					"Breakfast": ["7:30am", "9:30am"],
-					"Lunch": ["11:30am", "1:15pm"],
-					"Dinner": ["5:00pm", "7:00pm"]
-				},
-				"weekends": {
-					"Brunch": ["10:30am", "1:00pm"],
-					"Dinner": ["5:00pm", "7:00pm"]
-				},
-				"closed": [],
-				"latenightDays": []
-			},
-			"imageURL": "/images/dining.png",
-			"menu": [
-				{
-				"name": "Mimosa", 
-				"imageURL": "dining.png",
-				"upvotes": 76,
-				"downvotes": 23,
-				"dining_hall": "Wilbur", 
-				"nutritional_info": "The favorite item on teh menu",
-				"favorites": 39, 
-				"tags": ["beverage", "alcoholic"]
-				},
-				{
-				"name": "Pesto Chicken", 
-				"imageURL": "dining.png",
-				"upvotes": 29,
-				"downvotes": 10,
-				"dining_hall": "Wilbur", 
-				"nutritional_info": "Yup",
-				"favorites": 20, 
-				"tags": ["non-vegetarian", "spicy", "protein"]
-				},
-				{
-				"name": "Quinoa", 
-				"imageURL": "images/dining.png",
-				"upvotes": 7,
-				"downvotes": 10,
-				"dining_hall": "Wilbur", 
-				"nutritional_info": "Protein in Quinoa:One of the best reasons to enjoy quinoa is because it has a high-protein content, which makes it a great cholesterol-free and low-fat source of protein for vegetarians and vegans. According to the USDA nutrient database, 1 cup of cooked quinoa (185 g) contains 8.14 grams of protein. To put that in reference, the recommended daily protein intake is about 56 grams for most men and 46 for most women. See also: Six Sources of Protein for Vegetarians",
-				"favorites": 50, 
-				"tags": ["vegetarian", "vegan", "health++"]
-				}, 
-				{
-				"name": "Pizza", 
-				"imageURL": "dining.png",
-				"upvotes": 7,
-				"downvotes": 10,
-				"dining_hall": "Wilbur", 
-				"nutritional_info": "At Pizza Hut, we believe in using nothing but tasty, real ingredients that you can feel good about. From 100% real cheese and premium meats to fresh vegetables and vine-ripened tomatoes, we know that your pizza will only taste as good as the quality of ingredients used to build each hand-crafted layer, before baking to a golden brown.",
-				"favorites": 50, 
-				"tags": ["vegetarian"]
-				},
-				{
-				"name": "Grilled Chicken", 
-				"imageURL": "dining.png",
-				"upvotes": 7,
-				"downvotes": 10,
-				"dining_hall": "Wilbur", 
-				"nutritional_info": "Hmmmmmmm",
-				"favorites": 50, 
-				"tags": ["non-vegetarian", "spicy"]
-				},
-				{
-				"name": "Dosa", 
-				"imageURL": "dining.png",
-				"upvotes": 7,
-				"downvotes": 10,
-				"dining_hall": "Wilbur", 
-				"nutritional_info": "Dosa is beautiful. Daryl is in love",
-				"favorites": 50, 
-				"tags": ["vegetarian", "indian", "health++"]
-				}
-			]
-		}
+		}	
+		
 	]
 }

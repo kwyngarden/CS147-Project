@@ -64,6 +64,7 @@ app.post('/food/downvote/:dhall/:name/:number', food.downvote);
 app.post('/addFavorite', favorites.addFavorite);
 app.post('/removeFavorite', favorites.removeFavorite);
 app.post('/getNearby', index.getNearby);
+app.get('/events/getFreeFood', events.freefood);
 
 //app.get('/project/:name', project.viewProject)
 // Example route
