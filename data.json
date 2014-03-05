@@ -345,7 +345,7 @@
 				"tags": ["vegetarian"]
 				}, 
 				{
-				"name": "Sweet Roasted Potatoes", 
+				"name": "Roasted Sweet Potatoes", 
 				"imageURL": "dining.png",
 				"mealList": ["1l"],
 				"upvotes": 0,
@@ -389,7 +389,7 @@
 				},
 				{
 				"name": "Sauteed Kale with Cranberries",
-				"mealList": ["1d"], 
+				"mealList": ["1l"], 
 				"imageURL": "dining.png",
 				"upvotes": 0,
 				"downvotes": 0,
