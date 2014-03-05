@@ -35,7 +35,8 @@ exports.view = function(req, res){
             }
             favoritesArr.push({
                 'name': menuItem.name,
-                'dining_halls': dining_halls
+                'dining_halls': dining_halls,
+                'favorited_hall': menuItem.dining_hall
             });
             numLeft--;
 
@@ -83,8 +84,8 @@ exports.addFavorite = function(req, res) {
                 menuItem.update({$inc: {'favorites': 1}}, callbackFour);
 
                 function callbackFour(err) {
-                    models.User.findOne({'username': username}, function(err, m){console.log(m)});
-                    models.MenuItem.findOne({'name': itemName, 'dining_hall': hall}, function(err, n){console.log(n)});
+                    //models.User.findOne({'username': username}, function(err, m){console.log(m)});
+                    //models.MenuItem.findOne({'name': itemName, 'dining_hall': hall}, function(err, n){console.log(n)});
                     res.send(200);
                 }
             }
