@@ -74,7 +74,8 @@ function createHall(err) {
       'favorites': menu[j].favorites,
       'upvoters': [],
       'downvoters': [],
-      'tags': menu[j].tags
+      'tags': menu[j].tags,
+      'mealList': menu[j].mealList
     });
 
     // Save new menu item

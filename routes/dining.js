@@ -8,7 +8,7 @@ var models = require('../models');
 
 exports.view = function(req, res){
   var lastPage = req.session.lastPage;
-  req.session.lastPage = '/dining/'+encodeURIComponent(req.params.name);
+  req.session.lastPage = '/dining/' + encodeURIComponent(req.params.name);
   var hallName = req.params.name;
   var menu;
   var weekdayHours;
@@ -18,7 +18,7 @@ exports.view = function(req, res){
         .findOne({'name': hallName})
         .populate('menu')
         .exec(function(err, hall) {
-          var menu = hall.menu;
+          var menu = date.getMenu(hall.menu);
           var hours = hall.hours;
           var weekdayHours = getSortedHoursArr(hours.weekdays);
           var weekendHours = getSortedHoursArr(hours.weekends);
@@ -119,7 +119,3 @@ function getHoursComponents(hoursString) {
 function endsWith(str, suffix) {
     return str.indexOf(suffix, str.length - suffix.length) !== -1;
 }
-
-
-
-

@@ -5,6 +5,7 @@
 
 var models = require('../models');
 var data = require('../data.json');
+var date = require('/routes/date');
 
 // HOW-TO: write JSON to file
 var fs = require('fs');
@@ -28,7 +29,8 @@ exports.viewAlt = function(req, res){
     function callbackZero(err, halls) {
       if(err) console.log(err);
       for(var i = 0; i < halls.length; i++) {
-          var menu = halls[i].menu;
+          var menu = halls[i].menu; 
+          halls[i].menu = date.getMenu(menu);
       }
 
       var restHalls = halls.slice(2);
@@ -104,7 +106,7 @@ exports.viewAlt = function(req, res){
                     if(err) console.log(err);
                     for(var i = 0; i < halls.length; i++) {
                         var menu = halls[i].menu;
-                        halls[i].menu = menu;
+                        halls[i].menu = date.getMenu(menu);
                     }
                     halls = halls.slice(0,2);
                     res.render('indexAlt', {
@@ -140,6 +142,7 @@ exports.view = function(req, res){
       if(err) console.log(err);
       for(var i = 0; i < halls.length; i++) {
           var menu = halls[i].menu;
+          halls[i].menu = date.getMenu(menu);
       }
 
       if (!username){
@@ -211,7 +214,7 @@ exports.view = function(req, res){
                     if(err) console.log(err);
                     for(var i = 0; i < halls.length; i++) {
                         var menu = halls[i].menu;
-                        halls[i].menu = menu;
+                        halls[i].menu = date.getMenu(menu);
                     }
                     res.render('index', {
                        'lastPage': lastPage,
