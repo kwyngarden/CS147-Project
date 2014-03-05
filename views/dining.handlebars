@@ -32,19 +32,19 @@
 			    <div class="accordion-frame">
 			        <a href="#" class="heading">
 			        	<span id="expandIcon" class="icon-arrow-right-2"></span>
-			        	Open for {{closestMeal}} {{closestMealOpen}}-{{closestMealClose}} (tap for more hours)
+			        	Open for {{closestMeal}} {{closestMealOpen}}-{{closestMealClose}}
 			        </a>
 			        <div class="content">
 			        	Weekdays
 			        	<ul>
 				        	{{#each weekdayHours}}
-	    						<li>{{@key}}: {{this.[0]}} - {{this.[1]}}</li>
+	    						<li>{{this.[0]}}: {{this.[1]}} - {{this.[2]}}</li>
 							{{/each}}
 						</ul>
 						Weekends
 						<ul>
 							{{#each weekendHours}}
-								<li>{{@key}}: {{this.[0]}} - {{this.[1]}}</li>
+								<li>{{this.[0]}}: {{this.[1]}} - {{this.[2]}}</li>
 							{{/each}}
 						</ul>
 			        </div>
