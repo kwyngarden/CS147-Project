@@ -52,6 +52,12 @@ function createHall(err) {
   if (i >= data.halls.length) {
     mongoose.connection.close();
     console.log("Done!");
+    var clicks = new models.Click({
+      'altHallClick': 0,
+      'hallClick': 0,
+      'altFoodClick': 0,
+      'foodClick': 0    
+    });
     return;
   }
 

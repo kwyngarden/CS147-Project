@@ -15,6 +15,13 @@ exports.view = function(req, res){
   var weekdayHours;
   var weekendHours;
 
+  if lastPage == '/alt'{
+    models.Click.update( $inc: { 'altHallClick': 1 },)
+  }
+  else{
+    models.Click.update( $inc: { 'hallClick': 1 },)
+  }
+
   models.Hall
         .findOne({'name': hallName})
         .populate('menu')

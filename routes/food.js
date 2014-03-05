@@ -51,6 +51,9 @@ exports.upvote = function(req, res) {
 	}
 };
 
+
+
+
 exports.downvote = function(req, res) {
 	var name = req.params.name;
 	var dhall = req.params.dhall;
