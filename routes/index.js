@@ -18,7 +18,7 @@ exports.viewAlt = function(req, res){
     var lastPage = req.session.lastPage;
     var username = req.session.username;
     var favoritesArr = []
-    req.session.lastPage = '/';
+    req.session.lastPage = '/alt';
     req.session.pageVersion = 'alt';
 
     models.Hall

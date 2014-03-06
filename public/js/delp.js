@@ -3,7 +3,7 @@
 m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
 })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-ga('create', 'UA-48537417-2', 'cs147-delp.herokuapp.com');
+ga('create', 'UA-48537417-2', {'cookieDomain':'none'});
 ga('send', 'pageview');
 
 // $(document).ready(loadImages);

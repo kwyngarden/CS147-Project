@@ -15,14 +15,17 @@ exports.view = function(req, res){
   var weekdayHours;
   var weekendHours;
 
-  if lastPage == '/alt'{
-    models.Click.update( $inc: { 'altHallClick': 1 },)
+  if (lastPage == '/alt'){
+    models.Click.update({}, {$inc: { 'altHallClick': 1 }}, callbackOne);
   }
-  else{
-    models.Click.update( $inc: { 'hallClick': 1 },)
+  else if (lastPage == '/'){
+    models.Click.update({}, {$inc: { 'hallClick': 1 }}, callbackOne);
   }
 
-  models.Hall
+  function callbackOne(err) {
+    if(err) console.log(err);
+
+    models.Hall
         .findOne({'name': hallName})
         .populate('menu')
         .exec(function(err, hall) {
@@ -46,6 +49,7 @@ exports.view = function(req, res){
             'closestMealClose': closestMeal[2]
           });
         });
+  }
 };
 
 function getSortedHoursArr(hoursObj) {

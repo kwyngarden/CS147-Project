@@ -7,7 +7,6 @@ exports.getMenu = function getMealAdjustedMenu(menu) {
       newMenu.push(menu[i]);
     }
   }
-  console.log(newMenu);
   return newMenu;
 };
 
