@@ -108,71 +108,62 @@ exports.view = function(req, res){
     var downvoted = false;
     var favorited = false;
 
-    if (lastPage == '/alt'){
-		models.Click.update({}, {$inc: { 'altFoodClick': 1 }}, callbackZero);
-  	}
-	else if (lastPage == '/'){
-	  	models.Click.update({}, {$inc: { 'foodClick': 1 }}, callbackZero);
-  	}
+    models.MenuItem
+          .findOne({'name': name, 'dining_hall': dhall})
+		  .exec(function(err, menuItem) {
+		  		// Find user and see if he's downvoted, 
+		  		// upvoted, or favorited it before
+		  		if (username){
+			  		models.User
+			  			  .findOne({'username': username})
+			  			  .exec(function(err, user) {
+			  			  	var userId = user._id;
+			  			  	var menuItemId = menuItem._id;
 
-  	function callbackZero(err) {
-	    models.MenuItem
-	          .findOne({'name': name, 'dining_hall': dhall})
-			  .exec(function(err, menuItem) {
-			  		// Find user and see if he's downvoted, 
-			  		// upvoted, or favorited it before
-			  		if (username){
-				  		models.User
-				  			  .findOne({'username': username})
-				  			  .exec(function(err, user) {
-				  			  	var userId = user._id;
-				  			  	var menuItemId = menuItem._id;
+			  			  	// Iterate through downvoters
+			  			  	for (var i=0; i<menuItem.downvoters.length; i++) {
+			  			  		if (menuItem.downvoters[i].toString() == userId) {
+			  			  			downvoted = true;
+			  			  			break;
+			  			  		}
+			  			  	}
 
-				  			  	// Iterate through downvoters
-				  			  	for (var i=0; i<menuItem.downvoters.length; i++) {
-				  			  		if (menuItem.downvoters[i].toString() == userId) {
-				  			  			downvoted = true;
-				  			  			break;
-				  			  		}
-				  			  	}
+			  			  	// Iterate through upvoters
+			  			  	for (var i=0; i<menuItem.upvoters.length; i++) {
+			  			  		if (menuItem.upvoters[i].toString() == userId) {
+				  			  		upvoted = true;
+				  			  		break;
+			  			  		}
+			  			  	}
+			  			  	
+			  			  	// Iterate through favorites
+			  			  	for (var i=0; i<user.favorites.length; i++) {
+			  			  		if (user.favorites[i].toString() == menuItemId) {
+			  			  			favorited = true;
+			  			  			break;
+			  			  		}
+			  			  	}
 
-				  			  	// Iterate through upvoters
-				  			  	for (var i=0; i<menuItem.upvoters.length; i++) {
-				  			  		if (menuItem.upvoters[i].toString() == userId) {
-					  			  		upvoted = true;
-					  			  		break;
-				  			  		}
-				  			  	}
-				  			  	
-				  			  	// Iterate through favorites
-				  			  	for (var i=0; i<user.favorites.length; i++) {
-				  			  		if (user.favorites[i].toString() == menuItemId) {
-				  			  			favorited = true;
-				  			  			break;
-				  			  		}
-				  			  	}
-
-				  			  	res.render('food', {
-								  'lastPage': lastPage,
-								  'username': req.session.username,
-								  'hall': dhall,
-								  'menuItem': menuItem,
-								  'downvoted': downvoted,
-								  'upvoted': upvoted,
-								  'favorited': favorited
-								});
-				  			  });
-				  	} else {
-				  		res.render('food', {
-						  'lastPage': lastPage,
-						  'username': req.session.username,
-						  'notLoggedIn': !req.session.username,
-						  'hall': dhall,
-						  'menuItem': menuItem,
-						  'downvoted': downvoted,
-						  'upvoted': upvoted
-						});
-				  	}
-			   });
-	}
+			  			  	res.render('food', {
+							  'lastPage': lastPage,
+							  'username': req.session.username,
+							  'hall': dhall,
+							  'menuItem': menuItem,
+							  'downvoted': downvoted,
+							  'upvoted': upvoted,
+							  'favorited': favorited
+							});
+			  			  });
+			  	} else {
+			  		res.render('food', {
+					  'lastPage': lastPage,
+					  'username': req.session.username,
+					  'notLoggedIn': !req.session.username,
+					  'hall': dhall,
+					  'menuItem': menuItem,
+					  'downvoted': downvoted,
+					  'upvoted': upvoted
+					});
+			  	}
+		   });
 };
