@@ -51,8 +51,12 @@
                     b.children[0].textContent = " " + likeCount;
                     disliked = false;
 
-                    var postURL = '/food/downvote/' + '{{hall}}' + '/' + '{{menuItem.name}}' + '/' + 'decrement';
-                    $.post(postURL, function(data){});
+                    var postURL = '/food/downvote/';
+                    $.post(postURL, {
+                        'hall': '{{hall}}',
+                        'name': '{{menuItem.name}}'.replace(/&#x27;/, "'"),
+                        'change': 'decrement'
+                    });
                 }
 
                  var b = document.getElementById("thumbs-up");
@@ -60,16 +64,24 @@
                 b.children[0].textContent = " " + (Number(b.children[0].textContent) + 1).toString();
                 liked = true;
 
-                var postURL = '/food/upvote/' + '{{hall}}' + '/' + '{{menuItem.name}}' + '/' + 'increment';
-                $.post(postURL, function(data){});  
+                var postURL = '/food/upvote/';
+                $.post(postURL, {
+                    'hall': '{{hall}}',
+                    'name': '{{menuItem.name}}'.replace(/&#x27;/, "'"),
+                    'change': 'increment'
+                });
             } else {
                 liked = false;
                 var b = document.getElementById("thumbs-up");
                 b.className = "fg-green";
                 b.children[0].textContent = " " + (Number(b.children[0].textContent) - 1).toString();
 
-                var postURL = '/food/upvote/' + '{{hall}}' + '/' + '{{menuItem.name}}' + '/' + 'decrement';
-                $.post(postURL, function(data){});
+                var postURL = '/food/upvote/';
+                $.post(postURL, {
+                    'hall': '{{hall}}',
+                    'name': '{{menuItem.name}}'.replace(/&#x27;/, "'"),
+                    'change': 'decrement'
+                });
             }
         {{/if}}
     }
@@ -85,8 +97,12 @@
                     likeCount = (Number(likeCount) - 1).toString();
                     b.children[0].textContent = " " + likeCount;
                     liked = false;
-                    var postURL = '/food/upvote/' + '{{hall}}' + '/' + '{{menuItem.name}}' + '/' + 'decrement';
-                    $.post(postURL, function(data){});
+                    var postURL = '/food/upvote/';
+                    $.post(postURL, {
+                        'hall': '{{hall}}',
+                        'name': '{{menuItem.name}}'.replace(/&#x27;/, "'"),
+                        'change': 'decrement'
+                    });
                 }
                 var b = document.getElementById("thumbs-down");
                 b.className = "fg-red bg-black active";
@@ -95,16 +111,24 @@
                 likeCount.textContent = " " + numLikes;
                 disliked = true;
 
-                var postURL = '/food/downvote/' + '{{hall}}' + '/' + '{{menuItem.name}}' + '/' + 'increment';
-                $.post(postURL, function(data){});
+                var postURL = '/food/downvote/';
+                $.post(postURL, {
+                    'hall': '{{hall}}',
+                    'name': '{{menuItem.name}}'.replace(/&#x27;/, "'"),
+                    'change': 'increment'
+                });
             } else {
                 disliked = false;
                 var b = document.getElementById("thumbs-down");
                 b.className = "fg-red";
                 b.children[0].textContent = " " + (Number(b.children[0].textContent) - 1).toString();
 
-                var postURL = '/food/downvote/' + '{{hall}}' + '/' + '{{menuItem.name}}' + '/' + 'decrement';
-                $.post(postURL, function(data){});
+                var postURL = '/food/downvote/';
+                $.post(postURL, {
+                    'hall': '{{hall}}',
+                    'name': '{{menuItem.name}}'.replace(/&#x27;/, "'"),
+                    'change': 'decrement'
+                });
             }
         {{/if}}
     }
@@ -122,7 +146,7 @@
                 b.children[0].textContent = " " + likeCount;
                 favorited = false;
                 $.post('/removeFavorite', { 
-                         'name':'{{menuItem.name}}',
+                         'name':'{{menuItem.name}}'.replace(/&#x27;/, "'"),
                          'hall': '{{hall}}'
                       });
             // Favorite
@@ -135,7 +159,7 @@
                 b.children[0].textContent = " " + likeCount;
                 favorited = true;
                 $.post('/addFavorite', { 
-                         'name':'{{menuItem.name}}',
+                         'name':'{{menuItem.name}}'.replace(/&#x27;/, "'"),
                          'hall': '{{hall}}'
                       });
             }
@@ -153,7 +177,7 @@
 
         <div class="panel-header bg-darkRed fg-white">
 
-            <h3 class="fg-white">
+            <h3 class="fg-white foodName">
                 <button id="back"  type="submit" onclick="window.location.href='{{lastPage}}'" class="bg-darkRed">
                     <i class="icon-arrow-left fg-white"></i>
                 </button>

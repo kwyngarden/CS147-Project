@@ -60,7 +60,7 @@ exports.view = function(req, res){
 
 exports.addFavorite = function(req, res) {
     var username = req.session.username;
-    var itemName = req.body.name;
+    var itemName = req.body.name.replace(/&#x27;/, "'");
     var hall = req.body.hall;
 
     models.User
@@ -68,7 +68,6 @@ exports.addFavorite = function(req, res) {
           .exec(callbackOne);
 
     function callbackOne(err, user) {
-        console.log(itemName, hall);
         models.MenuItem
               .findOne({'name': itemName, 'dining_hall': hall})
               .exec(callbackTwo);

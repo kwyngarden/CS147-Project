@@ -8,9 +8,9 @@ var models = require('../models');
 var ObjectId = require('mongoose').Types.ObjectId;
 
 exports.upvote = function(req, res) {
-	var name = req.params.name;
-	var dhall = req.params.dhall;
-	var change = req.params.change;
+	var name = req.body.name;
+	var dhall = req.body.hall;
+	var change = req.body.change;
 	var username = req.session.username;
 	var number;
 
@@ -64,9 +64,9 @@ exports.upvote = function(req, res) {
 
 
 exports.downvote = function(req, res) {
-	var name = req.params.name;
-	var dhall = req.params.dhall;
-	var change = req.params.change;
+	var name = req.body.name;
+	var dhall = req.body.hall;
+	var change = req.body.change;
 	var username = req.session.username;
 	var number;
 
