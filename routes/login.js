@@ -2,8 +2,12 @@ var data = require('../data.json');
 var models = require('../models');
 
 exports.view = function(req, res){
+  if(req.session.username) {
+    res.redirect('/home');
+    return;
+  }
   if(!req.session.lastPage) {
-    req.session.lastPage = '/';
+    req.session.lastPage = '/login';
   }
   var lastPage = req.session.lastPage;
   res.render('login', {
@@ -48,8 +52,7 @@ exports.login = function(req, res) {
                                     'pageVersion': req.session.pageVersion,
                                     'numFavEvents': 0
                                     });
-      console.log(newUser);
-      console.log(req.session.pageVersion);
+      //console.log(newUser);
       newUser.save(function(err){
         if (err) console.log(err);
         if(req.session.lastPage) {
@@ -62,9 +65,9 @@ exports.login = function(req, res) {
     
     // Handle user login validation
     else {
-      console.log("comparing " + password + "->" + hash + " to stored hash: " + user.passwordHash);
+      //console.log("comparing " + password + "->" + hash + " to stored hash: " + user.passwordHash);
       if(user.passwordHash != hash) {
-        console.log('password error; re-rendering login page');
+        //console.log('password error; re-rendering login page');
         res.render('login', {
           'lastPage': lastPage,
           'username': req.session.username,
