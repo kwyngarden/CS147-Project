@@ -10,8 +10,9 @@ var ObjectId = require('mongoose').Types.ObjectId;
 exports.upvote = function(req, res) {
 	var name = req.params.name;
 	var dhall = req.params.dhall;
-	var number = req.params.number;
+	var change = req.params.change;
 	var username = req.session.username;
+	var number;
 
 	models.User
 		  .findOne({'username': username})
@@ -20,10 +21,19 @@ exports.upvote = function(req, res) {
 	function callbackOne(err, user) {
 		if (err) {console.log(err); res.send(500)}
 		// Update MenuItem to include upvotes and new upvoter
-		models.MenuItem
+		if (change == 'increment') {
+			number = 1;
+			models.MenuItem
 		  	  .update({'name': name, 'dining_hall': dhall},
-		  	  		  {'upvotes': number, $push: {'upvoters': user._id}},
+		  	  		  {$inc: {'upvotes': number}, $push: {'upvoters': user._id}},
 		  	  		  callbackTwo);
+		} else if (change == 'decrement') {
+			number = -1;
+			models.MenuItem
+		  	  .update({'name': name, 'dining_hall': dhall},
+		  	  		  {$inc: {'upvotes': number}, $pull: {'upvoters': user._id}},
+		  	  		  callbackTwo);
+		}
 
 		// Remove downvote and downvoter records if user previously downvoted
 		function callbackTwo(err) {
@@ -56,8 +66,11 @@ exports.upvote = function(req, res) {
 exports.downvote = function(req, res) {
 	var name = req.params.name;
 	var dhall = req.params.dhall;
-	var number = req.params.number;
+	var change = req.params.change;
 	var username = req.session.username;
+	var number;
+
+	console.log(change);
 
 	models.User
 		  .findOne({'username': username})
@@ -66,10 +79,20 @@ exports.downvote = function(req, res) {
 	function callbackOne(err, user) {
 		if (err) {console.log(err); res.send(500)}
 		// Update MenuItem to include downvotes and new downvoter
-		models.MenuItem
+		if (change == 'increment') {
+			number = 1;
+			models.MenuItem
 		  	  .update({'name': name, 'dining_hall': dhall},
-		  	  		  {'downvotes': number, $push: {'downvoters': user._id}},
+		  	  		  {$inc: {'downvotes': number}, $push: {'downvoters': user._id}},
 		  	  		  callbackTwo);
+		} else if (change == 'decrement') {
+			number = -1;
+			console.log(number);
+			models.MenuItem
+		  	  .update({'name': name, 'dining_hall': dhall},
+		  	  		  {$inc: {'downvotes': number}, $pull: {'downvoters': user._id}},
+		  	  		  callbackTwo);
+		}
 
 		// Remove upvote and upvoter records if user previously upvoted
 		function callbackTwo(err) {

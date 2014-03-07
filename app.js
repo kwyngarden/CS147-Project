@@ -60,8 +60,8 @@ app.get('/search', index.view); // If no parameters sent, reroute to homepage
 app.get('/login', login.view);
 app.post('/user_login', login.login);
 app.get('/user_logout', login.logout);
-app.post('/food/upvote/:dhall/:name/:number', food.upvote);
-app.post('/food/downvote/:dhall/:name/:number', food.downvote);
+app.post('/food/upvote/:dhall/:name/:change', food.upvote);
+app.post('/food/downvote/:dhall/:name/:change', food.downvote);
 app.post('/addFavorite', favorites.addFavorite);
 app.post('/removeFavorite', favorites.removeFavorite);
 app.post('/getNearby', index.getNearby);

@@ -36,7 +36,7 @@
         {{#if favorited}}
             favorited = true;
             var b = document.getElementById("favorites");
-            b.className += "fg-amber bg-black active";
+            b.className = "fg-amber bg-black active";
         {{/if}}
     });
 
@@ -45,23 +45,32 @@
             if (!liked) {
                 if (disliked) {
                     var b = document.getElementById("thumbs-down")
-                    b.className = "fg-red bg-white active";
+                    b.className = "fg-red";
                     var likeCount = b.children[0].textContent;
                     likeCount = (Number(likeCount) - 1).toString();
                     b.children[0].textContent = " " + likeCount;
                     disliked = false;
+
+                    var postURL = '/food/downvote/' + '{{hall}}' + '/' + '{{menuItem.name}}' + '/' + 'decrement';
+                    $.post(postURL, function(data){});
                 }
 
-                var b = document.getElementById("thumbs-up");
+                 var b = document.getElementById("thumbs-up");
                 b.className = "fg-green bg-black active";
-                var numLikes = {{menuItem.upvotes}} + 1;
-                var likeCount = b.children[0];
-                likeCount.textContent = " " + numLikes;
+                b.children[0].textContent = " " + (Number(b.children[0].textContent) + 1).toString();
                 liked = true;
 
-                postURL = '/food/upvote/' + '{{hall}}' + '/' + '{{menuItem.name}}' + '/' + numLikes;
+                var postURL = '/food/upvote/' + '{{hall}}' + '/' + '{{menuItem.name}}' + '/' + 'increment';
                 $.post(postURL, function(data){});  
-            }          
+            } else {
+                liked = false;
+                var b = document.getElementById("thumbs-up");
+                b.className = "fg-green";
+                b.children[0].textContent = " " + (Number(b.children[0].textContent) - 1).toString();
+
+                var postURL = '/food/upvote/' + '{{hall}}' + '/' + '{{menuItem.name}}' + '/' + 'decrement';
+                $.post(postURL, function(data){});
+            }
         {{/if}}
     }
 
@@ -71,13 +80,13 @@
             if (!disliked) {
                 if (liked) {
                     var b = document.getElementById("thumbs-up");
-                    b.className = "fg-green bg-white active";
+                    b.className = "fg-green";
                     var likeCount = b.children[0].textContent;
                     likeCount = (Number(likeCount) - 1).toString();
                     b.children[0].textContent = " " + likeCount;
                     liked = false;
-                    // var postURL = '/food/upvote/' + '{{hall}}' + '/' + '{{menuItem.name}}' + '/' + numLikes;
-                    // $.post(postURL, function(data){});
+                    var postURL = '/food/upvote/' + '{{hall}}' + '/' + '{{menuItem.name}}' + '/' + 'decrement';
+                    $.post(postURL, function(data){});
                 }
                 var b = document.getElementById("thumbs-down");
                 b.className = "fg-red bg-black active";
@@ -86,7 +95,15 @@
                 likeCount.textContent = " " + numLikes;
                 disliked = true;
 
-                var postURL = '/food/downvote/' + '{{hall}}' + '/' + '{{menuItem.name}}' + '/' + numLikes;
+                var postURL = '/food/downvote/' + '{{hall}}' + '/' + '{{menuItem.name}}' + '/' + 'increment';
+                $.post(postURL, function(data){});
+            } else {
+                disliked = false;
+                var b = document.getElementById("thumbs-down");
+                b.className = "fg-red";
+                b.children[0].textContent = " " + (Number(b.children[0].textContent) - 1).toString();
+
+                var postURL = '/food/downvote/' + '{{hall}}' + '/' + '{{menuItem.name}}' + '/' + 'decrement';
                 $.post(postURL, function(data){});
             }
         {{/if}}
@@ -99,7 +116,7 @@
             // Unfavorite
             if (favorited) {
                 ga("send", "event", "favorites", "unfavorite");  //Log the favorite
-                b.className = 'fg-amber bg-white';
+                b.className = 'fg-amber';
                 var likeCount = b.children[0].textContent;
                 likeCount = (Number(likeCount) - 1).toString();
                 b.children[0].textContent = " " + likeCount;
@@ -112,7 +129,7 @@
             } else {
                 ga("send", "event", "favorites", "favorite");  //Log the favorite
                 var b = document.getElementById("favorites")
-                b.className += "fg-amber bg-black active";
+                b.className = "fg-amber bg-black active";
                 var likeCount = b.children[0].textContent;
                 likeCount = (Number(likeCount) + 1).toString();
                 b.children[0].textContent = " " + likeCount;

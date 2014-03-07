@@ -68,6 +68,7 @@ exports.addFavorite = function(req, res) {
           .exec(callbackOne);
 
     function callbackOne(err, user) {
+        console.log(itemName, hall);
         models.MenuItem
               .findOne({'name': itemName, 'dining_hall': hall})
               .exec(callbackTwo);
