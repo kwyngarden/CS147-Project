@@ -105,7 +105,7 @@
 				"dining_hall": "Ricker", 
 				"nutritional_info": "Heaven on a biscuit. Need we say more?",
 				"favorites": 0, 
-				"tags": ["desert"]
+				"tags": ["dessert"]
 				},
 				{
 				"name": "Fish and Chips", 
@@ -141,7 +141,7 @@
 				"tags": ["vegetarian", "carbohydrates"]
 				}, 
 				{
-				"name": "Kamut with Roasted Butterut Squash", 
+				"name": "Kamut with Roasted Butternut Squash", 
 				"imageURL": "dining.png",
 				"mealList": ["1d"],
 				"upvotes": 0,
@@ -182,7 +182,7 @@
 				"dining_hall": "Ricker", 
 				"nutritional_info": "New flavors, new Friends",
 				"favorites": 0, 
-				"tags": ["desert"]
+				"tags": ["dessert"]
 				},
 				{
 				"name": "Pizza",
@@ -407,7 +407,7 @@
 				"dining_hall": "Ricker", 
 				"nutritional_info": "New flavors, new Friends",
 				"favorites": 0, 
-				"tags": ["desert"]
+				"tags": ["dessert"]
 				}
 			]
 		},

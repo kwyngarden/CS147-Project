@@ -3,8 +3,8 @@
 <html>
 <head>
     <!-- Google Analytics Content Experiment code -->
-    <!-- <script>function utmx_section(){}function utmx(){}(function(){var
-    k='83006042-3',d=document,l=d.location,c=d.cookie;
+    <script>function utmx_section(){}function utmx(){}(function(){var
+    k='83006042-4',d=document,l=d.location,c=d.cookie;
     if(l.search.indexOf('utm_expid='+k)>0)return;
     function f(n){if(c){var i=c.indexOf(n+'=');if(i>-1){var j=c.
     indexOf(';',i);return escape(c.substring(i+n.length+1,j<0?c.
@@ -14,7 +14,7 @@
     '&utmx='+(x?x:'')+'&utmxx='+(xx?xx:'')+'&utmxtime='+new Date().
     valueOf()+(h?'&utmxhash='+escape(h.substr(1)):'')+
     '" type="text/javascript" charset="utf-8"><\/sc'+'ript>')})();
-    </script><script>utmx('url','A/B');</script> -->
+    </script><script>utmx('url','A/B');</script>
     <!-- End of Google Analytics Content Experiment code -->
 
 	<title>Delp</title>	
@@ -48,8 +48,8 @@
 	{{#each halls}}
 	<a href="/dining/{{name}}">
 		<div class="panel">
-	    	<div class="panel-header bg-darkRed fg-white">
-	    		<h3>{{name}} Dining <span class="icon-redo"></span></h3>
+	    	<div class="panel-header bg-darkRed fg-white diningHeader">
+	    		<h3>{{name}} Dining</h3>
 	    	</div>
 
 	    	<div class="panel-content homePageDiningPanel">
@@ -81,6 +81,12 @@
 
 </div>
 <script>
+    $('.diningHeader').click(recordHallClick);
+
+    function recordHallClick() {
+        alert("HI");
+        ga("send", "event", "hall", "click");
+    }
 </script>
 </body>
 </html>

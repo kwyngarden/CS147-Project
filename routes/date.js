@@ -7,7 +7,6 @@ exports.getMenu = function getMealAdjustedMenu(menu) {
       newMenu.push(menu[i]);
     // }
   }
-  console.log(newMenu);
   return newMenu;
 };
 
@@ -16,7 +15,7 @@ function getMenuIdentifier() {
   now.setHours(now.getHours() - 8);
   var meal = 'l';
   if(now.getHours() >= 15) {
-    meal = 'l';
+    meal = 'd';
   }
   var day = now.getDay() - 2;
   if(day < 0 || day > 3) {
