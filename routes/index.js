@@ -50,11 +50,9 @@ exports.viewAlt = function(req, res){
       }
 
       function callbackOne(err, user) {
-        console.log('callbackOne');
         var favorites = user.favorites;
         var numLeft = favorites.length;
         if (favorites.length == 0) {
-          console.log("NO FAVORITES");
           res.render('indexAlt', {
                        'lastPage': lastPage,
                        'halls': halls,
@@ -70,12 +68,12 @@ exports.viewAlt = function(req, res){
         }
 
         function callbackTwo(err, menuItem) {
-            console.log('callbackTwo');
+            //console.log('callbackTwo');
             models.MenuItem.find()
                            .exec(callbackThree);
             
             function callbackThree(err, items) {
-                console.log('callbackThree');
+                //console.log('callbackThree');
                 var dining_halls = [];
                 for (var i=0; i<items.length; i++) {
                     if (items[i].name == menuItem.name) {
@@ -102,7 +100,7 @@ exports.viewAlt = function(req, res){
                 }
 
                 function callbackFour(err, halls) {
-                    console.log("callbackFour")
+                    //console.log("callbackFour")
                     if(err) console.log(err);
                     for(var i = 0; i < halls.length; i++) {
                         var menu = halls[i].menu;
@@ -138,7 +136,7 @@ exports.view = function(req, res){
             .exec(callbackZero);
 
     function callbackZero(err, halls) {
-      console.log(halls.length);
+      //console.log(halls.length);
       if(err) console.log(err);
       for(var i = 0; i < halls.length; i++) {
           var menu = halls[i].menu;
@@ -146,7 +144,7 @@ exports.view = function(req, res){
       }
 
       if (!username){
-        console.log("NO USERNAME");
+        //console.log("NO USERNAME");
         res.render('index', {
                        'lastPage': lastPage,
                        'halls': halls,
@@ -159,11 +157,11 @@ exports.view = function(req, res){
       }
 
       function callbackOne(err, user) {
-        console.log('callbackOne');
+        //console.log('callbackOne');
         var favorites = user.favorites;
         var numLeft = favorites.length;
         if (favorites.length == 0) {
-          console.log("NO FAVORITES");
+          //console.log("NO FAVORITES");
           res.render('index', {
                        'lastPage': lastPage,
                        'halls': halls,
@@ -178,12 +176,12 @@ exports.view = function(req, res){
         }
 
         function callbackTwo(err, menuItem) {
-            console.log('callbackTwo');
+            //console.log('callbackTwo');
             models.MenuItem.find()
                            .exec(callbackThree);
             
             function callbackThree(err, items) {
-                console.log('callbackThree');
+                //console.log('callbackThree');
                 var dining_halls = [];
                 for (var i=0; i<items.length; i++) {
                     if (items[i].name == menuItem.name) {
@@ -210,7 +208,7 @@ exports.view = function(req, res){
                 }
 
                 function callbackFour(err, halls) {
-                    console.log("callbackFour")
+                    //console.log("callbackFour")
                     if(err) console.log(err);
                     for(var i = 0; i < halls.length; i++) {
                         var menu = halls[i].menu;
