@@ -91,7 +91,7 @@ exports.addFavorite = function(req, res) {
                 menuItem.update({$inc: {'favorites': 1}}, callbackFour);
 
                 function callbackFour(err) {
-                    models.User.findOne({'username': username}, function(err, m){console.log(m)});
+                    models.User.findOne({'username': username}, function(err, m){ if(err) { console.log(err) } });
                     //models.MenuItem.findOne({'name': itemName, 'dining_hall': hall}, function(err, n){console.log(n)});
                     res.send(200);
                 }
@@ -132,8 +132,8 @@ exports.removeFavorite = function(req, res) {
                 menuItem.update({$inc: {'favorites': -1}}, callbackFour);
 
                 function callbackFour(err) {
-                    models.User.findOne({'username': username}, function(err, m){console.log(m)});
-                    models.MenuItem.findOne({'name': itemName, 'dining_hall': hall}, function(err, n){console.log(n)});
+                    models.User.findOne({'username': username}, function(err, m){ if(err) { console.log(err)} });
+                    models.MenuItem.findOne({'name': itemName, 'dining_hall': hall}, function(err, n){ if(err) { console.log(err) } });
                     res.send(200);
                 }
             }
