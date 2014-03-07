@@ -42,9 +42,9 @@ body {
 */
 }
 
-.metro .panel .panel-content {
+/*.metro .panel .panel-content {
 	cursor: pointer;
-}
+}*/
 
 .metro .panel .homePageDiningPanel {
 	max-width: 100%;
@@ -93,9 +93,9 @@ body {
 	color: white;
 }
 
-.button-set .foodTag {
+/*.button-set .foodTag {
 	cursor: default;
-}
+}*/
 
 .panel-header{
 	text-align: center;
@@ -141,7 +141,7 @@ body {
 	float: left;
 }
 
-#thumbs-up{
+/*#thumbs-up{
 	border: 2px solid black;
 }
 
@@ -151,7 +151,7 @@ body {
 
 #favorites{
 	border: 2px solid black;
-}
+}*/
 
 
 /*#restHalls {
