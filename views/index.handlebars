@@ -50,7 +50,11 @@
 	<a href="/dining/{{name}}">
 		<div class="panel">
 	    	<div class="panel-header bg-darkRed fg-white diningHeader">
+<<<<<<< HEAD
 	    		<h3>{{name}} Dining<span class="icon-redo"></span></h3>
+=======
+	    		<h3>{{name}} Dining <span class="icon-redo"></span></h3>
+>>>>>>> eaa898244f9b41b768ba96273875dd4fa5a2e7d1
 	    	</div>
 
 	    	<div class="panel-content homePageDiningPanel">
@@ -81,13 +85,5 @@
     {{/each}}
 
 </div>
-<script>
-    $('.diningHeader').click(recordHallClick);
-
-    function recordHallClick() {
-        alert("HI");
-        ga("send", "event", "hall", "click");
-    }
-</script>
 </body>
 </html>
