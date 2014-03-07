@@ -47,6 +47,7 @@ if ('development' == app.get('env')) {
 
 // Add routes here
 app.get('/', index.view);
+//app.get('/alt', index.viewAlt);
 app.get('/events', events.view);
 app.get('/map', map.view);
 app.get('/food/:dhall/:name', food.view);
