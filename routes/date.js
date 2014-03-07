@@ -4,6 +4,7 @@ exports.getMenu = function getMealAdjustedMenu(menu) {
   for (var i = 0; i < menu.length; i++) {
     var mealIDlist = menu[i].mealList;
      if (mealIDlist.indexOf(currMealID) >= 0) {
+      console.log(menu[i]);
       newMenu.push(menu[i]);
      }
   }
