@@ -3,9 +3,9 @@ exports.getMenu = function getMealAdjustedMenu(menu) {
   var newMenu = [];
   for (var i = 0; i < menu.length; i++) {
     var mealIDlist = menu[i].mealList;
-    // if (mealIDlist.indexOf(currMealID) >= 0) {
+     if (mealIDlist.indexOf(currMealID) >= 0) {
       newMenu.push(menu[i]);
-    // }
+     }
   }
   return newMenu;
 };
@@ -17,9 +17,10 @@ function getMenuIdentifier() {
   if(now.getHours() >= 15) {
     meal = 'd';
   }
-  var day = now.getDay() - 2;
-  if(day < 0 || day > 3) {
-    day = 3;
-  }
-  return day + meal ;
+  // var day = now.getDay() - 2;
+  // if(day < 0 || day > 3) {
+  //   day = 3;
+  // }
+  // return day + meal ;
+  return 1 + meal ;
 }
