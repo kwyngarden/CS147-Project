@@ -35,7 +35,6 @@ exports.view = function(req, res){
           var weekendHours = getSortedHoursArr(hours.weekends);
           var closestMeal = getClosestMealAndHours(hours.weekdays, hours.weekends);
           //console.log(closestMeal);
-          console.log(menu);
 
           // Render the dining hall page
           res.render('dining', {

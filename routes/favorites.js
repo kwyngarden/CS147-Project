@@ -8,6 +8,12 @@ exports.view = function(req, res){
 
   if (username) {
     models.User.findOne({'username': username}, callbackOne);
+  } else {
+    res.render('favorites', {
+        'lastPage': lastPage,
+        'username': username,
+        'favorites': []
+    });
   }
 
   var favoritesArr = [];
