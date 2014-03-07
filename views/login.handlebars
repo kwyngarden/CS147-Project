@@ -19,7 +19,7 @@
 
     {{>navMenu}}       
 
-    <div class="panel" style="margin-left:5px;">
+    <div class="panel text-center">
         {{#if message}}
             <div>
                 <p style="color:red">{{message}}</p>
@@ -28,12 +28,14 @@
         <!-- Basic login form from Gilbert's session example -->
         <form id="username-form" action="user_login" method="post" role="form">
           <div class="form-group">
-            <label for="title">Log In or Create Account</label>
+            <h3><label for="title">Log In or Create Account</label></h3><br>
             <input type="text" style="margin-bottom:5px;" class="form-control" name="username" placeholder="username"><br>
             <input type="password" style="margin-bottom:5px;" class="form-control" name="password" placeholder="password">
-          </div>
-          <button type="submit" class="btn btn-default">Submit</button>
+          </div><br>
+          <button type="submit" class="btn btn-default">Log In/Register</button>
         </form>
+        <br>
+        <!-- <p><a href="/home">Homepage (skip login)</a></p> -->
 
     </div>
 </body>
