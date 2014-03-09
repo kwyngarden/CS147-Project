@@ -106,9 +106,7 @@
                 }
                 var b = document.getElementById("thumbs-down");
                 b.className = "fg-red bg-black active";
-                var numLikes = {{menuItem.downvotes}} + 1;
-                var likeCount = b.children[0];
-                likeCount.textContent = " " + numLikes;
+                b.children[0].textContent = " " + (Number(b.children[0].textContent) + 1).toString();
                 disliked = true;
 
                 var postURL = '/food/downvote/';
