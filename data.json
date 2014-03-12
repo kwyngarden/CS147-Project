@@ -1,6 +1,60 @@
 {
 	"halls": [
 		{
+			"name": "FloMo",
+			"latitude": 37.421869,
+			"longitude": -122.171799,
+			"hours": {
+				"weekdays": {
+					"Breakfast": ["8:00am", "9:30am"],
+					"Lunch": ["11:30am", "1:15pm"],
+					"Dinner": ["5:00pm", "7:30pm"]
+				},
+				"weekends": {
+					"Brunch": ["10:30am", "1:00pm"],
+					"Dinner": ["5:00pm", "7:30pm"]
+				},
+				"closed": [],
+				"latenightDays": []
+			},
+			"imageURL": "/images/dining.png",
+			"menu": [
+				{
+				"name": "Quinoa with Dried Fruit", 
+				"mealList": ["1l"],
+				"imageURL": "dining.png",
+				"upvotes": 3,
+				"downvotes": 1,
+				"dining_hall": "FloMo", 
+				"nutritional_info": "Protein filled vegetarian start to the meal",
+				"favorites": 0, 
+				"tags": ["vegan", "vegetarian", "wheat"]
+				},
+				{
+				"name": "Lentils with Spinach", 
+				"imageURL": "images/dining.png",
+				"mealList": ["1l"],
+				"upvotes": 5,
+				"downvotes": 2,
+				"dining_hall": "FloMo", 
+				"nutritional_info": "Delicious lentils for your salad",
+				"favorites": 0, 
+				"tags": ["vegetarian", "vegan"]
+				},
+				{
+				"name": "Baked Salmon", 
+				"mealList": ["1l"],
+				"imageURL": "dining.png",
+				"upvotes": 1,
+				"downvotes": 1,
+				"dining_hall": "FloMo", 
+				"nutritional_info": "Fresh Salmon to provide you with a high-protein soaked in brown sugar",
+				"favorites": 0, 
+				"tags": ["protein", "non-vegetarian"]
+				}
+			]
+		},
+		{
 			"name": "Ricker",
 			"latitude": 37.425604,
 			"longitude": -122.180428,
@@ -433,225 +487,6 @@
 				"upvotes": 0,
 				"downvotes": 0,
 				"dining_hall": "Arrillaga", 
-				"nutritional_info": "Grass Fed Burger, Grilled Chicken, Hillary Adzuki Burger, Fries, Comdiments",
-				"favorites": 0, 
-				"tags": ["protein", "carbohydrates"]
-				}
-			]
-		},
-		{
-			"name": "FloMo",
-			"latitude": 37.421869,
-			"longitude": -122.171799,
-			"hours": {
-				"weekdays": {
-					"Breakfast": ["8:00am", "9:30am"],
-					"Lunch": ["11:30am", "1:15pm"],
-					"Dinner": ["5:00pm", "7:30pm"]
-				},
-				"weekends": {
-					"Brunch": ["10:30am", "1:00pm"],
-					"Dinner": ["5:00pm", "7:30pm"]
-				},
-				"closed": [],
-				"latenightDays": []
-			},
-			"imageURL": "/images/dining.png",
-			"menu": [
-				{
-				"name": "Garlicky White Bean Soup", 
-				"mealList": ["1l, 1d"],
-				"imageURL": "dining.png",
-				"upvotes": 0,
-				"downvotes": 0,
-				"dining_hall": "FloMo", 
-				"nutritional_info": "Protein filled vegetarian start to the meal",
-				"favorites": 0, 
-				"tags": ["soup", "vegetarian"]
-				},
-				{
-				"name": "Baked Salmon", 
-				"mealList": ["1l"],
-				"imageURL": "dining.png",
-				"upvotes": 0,
-				"downvotes": 0,
-				"dining_hall": "FloMo", 
-				"nutritional_info": "Fresh Salmon to provide you with a high-protein soaked in brown sugar",
-				"favorites": 0, 
-				"tags": ["protein", "non-vegetarian"]
-				},
-				{
-				"name": "Vegetarian Quesadilla", 
-				"imageURL": "images/dining.png",
-				"mealList": ["1l"],
-				"upvotes": 0,
-				"downvotes": 0,
-				"dining_hall": "FloMo", 
-				"nutritional_info": "High Protein and Cheesy Vegetable Quessadila",
-				"favorites": 0, 
-				"tags": ["vegetarian"]
-				}, 
-				{
-				"name": "Roasted Sweet Potatoes", 
-				"imageURL": "dining.png",
-				"mealList": ["1l"],
-				"upvotes": 0,
-				"downvotes": 0,
-				"dining_hall": "FloMo", 
-				"nutritional_info": "The perfect combination of sweet and salty to provide you with some carbohydrates",
-				"favorites": 0, 
-				"tags": ["vegetarian", "carbohydrates"]
-				},
-				{
-				"name": "Roasted Cauliflower Deli", 
-				"imageURL": "dining.png",
-				"mealList": ["1l"],
-				"upvotes": 0,
-				"downvotes": 0,
-				"dining_hall": "FloMo", 
-				"nutritional_info": "A very healthy option to get your dose of vitamins and nutrients",
-				"favorites": 0, 
-				"tags": ["vegetarian", "health++"]
-				},
-				{
-				"name": "Chicken Caesar",
-				"mealList": ["1l"], 
-				"imageURL": "dining.png",
-				"upvotes": 0,
-				"downvotes": 0,
-				"dining_hall": "FloMo", 
-				"nutritional_info": "Delicious Ceasar Salad with Chicken on the side",
-				"favorites": 0, 
-				"tags": ["non-vegetarian", "salad"]
-				},
-				{
-				"name": "Vegetarian Nicoise Salad",
-				"mealList": ["1l"], 
-				"imageURL": "dining.png",
-				"upvotes": 0,
-				"downvotes": 0,
-				"dining_hall": "FloMo", 
-				"nutritional_info": "Vegetarian Salad option for the day",
-				"favorites": 0, 
-				"tags": ["vegetarian", "salad"]
-				},
-				{
-				"name": "Cookies",
-				"mealList": ["1l"], 
-				"imageURL": "dining.png",
-				"upvotes": 0,
-				"downvotes": 0,
-				"dining_hall": "FloMo", 
-				"nutritional_info": "Heaven on a biscuit. Need we say more?",
-				"favorites": 0, 
-				"tags": ["dessert"]
-				},
-				{
-				"name": "Fish and Chips", 
-				"mealList": ["1d"],
-				"imageURL": "dining.png",
-				"upvotes": 0,
-				"downvotes": 0,
-				"dining_hall": "FloMo", 
-				"nutritional_info": "The classic",
-				"favorites": 0, 
-				"tags": ["protein","carbohydrates","non-vegetarian"]
-				},
-				{
-				"name": "Jorge's Southwest Fusili with Chicken", 
-				"mealList": ["1d"],
-				"imageURL": "dining.png",
-				"upvotes": 0,
-				"downvotes": 0,
-				"dining_hall": "FloMo", 
-				"nutritional_info": "A live pasta counter where you can pick your ingredients of choice to make a pasta suited to your tastes and health requirements",
-				"favorites": 0, 
-				"tags": ["protein", "non-vegetarian"]
-				},
-				{
-				"name": "Jorge's Gourmet Vegetable Pasta", 
-				"imageURL": "images/dining.png",
-				"mealList": ["1d"],
-				"upvotes": 0,
-				"downvotes": 0,
-				"dining_hall": "FloMo", 
-				"nutritional_info": "A live pasta counter where you can pick your ingredients of choice to make a pasta suited to your tastes and health requirements",
-				"favorites": 0, 
-				"tags": ["vegetarian", "carbohydrates"]
-				}, 
-				{
-				"name": "Kamut with Roasted Butternut Squash", 
-				"imageURL": "dining.png",
-				"mealList": ["1d"],
-				"upvotes": 0,
-				"downvotes": 0,
-				"dining_hall": "FloMo", 
-				"nutritional_info": "A very healthy option to get your dose of vitamins and nutrients",
-				"favorites": 0, 
-				"tags": ["vegetarian", "health++"]
-				},
-				{
-				"name": "Zucchini", 
-				"imageURL": "dining.png",
-				"mealList": ["1d"],
-				"upvotes": 0,
-				"downvotes": 0,
-				"dining_hall": "FloMo", 
-				"nutritional_info": "A very healthy option to get your dose of vitamins and nutrients",
-				"favorites": 0, 
-				"tags": ["vegetarian", "health++"]
-				},
-				{
-				"name": "Sauteed Kale with Cranberries",
-				"mealList": ["1d"], 
-				"imageURL": "dining.png",
-				"upvotes": 0,
-				"downvotes": 0,
-				"dining_hall": "FloMo", 
-				"nutritional_info": "Vegetarian Salad option for the day with sweet Cranberries",
-				"favorites": 0, 
-				"tags": ["vegetarian", "health++"]
-				},
-				{
-				"name": "Ice Cream Social",
-				"mealList": ["1d"], 
-				"imageURL": "dining.png",
-				"upvotes": 0,
-				"downvotes": 0,
-				"dining_hall": "FloMo", 
-				"nutritional_info": "New flavors, new Friends",
-				"favorites": 0, 
-				"tags": ["dessert"]
-				},
-				{
-				"name": "Pizza",
-				"mealList": ["1l", "1d"], 
-				"imageURL": "dining.png",
-				"upvotes": 0,
-				"downvotes": 0,
-				"dining_hall": "FloMo", 
-				"nutritional_info": "Cheese, Vegetable, Pepperoni, House Special",
-				"favorites": 0, 
-				"tags": ["vegetarian", "non-vegetarian"]
-				},
-				{
-				"name": "Garlic Bread",
-				"mealList": ["1d"], 
-				"imageURL": "dining.png",
-				"upvotes": 0,
-				"downvotes": 0,
-				"dining_hall": "FloMo", 
-				"nutritional_info": "Crunchy Carlic Bread with molten butter",
-				"favorites": 0, 
-				"tags": ["carbohydrates"]
-				},
-				{
-				"name": "Burger Bar",
-				"mealList": ["1l", "1d"], 
-				"imageURL": "dining.png",
-				"upvotes": 0,
-				"downvotes": 0,
-				"dining_hall": "FloMo", 
 				"nutritional_info": "Grass Fed Burger, Grilled Chicken, Hillary Adzuki Burger, Fries, Comdiments",
 				"favorites": 0, 
 				"tags": ["protein", "carbohydrates"]
