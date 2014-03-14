@@ -141,17 +141,6 @@
 			"imageURL": "/images/dining.png",
 			"menu": [
 				{
-				"name": "Chicken Noodle Soup", 
-				"mealList": ["1l"],
-				"imageURL": "dining.png",
-				"upvotes": 0,
-				"downvotes": 0,
-				"dining_hall": "Ricker", 
-				"nutritional_info": "Thai style chicken noodle soup",
-				"favorites": 0, 
-				"tags": ["soup", "meat", "protein"]
-				},
-				{
 				"name": "Thai Basil Chicken", 
 				"mealList": ["1l"],
 				"imageURL": "dining.png",
