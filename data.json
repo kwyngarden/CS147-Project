@@ -317,17 +317,6 @@
 				"tags": ["vegetarian"]
 				},
 				{
-				"name": "French Bread with Pesto",
-				"mealList": ["1d"], 
-				"imageURL": "dining.png",
-				"upvotes": 0,
-				"downvotes": 0,
-				"dining_hall": "Ricker", 
-				"nutritional_info": "",
-				"favorites": 0, 
-				"tags": ["carbohydrates"]
-				},
-				{
 				"name": "Leprechaun Lime Drink",
 				"mealList": ["1d"], 
 				"imageURL": "dining.png",
