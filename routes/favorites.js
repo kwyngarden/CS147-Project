@@ -21,6 +21,16 @@ exports.view = function(req, res){
   function callbackOne(err, user) {
     var favorites = user.favorites;
     var numLeft = favorites.length;
+
+    if (favorites.length == 0) {
+        res.render('favorites', {
+            'lastPage': lastPage,
+            'username': username,
+            'favorites': favoritesArr
+      });
+        return;
+    }
+
     for (var i=0; i<favorites.length; i++) {
         models.MenuItem.findOne({'_id': favorites[i].toString()}, callbackTwo);
     }
