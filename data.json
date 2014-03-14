@@ -109,17 +109,6 @@
 				"tags": ["vegetarian"] 
 				},
 				{
-				"name": "Lentils and bitter melon", 
-				"mealList": ["1l", "1d"],
-				"imageURL": "dining.png",
-				"upvotes": 0,
-				"downvotes": 0,
-				"dining_hall": "FloMo", 
-				"nutritional_info": "",
-				"favorites": 0, 
-				"tags": ["vegetarian"]
-				},
-				{
 				"name": "Pizza Bar", 
 				"mealList": ["1l", "1d"],
 				"imageURL": "dining.png",
