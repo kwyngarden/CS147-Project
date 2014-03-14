@@ -141,51 +141,51 @@
 			"imageURL": "/images/dining.png",
 			"menu": [
 				{
-				"name": "Garlicky White Bean Soup", 
-				"mealList": ["1l, 1d"],
-				"imageURL": "dining.png",
-				"upvotes": 0,
-				"downvotes": 0,
-				"dining_hall": "Ricker", 
-				"nutritional_info": "Protein filled vegetarian start to the meal",
-				"favorites": 0, 
-				"tags": ["soup", "vegetarian"]
-				},
-				{
-				"name": "Baked Salmon", 
+				"name": "Chicken Noodle Soup", 
 				"mealList": ["1l"],
 				"imageURL": "dining.png",
 				"upvotes": 0,
 				"downvotes": 0,
 				"dining_hall": "Ricker", 
-				"nutritional_info": "Fresh Salmon to provide you with a high-protein soaked in brown sugar",
+				"nutritional_info": "Thai style chicken noodle soup",
+				"favorites": 0, 
+				"tags": ["soup", "meat", "protein"]
+				},
+				{
+				"name": "Thai Basil Chicken", 
+				"mealList": ["1l"],
+				"imageURL": "dining.png",
+				"upvotes": 0,
+				"downvotes": 0,
+				"dining_hall": "Ricker", 
+				"nutritional_info": "",
 				"favorites": 0, 
 				"tags": ["protein", "non-vegetarian"]
 				},
 				{
-				"name": "Vegetarian Quesadilla", 
+				"name": "Vegetable Curry with Potatoes and Tofu", 
 				"imageURL": "images/dining.png",
 				"mealList": ["1l"],
 				"upvotes": 0,
 				"downvotes": 0,
 				"dining_hall": "Ricker", 
-				"nutritional_info": "High Protein and Cheesy Vegetable Quessadila",
+				"nutritional_info": "",
 				"favorites": 0, 
 				"tags": ["vegetarian"]
 				}, 
 				{
-				"name": "Roasted Sweet Potatoes", 
+				"name": "Coconut Rice", 
 				"imageURL": "dining.png",
 				"mealList": ["1l"],
 				"upvotes": 0,
 				"downvotes": 0,
 				"dining_hall": "Ricker", 
-				"nutritional_info": "The perfect combination of sweet and salty to provide you with some carbohydrates",
+				"nutritional_info": "",
 				"favorites": 0, 
 				"tags": ["vegetarian", "carbohydrates"]
 				},
 				{
-				"name": "Roasted Cauliflower Deli", 
+				"name": "Zucchini", 
 				"imageURL": "dining.png",
 				"mealList": ["1l"],
 				"upvotes": 0,
@@ -196,73 +196,84 @@
 				"tags": ["vegetarian", "health++"]
 				},
 				{
-				"name": "Chicken Caesar",
+				"name": "Southwest Salad with Cilantro Lime Dressing",
 				"mealList": ["1l"], 
 				"imageURL": "dining.png",
 				"upvotes": 0,
 				"downvotes": 0,
 				"dining_hall": "Ricker", 
-				"nutritional_info": "Delicious Ceasar Salad with Chicken on the side",
+				"nutritional_info": "Delicious salad",
 				"favorites": 0, 
 				"tags": ["non-vegetarian", "salad"]
 				},
 				{
-				"name": "Vegetarian Nicoise Salad",
+				"name": "Coleslaw with Kale and Organic Apples",
 				"mealList": ["1l"], 
 				"imageURL": "dining.png",
 				"upvotes": 0,
 				"downvotes": 0,
 				"dining_hall": "Ricker", 
-				"nutritional_info": "Vegetarian Salad option for the day",
+				"nutritional_info": "",
 				"favorites": 0, 
 				"tags": ["vegetarian", "salad"]
 				},
 				{
-				"name": "Cookies",
+				"name": "Pizza",
 				"mealList": ["1l"], 
 				"imageURL": "dining.png",
 				"upvotes": 0,
 				"downvotes": 0,
 				"dining_hall": "Ricker", 
-				"nutritional_info": "Heaven on a biscuit. Need we say more?",
+				"nutritional_info": "Pepperoni, Cheese, Vegetable",
+				"favorites": 0, 
+				"tags": ["pizza"]
+				},
+				{
+				"name": "Otis Spunkmeyer Cookies", 
+				"mealList": ["1l"],
+				"imageURL": "dining.png",
+				"upvotes": 0,
+				"downvotes": 0,
+				"dining_hall": "Ricker", 
+				"nutritional_info": "Who doesn't love cookies?",
 				"favorites": 0, 
 				"tags": ["dessert"]
 				},
 				{
-				"name": "Fish and Chips", 
+				"name": "Chicken Noodle Soup", 
 				"mealList": ["1d"],
 				"imageURL": "dining.png",
 				"upvotes": 0,
 				"downvotes": 0,
 				"dining_hall": "Ricker", 
-				"nutritional_info": "The classic",
-				"favorites": 0, 
-				"tags": ["protein","carbohydrates","non-vegetarian"]
-				},
-				{
-				"name": "Jorge's Southwest Fusili with Chicken", 
-				"mealList": ["1d"],
-				"imageURL": "dining.png",
-				"upvotes": 0,
-				"downvotes": 0,
-				"dining_hall": "Ricker", 
-				"nutritional_info": "A live pasta counter where you can pick your ingredients of choice to make a pasta suited to your tastes and health requirements",
+				"nutritional_info": "Thai style chicken noodle soup",
 				"favorites": 0, 
 				"tags": ["protein", "non-vegetarian"]
 				},
 				{
-				"name": "Jorge's Gourmet Vegetable Pasta", 
+				"name": "Irish Halal Chicken Thigh Stew", 
 				"imageURL": "images/dining.png",
 				"mealList": ["1d"],
 				"upvotes": 0,
 				"downvotes": 0,
 				"dining_hall": "Ricker", 
-				"nutritional_info": "A live pasta counter where you can pick your ingredients of choice to make a pasta suited to your tastes and health requirements",
+				"nutritional_info": "Get your St. Patrick's Day spirit on!",
 				"favorites": 0, 
-				"tags": ["vegetarian", "carbohydrates"]
+				"tags": ["meat", "non-vegetarian"]
 				}, 
 				{
-				"name": "Kamut with Roasted Butternut Squash", 
+				"name": "Irish Corned Beef", 
+				"imageURL": "dining.png",
+				"mealList": ["1d"],
+				"upvotes": 0,
+				"downvotes": 0,
+				"dining_hall": "Ricker", 
+				"nutritional_info": "",
+				"favorites": 0, 
+				"tags": ["meat", "non-vegetarian"]
+				},
+				{
+				"name": "Mushroom Pasty in Puff Pastry", 
 				"imageURL": "dining.png",
 				"mealList": ["1d"],
 				"upvotes": 0,
@@ -273,29 +284,18 @@
 				"tags": ["vegetarian", "health++"]
 				},
 				{
-				"name": "Zucchini", 
-				"imageURL": "dining.png",
-				"mealList": ["1d"],
-				"upvotes": 0,
-				"downvotes": 0,
-				"dining_hall": "Ricker", 
-				"nutritional_info": "A very healthy option to get your dose of vitamins and nutrients",
-				"favorites": 0, 
-				"tags": ["vegetarian", "health++"]
-				},
-				{
-				"name": "Sauteed Kale with Cranberries",
+				"name": "Braised Cabbage and Onions",
 				"mealList": ["1d"], 
 				"imageURL": "dining.png",
 				"upvotes": 0,
 				"downvotes": 0,
 				"dining_hall": "Ricker", 
-				"nutritional_info": "Vegetarian Salad option for the day with sweet Cranberries",
+				"nutritional_info": "",
 				"favorites": 0, 
 				"tags": ["vegetarian", "health++"]
 				},
 				{
-				"name": "Ice Cream Social",
+				"name": "Smashed Red Potatoes with Green Onions",
 				"mealList": ["1d"], 
 				"imageURL": "dining.png",
 				"upvotes": 0,
@@ -303,40 +303,40 @@
 				"dining_hall": "Ricker", 
 				"nutritional_info": "New flavors, new Friends",
 				"favorites": 0, 
-				"tags": ["dessert"]
+				"tags": ["vegetarian"]
 				},
 				{
-				"name": "Pizza",
-				"mealList": ["1l", "1d"], 
-				"imageURL": "dining.png",
-				"upvotes": 0,
-				"downvotes": 0,
-				"dining_hall": "Ricker", 
-				"nutritional_info": "Cheese, Vegetable, Pepperoni, House Special",
-				"favorites": 0, 
-				"tags": ["vegetarian", "non-vegetarian"]
-				},
-				{
-				"name": "Garlic Bread",
+				"name": "Barley with Caramelized Leeks and Mushrooms",
 				"mealList": ["1d"], 
 				"imageURL": "dining.png",
 				"upvotes": 0,
 				"downvotes": 0,
 				"dining_hall": "Ricker", 
-				"nutritional_info": "Crunchy Carlic Bread with molten butter",
+				"nutritional_info": "",
 				"favorites": 0, 
-				"tags": ["carbohydrates"]
+				"tags": ["vegetarian"]
 				},
 				{
-				"name": "Burger Bar",
-				"mealList": ["1l", "1d"], 
+				"name": "French Bread with Pesto",
+				"mealList": ["1d"], 
 				"imageURL": "dining.png",
 				"upvotes": 0,
 				"downvotes": 0,
 				"dining_hall": "Ricker", 
-				"nutritional_info": "Grass Fed Burger, Grilled Chicken, Hillary Adzuki Burger, Fries, Comdiments",
+				"nutritional_info": "",
 				"favorites": 0, 
-				"tags": ["protein", "carbohydrates"]
+				"tags": ["carbohydrates"]
+				},
+				{
+				"name": "Leprechaun Lime Drink",
+				"mealList": ["1d"], 
+				"imageURL": "dining.png",
+				"upvotes": 0,
+				"downvotes": 0,
+				"dining_hall": "Ricker", 
+				"nutritional_info": "Leprechaun Lime Drink",
+				"favorites": 0, 
+				"tags": ["drink"]
 				}
 			]
 		},
