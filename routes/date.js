@@ -9,7 +9,7 @@ exports.getMenu = function getMealAdjustedMenu(menu) {
      }
   }
   return newMenu;
-};
+}; 
 
 function getMenuIdentifier() {
   var now = new Date();
@@ -18,10 +18,10 @@ function getMenuIdentifier() {
   if(now.getHours() >= 15) {
     meal = 'd';
   }
-  // var day = now.getDay() - 2;
-  // if(day < 0 || day > 3) {
-  //   day = 3;
-  // }
+   var day = now.getDay() - 2;
+   if(day < 0 || day > 3) {
+     day = 3;
+   }
   // return day + meal ;
   return 1 + meal ;
 }
